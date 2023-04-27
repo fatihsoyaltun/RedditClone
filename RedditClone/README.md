@@ -1,2 +1,0 @@
-# RedditClone
-Reddit Clone Project

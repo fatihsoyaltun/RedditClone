@@ -185,7 +185,7 @@ body{
  img{
     height: auto;
 }
-hr{
+.dikcizgi{
     border: none;
     border-left: 1px solid black;
     height: 3rem;
@@ -199,4 +199,34 @@ hr{
     top: 20px;
     left: 38px;
 } 
+
+/* 
+detay sayfası
+ */
+
+.emoji{
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    width:250px;
+}
+.d-buton:hover{
+    background-color: #938c8c;
+}
+.duzenleme-left{
+    width: 40rem;
+   display: flex;
+    justify-content: end;
+}
+.duzenleme{
+    background-color: #ddd8d8;
+    
+}
+
+
+
+
+
+
+
 

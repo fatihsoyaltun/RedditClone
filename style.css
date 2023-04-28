@@ -1,3 +1,182 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    --bs-gutter-x: 0;
+  }
+  
+  img {
+    width: auto;
+  }
+  
+  
+  /* <!-- ********** Navbar Başlangıç ************* -->
+  
+  /* Style the navigation bar */
+  .navbar {
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    margin-top: 1rem;
+  }
+
+  
+  .fixed {
+    position: fixed;
+    
+    top: 0;
+    
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+  }
+
+  .navbarBaslik {
+    font-size: 10px;
+    color: #8a8888;
+  }
+  
+  /* Navbar links */
+  .navbar_icon {
+    /* float: left; */
+    text-align: center;
+    color: #8a8888;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 1s;
+    
+  }
+
+  .navbar a {
+    text-align: center;
+    color: #8a8888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 1s;
+    
+  }
+  
+  .navbar>ul>li {
+    padding: 12px;
+    padding-top: 0;
+    margin-left: 8px;
+    color: #5e5873;
+  
+  }
+  
+  
+  .custom-tooltip {
+    --bs-tooltip-bg: #2871b8;
+  }
+  
+  
+  /* Navbar links on mouse-over */
+
+  
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+  
+    }
+  }
+  
+
+  .dropdown {
+    width: 100%;
+  }
+ 
+  .btn {
+    --bs-btn-padding-x: 0;
+    --bs-btn-border-color:none;
+  }
+ 
+  .dropdown-menu {
+    --bs-dropdown-border-color: none;
+    position: relative;
+    max-height: 200px; 
+    overflow-y: auto;
+  }
+
+
+   .dropdown ul li a {
+    text-align: initial;
+    
+  }
+  
+  .navbar_alt_p {
+    padding: 6px;
+    margin-left: 8px;
+    font-size: 14px;
+  }
+
+  .navbar_alt_button {
+    padding: 6px;
+    margin-left: 8px;
+  }
+
+  .btn-kirmizi {
+    width: 175px;
+    border-radius: 9999px;
+    background-color: #ff4500;
+    color: white;
+  }
+
+  .navbar_alt_button_button1 {
+    border-radius: 20px;
+    padding: 1px;
+    margin-bottom: 2px;
+    border: 1px solid rgb(189, 186, 186);
+    display: flex;
+    justify-content: center;
+    width: 350px;
+   
+    
+  }
+
+  .navbar_alt_button_button2{
+    font-size: 14px;
+    
+  }
+
+
+  .modal-body {
+    width: 400px;
+    margin-left: 60px;
+   
+    
+  }
+
+  .navbar_alt_formcontrol {
+    width: 350px;
+    border-radius: 20px;
+    
+  }
+
+  .form-control:focus {
+   box-shadow: none;
+   border-color: #ff4500;
+  }
+  
+  .btn-kirmizi2 {
+    width: 350px;
+    border-radius: 9999px;
+    background-color: #ff4500;
+    color: white;
+    margin-top: 10px;
+  }
+
+  .modal-content{
+    width: 500px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+=======
 *{
     box-sizing: border-box;
     padding: 0;
@@ -136,7 +315,7 @@ body{
  img{
     height: auto;
 }
-hr{
+.dikcizgi{
     border: none;
     border-left: 1px solid black;
     height: 3rem;
@@ -150,6 +329,38 @@ hr{
     top: 20px;
     left: 38px;
 } 
+
+
+/* 
+detay sayfası
+ */
+
+.emoji{
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    width:250px;
+}
+.d-buton:hover{
+    background-color: #938c8c;
+}
+.duzenleme-left{
+    width: 40rem;
+   display: flex;
+    justify-content: end;
+}
+.duzenleme{
+    background-color: #ddd8d8;
+    
+}
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1040px) {
    .side-bar{
@@ -470,3 +681,5 @@ nav {
   .right li {
     margin-inline: 10px;
   }
+
+

@@ -1,0 +1,847 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    --bs-gutter-x: 0;
+  }
+  
+  img {
+    width: auto;
+  }
+  
+  /* berrdo*/
+
+
+ 
+
+  .nav{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    z-index: 997;
+    width: 100%;
+}
+
+.nav .arama{
+    margin: 0;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 25px;
+    background-color: #F6F7F8;
+    opacity: 1;
+   
+}
+
+
+.nav ul li{
+    display: inline;
+    list-style: none;
+    margin: 0px;
+    
+}
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    
+}
+.nav ul li a:hover{
+    background-color: #FFFFFF;
+    color: #333;
+    border-radius: 15px;
+    box-shadow: 2px 2px 10px #FFFF;
+}
+.right li{
+    margin: 0;
+}
+
+.nav img{
+    width: 90px;
+    height: 48px;
+}
+.search{
+    border: none;
+    border-radius: 15px;
+    height: 100%;
+    width: 30rem;
+    background-color:transparent;
+}
+input.search{
+    outline: none;
+}
+.nav div:hover{
+    background-color: #FFFFFF;
+    
+}
+.sol{
+    background-color: #c5c5c5;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
+    
+}
+.sag{
+    border: 1px solid black;
+    background-color: rgb(255, 94, 0);
+    border-radius: 15px;
+    padding-left: 23px;
+    padding-right: 23px;
+    
+}
+.sag:hover{
+    background-color: rgb(255, 123, 0);
+}
+.right {
+    display: flex;
+    align-items: center;
+    
+}
+.right li {
+    margin-inline: 10px;
+
+}
+
+.container .preOr{
+  display: grid;
+  grid-row: 2;
+}
+.container .preOr .text1{
+  font-size: 12.5px;
+  width: 300px;
+}
+.container .preOr .top{
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+/* .container .preOr .continueWith{
+  height: 50px;
+} */
+.container .preOr .continueWith .buttons{
+  margin: 10px;
+  height: 40px;
+  width: 250px;
+  border: 0.1mm gray solid;
+  border-radius: 25px;
+  color: gray;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+  place-items: center;
+}
+.container .preOr .continueWith .buttons:hover{
+  background-color: black;
+  fill: white;
+  color: white;
+}
+.container .or{
+  margin-top: 30px;
+  text-align: center;
+  color: darkgray;
+}
+h3{
+ width: 100%; 
+ text-align: center; 
+ border-bottom: 1px solid rgb(180, 178, 178); 
+ line-height: 0.1em;
+ margin: 10px 0 20px; 
+}
+h3 span { 
+  background:#fff; 
+  padding:0 20px; 
+}
+
+.container .postOr .inputs{
+  height: 45px;
+  width: 250px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 25px;
+  border: 0.5mm gray solid;
+  background-color: whitesmoke;
+  padding: 20px;
+}
+
+
+.container .postOr .loginbutton{
+  height: 45px;
+  width: 300px;
+  border-radius: 25px;
+  background-color: orangered;
+  border-style: none;
+  color: white;
+  font-size: 17.5px;
+margin-top: 15px;
+}
+.container .postOr .loginbutton:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
+h5{
+  color: black;
+  margin-top: 15px;
+}
+svg{
+  width: 16px;
+}
+.modal1 {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1;
+left: 0;
+top: 0;
+width: 100%; 
+height: 100%; 
+overflow: auto;
+background-color: rgb(0,0,0);
+background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal1 .modal-content1 {
+background-color: #fefefe;
+margin: 7.5px auto; /* 15% from the top and centered */
+padding: 20px;
+border: 1px solid #888;
+width: 400px;
+height: 585px;
+border-radius: 25px;
+}
+
+/* The Close Button */
+.modal1 .modal-content1 .close {
+color: #aaa;
+float: right;
+font-size: 28px;
+font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+color: black;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* Dropdown Button */
+.dropbtn {
+background-color: #fff;
+color: gray;
+padding: 16px;
+font-size: 19px;
+border: none;
+margin-top: 0.4rem;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown2 {
+position: relative;
+display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content1 {
+display: none;
+position: absolute;
+background-color: #f1f1f1;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+right: 0;
+}
+
+/* Links inside the dropdown */
+.dropdown-content1 a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content1 a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown2:hover .dropdown-content1 {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown2:hover .dropbtn {cursor: pointer;}
+
+#myBtn{
+width: 125px;
+height: 40px;
+border-radius: 20px;
+background-color: orangered;
+color: white;
+border: hidden;
+font-size: large;
+margin-right: 10px;
+}
+#myBtn:hover{
+cursor: pointer;
+}
+.x{
+  background-color: white;
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  padding-right: 20px;  
+}
+
+
+
+.logo .mobile-logo{
+  display: none;
+}
+
+
+.navbar-dropdown{
+  display: none;
+}
+
+@media screen and (max-width:1020px){
+.search{
+width: 20rem;
+} 
+nav{
+margin: 0;
+padding: 0;
+}
+}
+@media screen and (max-width:865px) {
+.search{
+  width: 50%;
+}
+.right{
+  display: none;
+}
+}
+@media screen and (max-width:600px) {
+#myBtn{
+  display: none;
+}
+.logo img{
+  display: none;
+}
+.logo .mobile-logo{
+  display: block;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+}
+ /* berdo erdem*/
+
+
+  /* <!-- ********** Navbar BaÅŸlangÄ±Ã§ ************* -->
+  
+  /* Style the navigation bar */
+  /* kevser*/
+  .navbar {
+    width: 100%;
+    background-color: white;
+    overflow: auto;
+    position: relative;
+    max-height: 500px; 
+    overflow-y: auto;
+  }
+
+  
+  .fixed {
+    position: fixed;
+    top: 70px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+  }
+
+  .navbarBaslik {
+    font-size: 10px;
+    color: #8a8888;
+  }
+  
+  /* Navbar links */
+  .navbar_icon {
+    /* float: left; */
+    text-align: center;
+    color: #8a8888;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 1s;
+    
+  }
+
+  .navbar a {
+    text-align: center;
+    color: #8a8888;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 1s;
+    
+  }
+  
+  .navbar>ul>li {
+    padding: 5px;
+    padding-top: 0;
+    margin-left: 8px;
+    color: #5e5873;
+  
+  }
+  
+  
+  .custom-tooltip {
+    --bs-tooltip-bg: #2871b8;
+  }
+  
+  
+  /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+  @media screen and (max-width: 500px) {
+    .navbar a {
+      float: none;
+      display: block;
+  
+    }
+  }
+
+  .yüzdeyüz{
+    width: 100%;
+  }
+ 
+ 
+ 
+  .dropdown-menu {
+    --bs-dropdown-border-color: none;
+    position: relative;
+    max-height: 200px; 
+    overflow-y: auto;
+  }
+
+
+   .dropdown ul li a {
+    text-align: initial;
+    
+  }
+  
+  .navbar_alt_p {
+    padding: 4px;
+    margin-left: 8px;
+    font-size: 14px;
+  }
+
+  .navbar_alt_button {
+    padding: 6px;
+    margin-left: 8px;
+  }
+
+  .btn-kirmizi {
+    width: 175px;
+    border-radius: 9999px;
+    background-color: #ff4500;
+    color: white;
+  }
+
+  .btn-kirmizi:hover {
+    background-color: #ff7746;
+    color: #fafdff;
+  }
+
+  .navbar_alt_button_button1 { 
+    border-radius: 20px;
+    padding: 1px;
+    margin-bottom: 2px;
+    border: 1px solid rgb(189, 186, 186);
+    display: flex;
+    justify-content: center;
+    width: 350px;
+  }
+
+  .navbar_alt_button_button2{
+    font-size: 14px; 
+  }
+
+
+  .modal-body {
+    width: 400px;
+    margin-left: 60px;
+  }
+
+  .navbar_alt_formcontrol {
+    width: 350px;
+    border-radius: 20px;
+    
+  }
+
+  .form-control:focus {
+   box-shadow: none;
+   border-color: #ff4500;
+  }
+  
+  .btn-kirmizi2 {
+    width: 350px;
+    border-radius: 9999px;
+    background-color: #ff4500;
+    color: white;
+    margin-top: 10px;
+  }
+
+  .modal-content{
+    width: 500px;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  }
+
+
+  .navbar_alt {
+    height: 200px;
+  }
+
+  .navbar_alt_button_button1:hover {
+    background-color: #fafdff;
+    border-color: #2871b8;
+  }
+
+  .block1{
+    display: block !important;
+  }
+
+  
+
+  
+  /* <!-- ********** Navbar Başlangıç ************* -->
+  
+  /* Style the navigation bar */
+
+
+
+/* a{
+    color: white;
+    text-decoration: none;
+} */
+
+/*kevser*/
+
+/*erdi*/
+.side-bar{
+    position: sticky;
+    top: 100px;
+    background-color: white;
+    color: black;
+    border-radius: 15px;
+    padding: 10px ;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    text-align: center;
+    
+}
+
+.side-bar a{
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 16px;
+    font-size: 11px;
+    color: #3d393c;
+}
+
+
+.side-bar2{
+    top: 135px;
+    color: black;
+    margin-top: 2rem;
+}
+
+.side-bar3{
+    top: 170px;
+    margin-top: .8rem;
+}
+
+
+.flip-card-back{
+    display: none;
+    
+}
+
+.side-bar:hover .flip-card-back{
+    display: block;
+}
+
+.side-bar:hover{
+    z-index: 9999;
+}
+
+.side-bar a:hover{
+    text-decoration: underline;
+}
+
+
+.side-bar{
+  border: 1px solid #bdb9b7;
+}
+
+.side-bar:nth-child(even) a{
+    color: black;
+}
+
+.side-bar:nth-child(even) a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+.grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px 0px;
+} 
+
+
+
+ .card-title{
+    justify-content: space-between;
+}
+.join{
+    border-radius: 15px;
+    border: none;
+    color: rgb(248, 241, 241);
+    padding: 9px;
+}
+.card{
+    margin-bottom: 30px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+.buttons:hover{
+    background-color: rgb(177, 170, 170);
+}
+.bi-caret-up:hover{
+    color: red;
+}
+.bi-caret-down:hover{
+    color: blue;
+}
+
+
+.pop-up {
+    display: none;
+    position: absolute;
+    top: 10px;
+    background-color: #938c8c;
+    padding: 10px;
+    z-index: 9999;
+    border-radius: 15px;
+}
+
+
+.hesap:hover  .pop-up{
+    display: block;
+}
+.dropdown-toggle::after{
+    display: none;
+} 
+ img{
+    height: auto;
+}
+.dikcizgi{
+    border: none;
+    border-left: 1px solid black;
+    height: 3rem;
+    width: 1px;
+}
+.right{
+    position: relative;
+}
+.time{
+    position: absolute;
+    top: 30px;
+    left: 48px;
+} 
+
+
+
+/* 
+detay sayfası
+ */
+
+.emoji{
+    position: absolute;
+    top: 450px;
+    left: 50px;
+    width:250px;
+}
+.d-buton:hover{
+    background-color: #938c8c;
+}
+.duzenleme-left{
+    width: 40rem;
+    display: flex;
+    justify-content: end;
+}
+.duzenleme{
+    background-color: #ddd8d8;
+    
+}
+
+.hepsi{
+  z-index: 9999;
+}
+
+.hepsi1{
+  z-index: 999999;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1270px) {
+  .grid{
+    grid-template-columns: auto auto ;
+    gap: 5px 0px;
+} 
+ }
+
+@media screen and (max-width: 1040px) {
+  .btn-group{
+    width: 100%;
+  }
+  .col-md-9{
+    width: 100%;
+  }
+  .col-md-4{
+    display: none;
+   }
+   .hepsi1{
+    display: none;
+    
+   }
+   .navbar-dropdown{
+    display: block;
+  }
+
+  .navbar>ul>li {
+    padding: 0;
+  
+  }
+  .navbarHr {
+    display: none;
+  }
+
+  .fixed {
+    border-radius: 20px;
+    top: 60px;
+    left: 80px;
+  
+  }
+  .navbar{
+    border-radius: 20px;
+  }
+  .navbar a {
+   text-align: left; 
+    
+}
+
+  main .col-10,.col-lg-8{
+    padding: 0;
+  }
+  .col-lg-8 .container{
+    padding-right: 3px;
+  }
+  }
+  @media screen and (max-width: 650px) {
+    .right , .right h6{
+        font-size:.8rem;
+    }
+    main .col-10,.col-lg-8{
+        padding: 0;
+    }
+    .col-lg-8 .container{
+        padding-right: 3px;
+    }
+    .kufirstyorum{
+      
+      height: 100px;
+      width: 40rem;
+    }
+ }
+
+ #ica{
+  text-decoration: none;
+  color: #808182;
+  transition:0.5s;
+  position: fixed;
+  right: 0;
+  bottom: 20px;
+  
+}
+#ica:hover{
+  color: rgb(2, 0, 0);
+}
+
+#ic{
+  font-size: 2.5rem;
+}
+
+/* detay sayfası kübra*/
+detay sayfasÄ±
+ */
+.kuzil{
+  overflow: hidden;
+}
+.emoji{
+    position: absolute;
+    top: 53rem;
+    left: 50px;
+    width:250px;
+}
+.d-buton:hover{
+    background-color: #938c8c;
+}
+.duzenleme-left{
+    width: 26rem;
+   display: flex;
+    justify-content: end;
+}
+.duzenleme{
+    background-color: #eae3e3;
+    border-radius: 0 0 5px 5px;
+    
+}
+#myBtn1 {
+  position: fixed;
+  bottom: 20px;
+  right: 0px;
+  margin-right:150px;
+  border: rgb(122, 118, 118) solid ;
+  padding: 5px;
+  
+}
+
+.kufirstyorum{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  border-radius: 5px 5px 0px 0px;
+  height: 150px;
+  width: 40rem;
+}
+.kualtyorum{
+  border-radius: 5px 5px 0px 0px;
+}
+
+.write-comments{
+  display: none;
+}
+
+
+
+
+/* DETAYYYYYYYYYYYYYYYY */
+
+

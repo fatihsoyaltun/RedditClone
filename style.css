@@ -869,3 +869,115 @@ detay sayfası
 /* DETAYYYYYYYYYYYYYYYY */
 
 
+
+
+
+/* İçerik Kısmı */
+.icerikBanner > img {
+  width: 1100px;
+  height: 190px;
+}
+
+.row {
+--bs-gutter-x: 0;
+}
+
+.hepsi1{
+  width: 20%;
+}
+.icerikProfil{
+  margin-left: 100px;
+}
+.icerikProfilİmg{
+  width: 100px;
+  border-radius: 50%;
+  border: 6px solid white;
+  position: relative;
+  bottom: 20px;
+}
+.icerikProfilButton{
+  height: 30px;
+  width: 100px;
+  border-radius: 30px;
+  background-color: #333;
+  color: #e4dee3;
+  
+}
+.icerikProfilButtonYazi {
+  margin-top: -4px;
+}
+
+
+.icerikNav {
+  margin-left: 7rem;
+}
+.icerikNav > a{
+  text-decoration: none;
+  color: #726e71;
+  margin: 4px;
+}
+
+.icerikNav > a:hover {
+  color: #888;
+}
+.icerikNavA {
+  border-bottom: 2px solid black;
+}
+.icerikIcon {
+  width: 100%;
+  margin-left: 7rem;
+  margin-top: 30px;
+  border: 1px solid #726e71;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.icerikIconSol  > .icerikIconA > a {
+  text-decoration: none;
+  color: #726e71;
+  margin: 4px;
+  margin-right: 2rem;
+}
+
+.icerikIconA1 {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.icerikIconA:hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  margin-bottom: 20px;  
+}
+
+
+.icerikIcondropdown1:hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  
+
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  border-color: white;
+}
+
+.icerikIcondropdown1Menu  {
+  background-color: #fafdff;
+  border-color: rgb(85, 84, 84);
+}
+.icerikIcondropdown1Menu :hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  
+}
+
+.icerikIconSag:hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  
+}
+
+
+/* İçerik Kısmı */

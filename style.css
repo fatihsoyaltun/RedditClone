@@ -942,7 +942,6 @@ detay sayfası
 .icerikIconA1 {
   background-color: #f8f5f5;
   border-radius: 20px;
-  margin-bottom: 20px;
 }
 
 .icerikIconA:hover {
@@ -979,5 +978,73 @@ detay sayfası
   
 }
 
+.icerikpaylasim {
+  width: 100%;
+  margin-left: 7rem;
+  margin-top: 30px;
+  
+}
 
+.icerikSagKisim {
+  width: 300px;
+  margin-left: 8rem;
+  margin-top: 30px;
+}
+
+.icerikSagKisimCardHeader {
+  background-color: #0dd3bb;
+  font-size: 15px;
+}
+.icerikSagKisimCardButton >a {
+  background-color: #373c3f;
+  border-radius: 10px;
+  font-size: 10px;
+  color: white;
+  margin-top: 10px;
+}
+.icerikSagKisimFooter {
+  font-size: 10px;
+  margin-bottom: 0;
+  
+}
+.icerikSagKisimCardAltButton :hover {
+  background-color: #e8eaec;
+  border-radius: 10px;
+}
+
+.icerikSagKisimCard3{
+  font-size: 13px;
+}
+
+.icerikSagKisimCardAccordion:focus,
+.icerikSagKisimCardAccordion:hover {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.icerikSagKisimCard4İmg {
+  width: 40px;
+  border-radius: 50%;
+}
+.icerikSagKisimCard4Yazi {
+  font-size: 10px;
+}
+
+.icerikSagKisimCard4Button {
+  background-color: #373c3f;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+  font-size: 13px;
+  width: 100%;
+}
+
+.icerikSagKisimCard6 {
+  font-size: 13px;
+}
+
+.icerikSagKisimCard5İmg {
+  width: 100%;
+}
 /* İçerik Kısmı */

@@ -364,7 +364,7 @@ padding: 0;
   
   .fixed {
     position: fixed;
-    top: 60px;
+    top: 30px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   
   }
@@ -609,6 +609,58 @@ padding: 0;
     gap: 10px 0px;
 } 
 
+.first-article{
+  margin-left: 19rem;
+  width: 70%;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+
+.first-article a {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.first-article a article {
+  padding: 1rem;
+  margin-top: 5rem;
+  background: linear-gradient(transparent, #121212);
+ 
+}
+.first-article a article h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 22px;
+ }
+ .first-article a article  .article-paragraf {
+  font-size: .8rem;
+  overflow: hidden;
+ }
+
+
+.first-article a:nth-child(1){
+  background-image: url(img/sheran.webp) ;
+}
+
+
+.first-article a:nth-child(2){
+  background-image: url(https://external-preview.redd.it/X6TV1mlBrmTbEfY-eXPSNJELAY0yP_ZaQXZ5_sUSpuQ.jpg?auto=webp&v=enabled&s=896a01c5139e3dce74fa476c4028bf89e60a9727);
+}
+.first-article a:nth-child(3){
+  background-image: url(https://external-preview.redd.it/RksrGikz3NI3Z52vGSviB5C3LDjiFZj4JHNnyLkXPj4.jpg?auto=webp&v=enabled&s=c73d0b9bdc0e64f6e9311cf4e07c401c0da6fb73);
+}
+
+.first-article a:nth-child(4){
+  background-image: url(https://external-preview.redd.it/PeICPXzjYC0ciC9XxKwrnNK31b9HDm0G7eck0tpK6H0.jpg?auto=webp&v=enabled&s=16f2c2f7c744fcbe53cf95b0322285046d82bdb6);
+}
+
 
 
  .card-title{
@@ -749,6 +801,10 @@ detay sayfası
   .col-md-3.md-12{
     display: none;
   }
+  .first-article{
+    width: 90%;
+    margin-left:2rem;
+  }
 
   .navbar>ul>li {
     padding: 0;
@@ -779,6 +835,16 @@ detay sayfası
     padding-right: 3px;
   }
   }
+
+  @media screen and (max-width: 900px) {
+    .first-article a:nth-child(4){
+      display: none;
+    }
+    .first-article{
+      grid-template-columns: repeat(3,1fr);
+    }
+ }
+
   @media screen and (max-width: 650px) {
     .right , .right h6{
         font-size:.8rem;
@@ -793,6 +859,12 @@ detay sayfası
       
       height: 100px;
       width: 40rem;
+    }
+    .first-article a:nth-child(3){
+      display: none;
+    }
+    .first-article{
+      grid-template-columns: repeat(2,1fr);
     }
  }
 
@@ -1012,6 +1084,43 @@ detay sayfası
   border-radius: 10px;
 }
 
+
+/* İçerik Kısmı */
+
+
+/*kübra begeni*/
+.kucard-body{
+  position: relative;
+
+}
+.kuekleme{
+  position: absolute;
+  top:-40px ;
+  right: 5px;
+  
+}
+.kuproresmi{
+  position: relative;
+  bottom: 60px;
+  left: 10px;
+}
+.kuhesap{
+  position: relative;
+  top: 40px;
+}
+.kuekleme2{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.kuayarlar{
+  position: relative;
+  bottom: 60px;
+  left: 50px;
+  
+}
+/*kübra begeni*/
+=======
 .icerikSagKisimCard3{
   font-size: 13px;
 }
@@ -1048,3 +1157,4 @@ detay sayfası
   width: 100%;
 }
 /* İçerik Kısmı */
+

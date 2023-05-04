@@ -8,14 +8,8 @@
     --bs-gutter-x: 0;
   }
   
-  img {
-    width: auto;
-  }
-  
   /* berrdo*/
 
-
- 
 
   .nav{
     background-color: white;
@@ -51,7 +45,7 @@
     text-decoration: none;
     color: black;
     padding: 10px;
-    
+    transition: .5s;
 }
 .nav ul li a:hover{
     background-color: #FFFFFF;
@@ -309,22 +303,19 @@ cursor: pointer;
 
 
 @media screen and  (max-width: 1040px) {
-  
+  .search{
+    width: 50%;
+    } 
 }
   
 
 
 @media screen and (max-width:1020px){
-.search{
-width: 20rem;
-} 
-nav{
-margin: 0;
-padding: 0;
-}
+
+
 }
 @media screen and (max-width:865px) {
-.search{
+.search {
   width: 50%;
 }
 .right{
@@ -559,7 +550,7 @@ padding: 0;
 .side-bar2{
     top: 135px;
     color: black;
-    margin-top: 2rem;
+    margin-top: .8rem;
 }
 
 .side-bar3{
@@ -597,10 +588,6 @@ padding: 0;
 .side-bar:nth-child(even) a:hover{
     text-decoration: underline;
 }
-
-
-
-
 
 
 .grid{
@@ -661,9 +648,7 @@ padding: 0;
   background-image: url(https://external-preview.redd.it/PeICPXzjYC0ciC9XxKwrnNK31b9HDm0G7eck0tpK6H0.jpg?auto=webp&v=enabled&s=16f2c2f7c744fcbe53cf95b0322285046d82bdb6);
 }
 
-
-
- .card-title{
+.card-title{
     justify-content: space-between;
 }
 .join{
@@ -691,9 +676,7 @@ padding: 0;
     color: #751313;
 }
 
-.post-img{
-  height:450px;
-}
+
 
 .pop-up {
     display: none;
@@ -731,6 +714,11 @@ padding: 0;
 } 
 
 
+
+.post-img img{
+  width: 100%;
+  height: 500px;
+}
 
 /* 
 detay sayfası
@@ -775,7 +763,7 @@ detay sayfası
 } 
  }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1035px) {
   .btn-group .buttons{
     font-size: 12px;
   }
@@ -790,7 +778,6 @@ detay sayfası
    }
    .hepsi1{
     display: none;
-    
    }
    .hepsi1{
     z-index: 999999;
@@ -865,6 +852,12 @@ detay sayfası
     }
     .first-article{
       grid-template-columns: repeat(2,1fr);
+    }
+ }
+
+  @media screen and (max-width: 500px) {
+    .arama {
+      width: 30%;
     }
  }
 
@@ -950,13 +943,13 @@ detay sayfası
   height: 190px;
 }
 
+/* 
 .row {
 --bs-gutter-x: 0;
-}
+} */
 
-.hepsi1{
-  width: 20%;
-}
+
+
 .icerikProfil{
   margin-left: 100px;
 }
@@ -1120,7 +1113,7 @@ detay sayfası
   
 }
 /*kübra begeni*/
-=======
+
 .icerikSagKisimCard3{
   font-size: 13px;
 }

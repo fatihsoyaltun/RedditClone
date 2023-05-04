@@ -8,14 +8,8 @@
     --bs-gutter-x: 0;
   }
   
-  img {
-    width: auto;
-  }
-  
   /* berrdo*/
 
-
- 
 
   .nav{
     background-color: white;
@@ -51,7 +45,7 @@
     text-decoration: none;
     color: black;
     padding: 10px;
-    
+    transition: .5s;
 }
 .nav ul li a:hover{
     background-color: #FFFFFF;
@@ -314,18 +308,15 @@ cursor: pointer;
 }
 
 @media screen and  (max-width: 1040px) {
-  
+  .search{
+    width: 50%;
+    } 
 }
 
 
 @media screen and (max-width:1020px){
-.search{
-width: 20rem;
-} 
-nav{
-margin: 0;
-padding: 0;
-}
+
+
 }
 @media screen and (max-width:992px) {
   .kubegeniyancard{
@@ -336,7 +327,7 @@ padding: 0;
   }
 }
 @media screen and (max-width:865px) {
-.search{
+.search {
   width: 50%;
 }
 .right{
@@ -571,7 +562,7 @@ padding: 0;
 .side-bar2{
     top: 135px;
     color: black;
-    margin-top: 2rem;
+    margin-top: .8rem;
 }
 
 .side-bar3{
@@ -609,10 +600,6 @@ padding: 0;
 .side-bar:nth-child(even) a:hover{
     text-decoration: underline;
 }
-
-
-
-
 
 
 .grid{
@@ -673,9 +660,7 @@ padding: 0;
   background-image: url(https://external-preview.redd.it/PeICPXzjYC0ciC9XxKwrnNK31b9HDm0G7eck0tpK6H0.jpg?auto=webp&v=enabled&s=16f2c2f7c744fcbe53cf95b0322285046d82bdb6);
 }
 
-
-
- .card-title{
+.card-title{
     justify-content: space-between;
 }
 .join{
@@ -703,9 +688,7 @@ padding: 0;
     color: #751313;
 }
 
-.post-img{
-  height:450px;
-}
+
 
 .pop-up {
     display: none;
@@ -743,6 +726,11 @@ padding: 0;
 } 
 
 
+
+.post-img img{
+  width: 100%;
+  height: 500px;
+}
 
 /* 
 detay sayfası
@@ -787,7 +775,7 @@ detay sayfası
 } 
  }
 
-@media screen and (max-width: 1040px) {
+@media screen and (max-width: 1035px) {
   .btn-group .buttons{
     font-size: 12px;
   }
@@ -802,7 +790,6 @@ detay sayfası
    }
    .hepsi1{
     display: none;
-    
    }
    .hepsi1{
     z-index: 999999;
@@ -877,6 +864,12 @@ detay sayfası
     }
     .first-article{
       grid-template-columns: repeat(2,1fr);
+    }
+ }
+
+  @media screen and (max-width: 500px) {
+    .arama {
+      width: 30%;
     }
  }
 
@@ -958,19 +951,20 @@ detay sayfası
 
 /* İçerik Kısmı */
 .icerikBanner > img {
-  width: 1100px;
+  width: 100%;
   height: 190px;
 }
 
+/* 
 .row {
 --bs-gutter-x: 0;
-}
+} */
 
-.hepsi1{
-  width: 20%;
-}
+
+
 .icerikProfil{
-  margin-left: 100px;
+  margin-left: 0px;
+  display: flex;
 }
 .icerikProfilİmg{
   width: 100px;
@@ -993,7 +987,7 @@ detay sayfası
 
 
 .icerikNav {
-  margin-left: 7rem;
+  margin-left: 0px;
 }
 .icerikNav > a{
   text-decoration: none;
@@ -1009,7 +1003,7 @@ detay sayfası
 }
 .icerikIcon {
   width: 100%;
-  margin-left: 7rem;
+  margin-left: 3rem;
   margin-top: 30px;
   border: 1px solid #726e71;
   padding: 10px;
@@ -1064,7 +1058,7 @@ detay sayfası
 
 .icerikpaylasim {
   width: 100%;
-  margin-left: 7rem;
+  margin-left: 3rem;
   margin-top: 30px;
   
 }
@@ -1182,5 +1176,139 @@ detay sayfası
 .icerikSagKisimCard5İmg {
   width: 100%;
 }
+
+
+@media screen and (max-width: 950px) {
+  .icerikSagKisim {
+    display: none;
+  }
+  .icerikBanner {
+    width: 100%;
+  }
+  .icerikIcon {
+    width: 100%;
+  }
+  .icerikpaylasim {
+    width: 100%;
+  }
+  .icerikProfil {
+    margin-left: 0px;
+  }
+  .icerikNav {
+    margin-left: 0px;
+  }
+  .icerikProfilUl {
+    flex-direction: column;
+    margin-left: 0;
+  }
+  
+  
+}
+
+.icerikProfilUl li:nth-child(n+1){
+  align-self: center  ;
+}
+
+.icerikSagKisimCardButton3 > a {
+font-size: 8px;
+}
+
+@media screen and (min-width: 1000px) {
+  .icerikSagKisimCardButton2 {
+    display: none;
+    
+  }
+  .icerikProfilUl {
+    margin-left: 80px;
+  }
+}
+  
+
+@media screen and (max-width: 1000px) {
+  .icerikBanner > img{
+    width: 100%;
+    height: 150px;
+  }
+  .icerikBanner {
+    justify-content: center;
+  }
+  .icerikProfil {
+    
+    width: 200px;
+    display: block;
+    padding: 0;
+    text-align: center;
+    
+    
+  }
+  .icerikProfilİmg {
+    width: 150px;
+    bottom: 40px;
+    text-align: center;
+  }
+  .icerikProfilP {
+    font-size: 40px;
+    margin-top: -50px;
+    text-align: center;
+
+  }
+
+  .icerikProfilP2 {
+    font-size: 20px;
+    margin-top: -20px;
+    text-align: center;
+    color: #bfbfbf;
+  }
+  .icerikpaylasim, .icerikIcon  {
+    margin-left: 0;
+  }
+  .icerikProfilButtonLi, .icerikProfilButton {
+    width: 100%;
+  }
+ 
+}
+ 
+
+
+
+
 /* İçerik Kısmı */
+
+
+/* İçerik Kısmı */
+
+
+/*kübra begeni*/
+.kucard-body{
+  position: relative;
+
+}
+.kuekleme{
+  position: absolute;
+  top:-40px ;
+  right: 5px;
+  
+}
+.kuproresmi{
+  position: relative;
+  bottom: 60px;
+  left: 10px;
+}
+.kuhesap{
+  position: relative;
+  top: 40px;
+}
+.kuekleme2{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.kuayarlar{
+  position: relative;
+  bottom: 60px;
+  left: 50px;
+  
+}
+/*kübra begeni*/
+
 

@@ -307,6 +307,13 @@ cursor: pointer;
   display: none;
 }
 
+
+@media screen and  (max-width: 1040px) {
+  
+}
+  
+
+
 @media screen and (max-width:1020px){
 .search{
 width: 20rem;
@@ -357,7 +364,7 @@ padding: 0;
   
   .fixed {
     position: fixed;
-    top: 70px;
+    top: 30px;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   
   }
@@ -602,6 +609,58 @@ padding: 0;
     gap: 10px 0px;
 } 
 
+.first-article{
+  margin-left: 19rem;
+  width: 70%;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 10px;
+}
+
+.first-article a {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 20px;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.first-article a article {
+  padding: 1rem;
+  margin-top: 5rem;
+  background: linear-gradient(transparent, #121212);
+ 
+}
+.first-article a article h2 {
+    font-size: 1.3rem;
+    font-weight: 500;
+    line-height: 22px;
+ }
+ .first-article a article  .article-paragraf {
+  font-size: .8rem;
+  overflow: hidden;
+ }
+
+
+.first-article a:nth-child(1){
+  background-image: url(img/sheran.webp) ;
+}
+
+
+.first-article a:nth-child(2){
+  background-image: url(https://external-preview.redd.it/X6TV1mlBrmTbEfY-eXPSNJELAY0yP_ZaQXZ5_sUSpuQ.jpg?auto=webp&v=enabled&s=896a01c5139e3dce74fa476c4028bf89e60a9727);
+}
+.first-article a:nth-child(3){
+  background-image: url(https://external-preview.redd.it/RksrGikz3NI3Z52vGSviB5C3LDjiFZj4JHNnyLkXPj4.jpg?auto=webp&v=enabled&s=c73d0b9bdc0e64f6e9311cf4e07c401c0da6fb73);
+}
+
+.first-article a:nth-child(4){
+  background-image: url(https://external-preview.redd.it/PeICPXzjYC0ciC9XxKwrnNK31b9HDm0G7eck0tpK6H0.jpg?auto=webp&v=enabled&s=16f2c2f7c744fcbe53cf95b0322285046d82bdb6);
+}
+
 
 
  .card-title{
@@ -620,13 +679,21 @@ padding: 0;
 .buttons:hover{
     background-color: rgb(177, 170, 170);
 }
-.bi-caret-up:hover{
-    color: red;
-}
-.bi-caret-down:hover{
-    color: blue;
+
+.fa-heart , .fa-heart-crack{
+  transition: .5s;
 }
 
+.fa-heart:hover{
+    color: red;
+}
+.fa-heart-crack:hover{
+    color: #751313;
+}
+
+.post-img{
+  height:450px;
+}
 
 .pop-up {
     display: none;
@@ -689,12 +756,11 @@ detay sayfası
 }
 
 .hepsi{
-  z-index: 9999;
+  z-index: 9999999;
 }
 
-.hepsi1{
-  z-index: 999999;
-}
+
+
 
 
 
@@ -710,8 +776,11 @@ detay sayfası
  }
 
 @media screen and (max-width: 1040px) {
-  .btn-group{
-    width: 100%;
+  .btn-group .buttons{
+    font-size: 12px;
+  }
+  .card-text{
+    font-size: 13px;
   }
   .col-md-9{
     width: 100%;
@@ -723,8 +792,18 @@ detay sayfası
     display: none;
     
    }
+   .hepsi1{
+    z-index: 999999;
+  }
    .navbar-dropdown{
     display: block;
+  }
+  .col-md-3.md-12{
+    display: none;
+  }
+  .first-article{
+    width: 90%;
+    margin-left:2rem;
   }
 
   .navbar>ul>li {
@@ -756,6 +835,16 @@ detay sayfası
     padding-right: 3px;
   }
   }
+
+  @media screen and (max-width: 900px) {
+    .first-article a:nth-child(4){
+      display: none;
+    }
+    .first-article{
+      grid-template-columns: repeat(3,1fr);
+    }
+ }
+
   @media screen and (max-width: 650px) {
     .right , .right h6{
         font-size:.8rem;
@@ -770,6 +859,12 @@ detay sayfası
       
       height: 100px;
       width: 40rem;
+    }
+    .first-article a:nth-child(3){
+      display: none;
+    }
+    .first-article{
+      grid-template-columns: repeat(2,1fr);
     }
  }
 
@@ -791,8 +886,7 @@ detay sayfası
 }
 
 /* detay sayfası kübra*/
-detay sayfasÄ±
- */
+ 
 .kuzil{
   overflow: hidden;
 }
@@ -806,11 +900,13 @@ detay sayfasÄ±
     background-color: #938c8c;
 }
 .duzenleme-left{
+  
     width: 26rem;
-   display: flex;
+    display: flex;
     justify-content: end;
 }
 .duzenleme{
+  
     background-color: #eae3e3;
     border-radius: 0 0 5px 5px;
     
@@ -844,4 +940,221 @@ detay sayfasÄ±
 
 /* DETAYYYYYYYYYYYYYYYY */
 
+
+
+
+
+/* İçerik Kısmı */
+.icerikBanner > img {
+  width: 1100px;
+  height: 190px;
+}
+
+.row {
+--bs-gutter-x: 0;
+}
+
+.hepsi1{
+  width: 20%;
+}
+.icerikProfil{
+  margin-left: 100px;
+}
+.icerikProfilİmg{
+  width: 100px;
+  border-radius: 50%;
+  border: 6px solid white;
+  position: relative;
+  bottom: 20px;
+}
+.icerikProfilButton{
+  height: 30px;
+  width: 100px;
+  border-radius: 30px;
+  background-color: #333;
+  color: #e4dee3;
+  
+}
+.icerikProfilButtonYazi {
+  margin-top: -4px;
+}
+
+
+.icerikNav {
+  margin-left: 7rem;
+}
+.icerikNav > a{
+  text-decoration: none;
+  color: #726e71;
+  margin: 4px;
+}
+
+.icerikNav > a:hover {
+  color: #888;
+}
+.icerikNavA {
+  border-bottom: 2px solid black;
+}
+.icerikIcon {
+  width: 100%;
+  margin-left: 7rem;
+  margin-top: 30px;
+  border: 1px solid #726e71;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.icerikIconSol  > .icerikIconA > a {
+  text-decoration: none;
+  color: #726e71;
+  margin: 4px;
+  margin-right: 2rem;
+}
+
+.icerikIconA1 {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+}
+
+.icerikIconA:hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  margin-bottom: 20px;  
+}
+
+
+.icerikIcondropdown1:hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  
+
+}
+
+.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active {
+  border-color: white;
+}
+
+.icerikIcondropdown1Menu  {
+  background-color: #fafdff;
+  border-color: rgb(85, 84, 84);
+}
+.icerikIcondropdown1Menu :hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  
+}
+
+.icerikIconSag:hover {
+  background-color: #f8f5f5;
+  border-radius: 20px;
+  
+}
+
+.icerikpaylasim {
+  width: 100%;
+  margin-left: 7rem;
+  margin-top: 30px;
+  
+}
+
+.icerikSagKisim {
+  width: 300px;
+  margin-left: 8rem;
+  margin-top: 30px;
+}
+
+.icerikSagKisimCardHeader {
+  background-color: #0dd3bb;
+  font-size: 15px;
+}
+.icerikSagKisimCardButton >a {
+  background-color: #373c3f;
+  border-radius: 10px;
+  font-size: 10px;
+  color: white;
+  margin-top: 10px;
+}
+.icerikSagKisimFooter {
+  font-size: 10px;
+  margin-bottom: 0;
+  
+}
+.icerikSagKisimCardAltButton :hover {
+  background-color: #e8eaec;
+  border-radius: 10px;
+}
+
+
+/* İçerik Kısmı */
+
+
+/*kübra begeni*/
+.kucard-body{
+  position: relative;
+
+}
+.kuekleme{
+  position: absolute;
+  top:-40px ;
+  right: 5px;
+  
+}
+.kuproresmi{
+  position: relative;
+  bottom: 60px;
+  left: 10px;
+}
+.kuhesap{
+  position: relative;
+  top: 40px;
+}
+.kuekleme2{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+}
+.kuayarlar{
+  position: relative;
+  bottom: 60px;
+  left: 50px;
+  
+}
+/*kübra begeni*/
+=======
+.icerikSagKisimCard3{
+  font-size: 13px;
+}
+
+.icerikSagKisimCardAccordion:focus,
+.icerikSagKisimCardAccordion:hover {
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.icerikSagKisimCard4İmg {
+  width: 40px;
+  border-radius: 50%;
+}
+.icerikSagKisimCard4Yazi {
+  font-size: 10px;
+}
+
+.icerikSagKisimCard4Button {
+  background-color: #373c3f;
+  border-radius: 10px;
+  color: white;
+  margin-top: 10px;
+  font-size: 13px;
+  width: 100%;
+}
+
+.icerikSagKisimCard6 {
+  font-size: 13px;
+}
+
+.icerikSagKisimCard5İmg {
+  width: 100%;
+}
+/* İçerik Kısmı */
 

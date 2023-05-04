@@ -300,19 +300,31 @@ cursor: pointer;
 .navbar-dropdown{
   display: none;
 }
-
+@media screen and (max-width: 1200px){
+  .kuayarlar{
+    position: relative;
+    right: 100px;
+  }
+}
 
 @media screen and  (max-width: 1040px) {
   .search{
     width: 50%;
     } 
 }
-  
 
 
 @media screen and (max-width:1020px){
 
 
+}
+@media screen and (max-width:992px) {
+  .kubegeniyancard{
+    display: none;
+  }
+  .kubegeni8card{
+    width: 100%;
+  }
 }
 @media screen and (max-width:865px) {
 .search {
@@ -1089,29 +1101,43 @@ detay sayfası
 }
 .kuekleme{
   position: absolute;
-  top:-40px ;
-  right: 5px;
+  right: 10px;
+  top: -45px;
   
 }
 .kuproresmi{
-  position: relative;
-  bottom: 60px;
+  position: absolute;
+  top: -60px;
   left: 10px;
 }
 .kuhesap{
-  position: relative;
-  top: 40px;
+  position: absolute;
+  bottom: -45px;
+  left: 18px;
 }
 .kuekleme2{
   position: absolute;
-  top: 40px;
-  right: 10px;
+  left: 40px;
+  bottom: 5px;
+
 }
 .kuayarlar{
-  position: relative;
-  bottom: 60px;
-  left: 50px;
+  position: absolute;
+  left: 15px;
+  bottom: -45px;
+}
+.kudetayayon:hover{
+  background-color: #c6bcc4;
   
+}
+.kubegenidropdown-menu{
+  position: relative;
+  right: 5px;
+  display: none;
+}
+.createavatar{
+  background: linear-gradient(to right , purple , pink);
+  margin-top: 7rem;
 }
 /*kübra begeni*/
 

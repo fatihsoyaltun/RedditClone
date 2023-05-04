@@ -83,3 +83,27 @@ function bell() {
   zil.style.color = "red";  
   
 }
+
+function openSecondModal() {
+  document.querySelector('#exampleModal').hide();
+  document.querySelector('#exampleModal2').show();
+}
+
+function kumoreoptions() {
+  const drop = document.querySelector(".kubegenidropdown-menu");
+  if(drop.style.display == "none"){
+    drop.style.display = "block";
+  }
+  else{
+    drop.style.display = "none";
+  }
+  
+}
+
+function checkProfilePicture() {
+  var profil_resmi = document.querySelector(".kubproresim").value;
+  if (profil_resmi == "") {
+    profil_resmi = "img/images.png";
+  }
+  return true;
+}

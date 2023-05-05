@@ -100,10 +100,3 @@ function kumoreoptions() {
   
 }
 
-function checkProfilePicture() {
-  var profil_resmi = document.querySelector(".kubproresim").value;
-  if (profil_resmi == "") {
-    profil_resmi = "img/images.png";
-  }
-  return true;
-}

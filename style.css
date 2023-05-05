@@ -329,6 +329,7 @@ cursor: pointer;
   .kubegeni8card{
     width: 100%;
   }
+
 }
 @media screen and (max-width:865px) {
 .search {
@@ -1198,15 +1199,20 @@ detay sayfası
 }
 .kuekleme2{
   position: absolute;
-  left: 40px;
+  left: 50px;
   bottom: 5px;
 
 }
 .kuayarlar{
   position: absolute;
-  left: 15px;
+  left: 60px;
   bottom: -45px;
 }
+
+.kudetayayon{
+  background-color: transparent;
+}
+
 .kudetayayon:hover{
   background-color: #c6bcc4;
   
@@ -1220,10 +1226,17 @@ detay sayfası
   background: linear-gradient(to right , purple , pink);
   margin-top: 7rem;
 }
+.kubeghesap:hover  .pop-up{
+  display: block;
+}
 /*kübra begeni*/
 
 .icerikSagKisimCard3{
   font-size: 13px;
+}
+
+.saved *{
+  font-size: 12px;
 }
 
 .icerikSagKisimCardAccordion:focus,
@@ -1352,44 +1365,15 @@ font-size: 8px;
 
 
 
-
 /* İçerik Kısmı */
 
 
 /* İçerik Kısmı */
 
 
-/*kübra begeni*/
-.kucard-body{
-  position: relative;
-
-}
-.kuekleme{
-  position: absolute;
-  top:-40px ;
-  right: 5px;
-  
-}
-.kuproresmi{
-  position: relative;
-  bottom: 60px;
-  left: 10px;
-}
-.kuhesap{
-  position: relative;
-  top: 40px;
-}
-.kuekleme2{
-  position: absolute;
-  top: 40px;
-  right: 10px;
-}
-.kuayarlar{
-  position: relative;
-  bottom: 60px;
-  left: 50px;
-  
-}
-/*kübra begeni*/
 
 
+.kurow{
+  display: flex;
+  justify-content: space-between;
+}

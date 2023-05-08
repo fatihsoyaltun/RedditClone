@@ -15,8 +15,11 @@
   /* berrdo*/
 
 
+
   .nav{
     /* background-color: white; */
+  .navUst{
+    background-color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +31,7 @@
     width: 100%;
 }
 
-.nav .arama{
+.navUst .arama{
     margin: 0;
     padding: 10px;
     border: 1px solid grey;
@@ -39,19 +42,19 @@
 }
 
 
-.nav ul li{
+.navUst ul li{
     display: inline;
     list-style: none;
     margin: 0px;
     
 }
-.nav ul li a{
+.navUst ul li a{
     text-decoration: none;
     color: black;
     padding: 10px;
     transition: .5s;
 }
-.nav ul li a:hover{
+.navUst ul li a:hover{
     background-color: #FFFFFF;
     color: #333;
     border-radius: 15px;
@@ -61,7 +64,7 @@
     margin: 0;
 }
 
-.nav img{
+.navUst img{
     width: 90px;
     height: 48px;
 }
@@ -75,7 +78,7 @@
 input.search{
     outline: none;
 }
-.nav div:hover{
+.navUst div:hover{
     background-color: #FFFFFF;
     
 }
@@ -1382,6 +1385,7 @@ font-size: 8px;
   justify-content: space-between;
 }
 
+
 /* kubra Ayarlarrrrrrr */
 
 /* CSS kodu */
@@ -1428,3 +1432,52 @@ body.dark-mode .dropdown2 .dropdown-content1 a{
   background-color: #575353;
 }
 /* DARKMODE */
+
+
+
+
+/********** post **********/
+.postNav {
+  margin-top: 100px;
+  border: 1px solid rgb(74, 74, 74);
+}
+
+.postNavButtons button {
+  border-radius: 20px;
+  height: 30px;
+  font-size: 12px;
+  margin-left: 8px;
+}
+
+.postNavDropdown {
+  background-color: white;
+  color: #989798;
+}
+
+.postNavLink {
+  color: gray;
+}
+
+.postNavButtonsAlt button {
+  height: 40px;
+  font-size: 15px;
+}
+
+.postNavButtons1 {
+  color: #2871b8;
+  border-color: #2871b8;
+}
+
+.postNavButtons2 {
+  background-color: #333;
+  color: #eae3e3;
+}
+
+.navPostSmall {
+  color: #2871b8;
+  
+}
+
+
+/********** post **********/
+

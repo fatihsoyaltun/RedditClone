@@ -17,6 +17,8 @@
     <header id="nav">
         <nav class="nav">
             <a href="#" class="logo">
+                <button id="dark-mode-toggle">Dark Mode</button>
+
                 <img src="img/Reddit-Logo.png" alt="Desktop Logo">
                 <img src="img/reddit_mob.webp" alt="Mobile Logo" class="mobile-logo">
             </a>
@@ -116,7 +118,7 @@
             <div class="row mt-4">
                 <ul class="d-flex list-unstyled nav-underline ayarlarnav">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Hesap</a>
+                        <a class="nav-link" aria-current="page" href="#">Hesap</a>
                     </li>
                     <li class="nav-item ms-2">
                         <a class="nav-link text-muted" href="#">Profil</a>
@@ -136,152 +138,78 @@
                     <li class="nav-item ms-2">
                         <a class="nav-link text-muted" href="#">Abonelikler</a>
                     </li>
-                    <li class="nav-item ms-2">
+                    <li class="nav-item  ms-2">
                         <a class="nav-link text-muted" href="#">Sohbet ve Mesajlaşma</a>
                     </li>
                 </ul>
             </div>
             <hr>
             <div class="row">
-                <h5>Hesap Ayarları</h5>
+                <h5>Profili Özelleştir</h5>
             </div>
             <div class="row mt-3">
                 <div class="col-8">
-                    <b class="text-secondary" style="font-size: x-small;">HESAP TERCİHLERİ</b>
+                    <b class="text-secondary" style="font-size: x-small;">Profil Bilgisi</b>
                     <hr>
-                    <div class="kurow">
-                        <div class="kusag">
-                            <h6>E-posta adresi</h6>
-                            <p class="text-muted">kubrasahin2812@gmail.com</p>
-                        </div>
-                        <div class="kusol mt-4">
-                            <button type="button" class="btn btn-outline-primary">Değiştir</button>
-                        </div>
-                    </div>
-                    <div class="kurow">
-                        <div class="kusag">
-                            <h6>Cinsiyet</h6>
-                            <p class="text-muted">Bu bilgiler, önerilerinizi ve reklamlarınızı iyileştirmek için
-                                kullanılabilir.</p>
-                        </div>
-                        <div class="kusol mt-4">
-                            <!-- Example single danger button -->
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Sec
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Kadin</a></li>
-                                    <li><a class="dropdown-item" href="#">Erkek</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kurow">
-                        <div class="kusag">
-                            <h6>Ekran Dili</h6>
-                            <p class="text-muted" style="font-size: smaller;">Reddit arayüzünü deneyimlemek istediğiniz
-                                dili seçin. Bunun, kullanıcı tarafından oluşturulan içeriğin dilini değiştirmeyeceğini
-                                ve bu özelliğin hâlâ geliştirilme aşamasında olduğunu, bu nedenle çevirilerin ve
-                                kullanıcı arayüzünün hâlâ incelenmekte olduğunu unutmayın</p>
-                        </div>
-                        <div class="kusol mt-4">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Sec
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Ingilizce</a></li>
-                                    <li><a class="dropdown-item" href="#">Turkce</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="kurow">
-                        <div class="kusag">
-                            <h6>Ülke</h6>
-                            <p class="text-muted" style="font-size: smaller;">Bu, birincil konumunuzdur. </p>
-                        </div>
-                        <div class="kusol mt-4">
-                            <div class="btn-group">
-                                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown"
-                                    aria-expanded="false">
-                                    Sec
-                                </button>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Türkiye</a></li>
-                                    <li><a class="dropdown-item" href="#">USA</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <b class="text-secondary mt-5" style="font-size: x-small;">BAĞLI HESAPLAR</b>
-                    <hr>
-                    <div class="kurow">
-                        <div class="kusag">
-                            <h6>Twitter'a bağlan</h6>
-                            <p class="text-muted">Yeni gönderilerinizi tweetleme ve profilinizde bir bağlantı
-                                görüntüleme seçeneğini etkinleştirmek için bir Twitter hesabı bağlayın. İzniniz olmadan
-                                asla Twitter'da paylaşımda bulunmayacağız.</p>
-                        </div>
-                    </div>
                     <div class="row">
-                        <button type="button" class="btn btn-primary w-25 rounded-4" style="margin-left: 550px;"><i
-                                class="bi bi-twitter">Twitter'a bağlan</i></button>
+                        <h6>Görünen İsim</h6>
+                        <p class="text-muted">Bir görünen ad belirleyin. Bu, kullanıcı adınızı değiştirmez.</p>
+                        <input type="text" class="rounded-2" placeholder="Görünen İsim">
                     </div>
-                    <div class="kurow">
-                        <div class="kusag">
-                            <h6>Apple'a bağlan</h6>
-                            <p class="text-muted">Apple ile Reddit'te oturum açmak için hesabı bağlayın</p>
-                        </div>
-                        <div class="kusol mt-4">
-                            <button type="button" class="btn btn-dark  rounded-4"><i class="bi bi-apple">Apple'a
-                                    bağlan</i></button>
-                        </div>
+                    <div class="row mt-4">
+                        <h6>Hakkında</h6>
+                        <p class="text-muted">Profilinizde gösterilen kendinizin kısa bir açıklaması</p>
+                        <input type="text" class="rounded-2" placeholder="Hakkında">
                     </div>
-                    <div class="kurow mt-3">
-                        <div class="kusag">
-                            <h6>Google'a bağlandı</h6>
-                            <p class="text-muted">Google ile Reddit'te oturum açmak için hesabı bağlayın</p>
-                        </div>
-                        <div class="kusol mt-4">
-                            <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                Bağlantıyı kes
+                    <div class="row mt-4">
+                        <h6>Sosyal Bağlantılar</h6>
+                        <p class="text-muted">Profilinizi ziyaret eden kişiler sosyal bağlantılarınızı görecektir.</p>
+                        <button type="button" class="btn btn-secondary rounded-5 w-25" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                + Add social link
                             </button>
-
                             <!-- Modal -->
-                            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                                aria-hidden="true">
+                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
                                 <div class="modal-dialog">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h1 class="modal-title fs-5" id="exampleModalLabel"><i
-                                                    class="bi bi-question-square">Google ile bağlantıyı kes</i></h1>
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                Add Social Link</h1>
                                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                         </div>
                                         <div class="modal-body">
-                                            Google hesabınızın bağlantısını kesmek için önce bir Reddit şifresi
-                                            oluşturmanız gerekir. Size yol göstereceğiz.
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary"
-                                                data-bs-dismiss="modal">Iptal et</button>
-                                            <button type="button" class="btn btn-primary">Devam Et</button>
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-secondary rounded-5 " data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2" onclick="openSecondModal()">
+                                                <i class="bi bi-instagram">Instagram</i>
+                                            </button>
+                                            <!-- Modal 1-->
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-
-                    </div>
-                    <b class="text-secondary mt-5" style="font-size: x-small;">HESABI SİL</b>
-                    <hr>
-                    <div class="row">
-                        <b class="text-danger w-25" style="margin-left: 550px;"><i class="bi bi-trash">HESABI SİL</i></b>
+                            <!-- Modal 2-->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                Add social link</h1>
+                                            <button type="button" class="btn btn-secondary">Save</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <button class="rounded-5 btn border-0" style="background-color: #8a8484;"><i
+                                                    class="bi bi-instagram ">Instagram</i></button>
+                                            <br>
+                                            <input class="mt-2 w-100 rounded-2" type="text" name="" id=""
+                                                placeholder="username">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                     </div>
                 </div>
             </div>

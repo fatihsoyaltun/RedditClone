@@ -19,7 +19,7 @@
 <body>
 
     <header id="nav">
-        <nav class="nav">
+        <nav class="nav navUst">
             <a href="#" class="logo">
                 <img src="img/Reddit-Logo.png" alt="Desktop Logo">
                 <img src="img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo" style="height: auto; width: 60px;">
@@ -112,7 +112,71 @@
 
     </header>
 
-   <main></main>
+   <main>
+        <div class="container">
+            <div class="row ">
+                <div class="col-md-8 postNav">
+                    <nav>
+                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                          <button class="nav-link active postNavLink" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="bi bi-stickies"></i> Post</button>
+                          <button class="nav-link postNavLink" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="bi bi-images"></i> Images & Video</button>
+                          <button class="nav-link postNavLink" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="bi bi-link-45deg"></i> Link</button>
+                          <button class="nav-link postNavLink" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="bi bi-list-columns-reverse"></i> Poll</button>
+                        </div>
+                      </nav>
+                      <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                            <input type="text" name="" id="" placeholder="Title" class="w-100 mt-3">
+                            <p>Ckeditör eklenecek</p>
+                            <div class="postNavButtons d-flex  ">
+                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> OC</button>
+                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> Spoiler</button>
+                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> NSFW</button>
+                                <div class="dropdown postNavButtons ">
+                                    <button class="btn btn-secondary dropdown-toggle postNavDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="bi bi-tags"></i> Flair <i class="bi bi-chevron-compact-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Flair</a></li>
+                                    </ul>
+                                  </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="postNavButtonsAlt postNavButtons d-flex justify-content-end">
+                                <button type="button" class="btn btn-outline-secondary postNavButtons1 ">Save Draft</button>
+                                <button type="button" class="btn btn-outline-secondary postNavButtons2 ">Post</button>
+                               
+                            </div>
+
+
+                        </div>
+                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+                        
+                      </div>
+
+                      <hr>
+
+                      <div class="navProfilSon">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault"> 
+                                <small>Send me post reply notifications</small> 
+                            </label>
+                          </div>
+    
+                          <small class="navPostSmall">Connect accounts to share your post <i class="bi bi-exclamation-circle"></i></small>
+                          
+                      </div>
+                     
+                </div>
+            </div>
+        </div>
+        
+    
+   </main>
 
     <a href="#nav" id="ica"><i id="ic" class="fas fa-arrow-alt-circle-up"></i></a>
 

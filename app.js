@@ -83,3 +83,20 @@ function bell() {
   zil.style.color = "red";  
   
 }
+
+function openSecondModal() {
+  document.querySelector('#exampleModal').hide();
+  document.querySelector('#exampleModal2').show();
+}
+
+function kumoreoptions() {
+  const drop = document.querySelector(".kubegenidropdown-menu");
+  if(drop.style.display == "none"){
+    drop.style.display = "block";
+  }
+  else{
+    drop.style.display = "none";
+  }
+  
+}
+

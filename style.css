@@ -7,6 +7,10 @@
   body {
     --bs-gutter-x: 0;
   }
+
+  li{
+    list-style: none;
+  }
   
   /* berrdo*/
 
@@ -300,18 +304,31 @@ cursor: pointer;
 .navbar-dropdown{
   display: none;
 }
-
+@media screen and (max-width: 1200px){
+  .kuayarlar{
+    position: relative;
+    right: 100px;
+  }
+}
 
 @media screen and  (max-width: 1040px) {
   .search{
     width: 50%;
     } 
 }
-  
 
 
 @media screen and (max-width:1020px){
 
+
+}
+@media screen and (max-width:992px) {
+  .kubegeniyancard{
+    display: none;
+  }
+  .kubegeni8card{
+    width: 100%;
+  }
 
 }
 @media screen and (max-width:865px) {
@@ -748,6 +765,83 @@ detay sayfası
 }
 
 
+/*profil-navbar*/
+
+
+.profil-navbar{
+  margin-top: 5rem;
+  margin-left: 10rem;
+  margin-right: 3rem;
+  
+}
+
+.profil-navbar ul{
+  display: grid;
+  grid-template-columns: repeat(10,1fr);
+  text-align: center;
+}
+
+.profil-navbar ul li  {
+  text-align: center;
+}
+
+.profil-navbar ul i {
+  cursor: pointer;
+}
+
+.profil-navbar ul li a {
+  word-break:break-all;
+  font-size:.8rem ;
+  color: #808182 ;
+  text-decoration: none;
+  transition: .5s;
+  padding-bottom: 1rem;
+
+}
+
+.profil-navbar ul li a:hover {
+  color: #007bff;
+}
+.profil-navbar ul li:hover   {
+  border-bottom:3px solid #007bff;
+}
+
+.last-cocuk  {
+  display: none;
+}
+
+
+@media screen and (max-width: 1340px) {
+  
+  .profil-navbar ul .on,.dokuz {
+    display: none;  
+  }
+  .last-cocuk  {
+    display: block;
+  }
+ }
+ @media screen and (max-width: 1250px) {
+  
+  .profil-navbar ul .sekiz,.yedi,.altı {
+    display: none;  
+  }
+  .profil-navbar ul{
+    grid-template-columns: repeat(6,1fr);
+  }
+  
+ }
+ @media screen and (max-width: 850px) {
+  
+  .profil-navbar ul .beş,.dört,.üç {
+    display: none;  
+  }
+  .profil-navbar ul{
+    grid-template-columns: repeat(3,1fr);
+  }
+  
+ }
+/*profil-navbar*/
+
 
 
 
@@ -1089,34 +1183,60 @@ detay sayfası
 }
 .kuekleme{
   position: absolute;
-  top:-40px ;
-  right: 5px;
+  right: 10px;
+  top: -45px;
   
 }
 .kuproresmi{
-  position: relative;
-  bottom: 60px;
+  position: absolute;
+  top: -60px;
   left: 10px;
 }
 .kuhesap{
-  position: relative;
-  top: 40px;
+  position: absolute;
+  bottom: -45px;
+  left: 18px;
 }
 .kuekleme2{
   position: absolute;
-  top: 40px;
-  right: 10px;
+  left: 50px;
+  bottom: 5px;
+
 }
 .kuayarlar{
-  position: relative;
-  bottom: 60px;
-  left: 50px;
+  position: absolute;
+  left: 60px;
+  bottom: -45px;
+}
+
+.kudetayayon{
+  background-color: transparent;
+}
+
+.kudetayayon:hover{
+  background-color: #c6bcc4;
   
+}
+.kubegenidropdown-menu{
+  position: relative;
+  right: 5px;
+  display: none;
+}
+.createavatar{
+  background: linear-gradient(to right , purple , pink);
+  margin-top: 7rem;
+}
+.kubeghesap:hover  .pop-up{
+  display: block;
 }
 /*kübra begeni*/
 
 .icerikSagKisimCard3{
   font-size: 13px;
+}
+
+.saved *{
+  font-size: 12px;
 }
 
 .icerikSagKisimCardAccordion:focus,
@@ -1245,44 +1365,15 @@ font-size: 8px;
 
 
 
-
 /* İçerik Kısmı */
 
 
 /* İçerik Kısmı */
 
 
-/*kübra begeni*/
-.kucard-body{
-  position: relative;
-
-}
-.kuekleme{
-  position: absolute;
-  top:-40px ;
-  right: 5px;
-  
-}
-.kuproresmi{
-  position: relative;
-  bottom: 60px;
-  left: 10px;
-}
-.kuhesap{
-  position: relative;
-  top: 40px;
-}
-.kuekleme2{
-  position: absolute;
-  top: 40px;
-  right: 10px;
-}
-.kuayarlar{
-  position: relative;
-  bottom: 60px;
-  left: 50px;
-  
-}
-/*kübra begeni*/
 
 
+.kurow{
+  display: flex;
+  justify-content: space-between;
+}

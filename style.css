@@ -16,7 +16,7 @@
 
 
   .nav{
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -231,8 +231,8 @@ cursor: pointer;
 
 /* Dropdown Button */
 .dropbtn {
-background-color: #fff;
-color: gray;
+background-color: white;
+color: rgb(33, 32, 32);
 padding: 16px;
 font-size: 19px;
 border: none;
@@ -318,8 +318,10 @@ cursor: pointer;
 }
 
 
-@media screen and (max-width:1020px){
-
+@media screen and (max-width:1000px){
+.ayarlarnav ul li{
+  display: block;
+}
 
 }
 @media screen and (max-width:992px) {
@@ -362,7 +364,7 @@ cursor: pointer;
   /* kevser*/
   .navbar {
     width: 100%;
-    background-color: white;
+    /* background-color: white; */
     overflow: auto;
     position: relative;
     max-height: 500px; 
@@ -546,8 +548,8 @@ cursor: pointer;
 .side-bar{
     position: sticky;
     top: 100px;
-    background-color: white;
-    color: black;
+    /* background-color: white;
+    color: black; */
     border-radius: 15px;
     padding: 10px ;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -566,7 +568,7 @@ cursor: pointer;
 
 .side-bar2{
     top: 135px;
-    color: black;
+    /* color: black; */
     margin-top: .8rem;
 }
 
@@ -677,6 +679,8 @@ cursor: pointer;
 .card{
     margin-bottom: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+   --bs-card-bg: none; 
+    
 }
 .buttons:hover{
     background-color: rgb(177, 170, 170);
@@ -1371,9 +1375,56 @@ font-size: 8px;
 /* İçerik Kısmı */
 
 
-
+/* kubra Ayarlarrrrrrr */
 
 .kurow{
   display: flex;
   justify-content: space-between;
 }
+
+/* kubra Ayarlarrrrrrr */
+
+/* CSS kodu */
+
+/* DARKMODE */
+body {
+  /* varsayılan arka plan rengi */
+  background-color: #f8f8f8;
+}
+
+body.dark-mode {
+  /* dark mode arka plan rengi */
+  background-color: #222;
+  color: #fff;
+}
+
+body.dark-mode .card-body {
+  color: white;
+}
+body.dark-mode i {
+  color: white;
+}
+body.dark-mode .card-title small {
+   color: white;
+}
+body.dark-mode .btn-group .buttons{
+  color: white;
+}
+body.dark-mode .flip-card-back .grid a{
+  color: white;
+}
+body.dark-mode .dropdown2:hover{
+  background-color: #575353;
+}
+
+body.dark-mode .dropdown2 .dropbtn:hover{
+  background-color: #575353;
+}
+body.dark-mode .dropdown2 .dropdown-content1:hover{
+  background-color: #575353;
+}
+body.dark-mode .dropdown2 .dropdown-content1 a{
+  color: white;
+  background-color: #575353;
+}
+/* DARKMODE */

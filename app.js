@@ -100,3 +100,35 @@ function kumoreoptions() {
   
 }
 
+// JavaScript kodu
+const darkModeToggle = document.querySelector('.dark-mode-toggle');
+const body = document.querySelector('body');
+
+// kaydedilen tema ayarını kontrol edin ve temayı yükle
+if (localStorage.getItem('theme') === 'dark') {
+  body.classList.add('dark-mode');
+}
+
+// butona tıklandığında tema ayarını değiştirin
+darkModeToggle.addEventListener('click', () => {
+  if (body.classList.contains('dark-mode')) {
+    body.classList.remove('dark-mode');
+    localStorage.setItem('theme', 'light'); // tema ayarını kaydedin
+  } else {
+    body.classList.add('dark-mode');
+    localStorage.setItem('theme', 'dark'); // tema ayarını kaydedin
+  }
+});
+
+
+const navprofil = document.querySelector(".dropbtn");
+const card = document.querySelector(".card");
+
+
+if (localStorage.getItem('theme') === 'dark') {
+  navprofil.style.background = "none"
+  navprofil.classList.add('dark-mode');
+  card.classList.add('dark-mode');
+  body.classList.add('dark-mode');
+  
+}

@@ -8,7 +8,7 @@
     --bs-gutter-x: 0;
   }
 
-  li{
+ ul li{
     list-style: none;
   }
   
@@ -1526,6 +1526,7 @@ body.dark-mode .dropdown2 .dropdown-content1 a{
   height: 30px;
   font-size: 12px;
   margin-left: 8px;
+ 
 }
 
 .postNavDropdown {
@@ -1540,6 +1541,7 @@ body.dark-mode .dropdown2 .dropdown-content1 a{
 .postNavButtonsAlt button {
   height: 40px;
   font-size: 15px;
+  margin-top: 20px;
 }
 
 .postNavButtons1 {
@@ -1557,6 +1559,43 @@ body.dark-mode .dropdown2 .dropdown-content1 a{
   
 }
 
+.dosyasec {
+  display: flex;
+  justify-content: center;
+  height: 200px;
+  align-items: center;
+  border-style: dotted;
+  margin-top: 10px;
+}
 
+.addoption {
+  padding: 6px;
+  font-size: 13px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: #2871b8;
+  border: none;
+}
+.addoption:hover {
+  background-color: #efefef;
+  color: #2871b8;
+}
+
+.addbutton {
+  padding: 6px;
+  font-size: 13px;
+  margin-top: 10px;
+  background-color: transparent;
+  color: #747272;
+  border: none;
+}
+.addbutton:hover {
+  background-color: white;
+  color: #747272;
+}
+
+.optionkismiol {
+  font-size: 13px;
+}
 /********** post **********/
 

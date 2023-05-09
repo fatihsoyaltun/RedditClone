@@ -789,8 +789,19 @@ detay sayfası
 
 .profil-navbar ul li  {
   text-align: center;
+  position: relative;
 }
-
+.profil-navbar ul li::before  {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  border-radius: 30px;
+  transition: all 0.4s ease-in-out; 
+  background-color: #007bff;
+}
 .profil-navbar ul i {
   cursor: pointer;
 }
@@ -808,14 +819,33 @@ detay sayfası
 .profil-navbar ul li a:hover {
   color: #007bff;
 }
-.profil-navbar ul li:hover   {
-  border-bottom:3px solid #007bff;
+
+.profil-navbar li:hover::before {
+  width: 100%;
 }
 
 .last-cocuk  {
   display: none;
 }
+.last-cocuk-list{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
 
+.last-cocuk-list a{
+  color: #808182 ;
+}
+
+.last-cocuk-list a:hover{
+  color: #007bff ;
+}
+
+.last-cocuk-list1,.last-cocuk-list2,.last-cocuk-list3,.last-cocuk-list4,.last-cocuk-list5,.last-cocuk-list6,.last-cocuk-list7,.last-cocuk-list8,.last-cocuk-list9,.last-cocuk-list10{
+  display: none;
+  font-size: .7rem;
+  margin-top: 5px;
+}
 
 @media screen and (max-width: 1340px) {
   
@@ -825,24 +855,74 @@ detay sayfası
   .last-cocuk  {
     display: block;
   }
+
+  .last-cocuk11:hover .last-cocuk-list10{
+    display: block;
+  }
+  .last-cocuk11:hover .last-cocuk-list9{
+    display: block;
+  }
+
  }
+
+
+
+
  @media screen and (max-width: 1250px) {
   
   .profil-navbar ul .sekiz,.yedi,.altı {
     display: none;  
   }
+
+  .last-cocuk11:hover .last-cocuk-list8{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list6{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list7{
+    display: block;
+  }
+
   .profil-navbar ul{
     grid-template-columns: repeat(6,1fr);
   }
   
  }
+
+
+
+
  @media screen and (max-width: 850px) {
   
   .profil-navbar ul .beş,.dört,.üç {
     display: none;  
   }
+
+
+  .last-cocuk11:hover .last-cocuk-list5{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list4{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list3{
+    display: block;
+  }
+  .last-cocuk-list1,.last-cocuk-list2,.last-cocuk-list3,.last-cocuk-list4,.last-cocuk-list5,.last-cocuk-list6,.last-cocuk-list7,.last-cocuk-list8,.last-cocuk-list9,.last-cocuk-list10{
+
+    font-size: .6rem;
+  
+  }
   .profil-navbar ul{
     grid-template-columns: repeat(3,1fr);
+  }
+  .profil-navbar{
+    margin-left: 0;
   }
   
  }
@@ -968,7 +1048,7 @@ detay sayfası
   position: fixed;
   right: 0;
   bottom: 20px;
-  
+  display: none;
 }
 #ica:hover{
   color: rgb(2, 0, 0);

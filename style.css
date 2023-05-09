@@ -809,7 +809,25 @@ detay sayfası
 .last-cocuk  {
   display: none;
 }
+.last-cocuk-list{
+  display: flex;
+  flex-direction: column;
+}
 
+.last-cocuk-list a{
+  transition: .5s;
+  color: #808182 ;
+}
+.last-cocuk-list a:hover{
+
+  color: #007bff ;
+}
+
+.last-cocuk-list1,.last-cocuk-list2,.last-cocuk-list3,.last-cocuk-list4,.last-cocuk-list5,.last-cocuk-list6,.last-cocuk-list7,.last-cocuk-list8,.last-cocuk-list9,.last-cocuk-list10{
+  display: none;
+  font-size: .7rem;
+  margin-top: 5px;
+}
 
 @media screen and (max-width: 1340px) {
   
@@ -819,24 +837,74 @@ detay sayfası
   .last-cocuk  {
     display: block;
   }
+
+  .last-cocuk11:hover .last-cocuk-list10{
+    display: block;
+  }
+  .last-cocuk11:hover .last-cocuk-list9{
+    display: block;
+  }
+
  }
+
+
+
+
  @media screen and (max-width: 1250px) {
   
   .profil-navbar ul .sekiz,.yedi,.altı {
     display: none;  
   }
+
+  .last-cocuk11:hover .last-cocuk-list8{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list6{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list7{
+    display: block;
+  }
+
   .profil-navbar ul{
     grid-template-columns: repeat(6,1fr);
   }
   
  }
+
+
+
+
  @media screen and (max-width: 850px) {
   
   .profil-navbar ul .beş,.dört,.üç {
     display: none;  
   }
+
+
+  .last-cocuk11:hover .last-cocuk-list5{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list4{
+    display: block;
+  }
+
+  .last-cocuk11:hover .last-cocuk-list3{
+    display: block;
+  }
+  .last-cocuk-list1,.last-cocuk-list2,.last-cocuk-list3,.last-cocuk-list4,.last-cocuk-list5,.last-cocuk-list6,.last-cocuk-list7,.last-cocuk-list8,.last-cocuk-list9,.last-cocuk-list10{
+
+    font-size: .6rem;
+  
+  }
   .profil-navbar ul{
     grid-template-columns: repeat(3,1fr);
+  }
+  .profil-navbar{
+    margin-left: 0;
   }
   
  }

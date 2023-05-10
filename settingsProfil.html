@@ -17,8 +17,6 @@
     <header id="nav">
         <nav class="navUst">
             <a href="#" class="logo">
-                <button id="dark-mode-toggle">Dark Mode</button>
-
                 <img src="img/Reddit-Logo.png" alt="Desktop Logo">
                 <img src="img/reddit_mob.webp" alt="Mobile Logo" class="mobile-logo">
             </a>
@@ -98,6 +96,10 @@
                     <a href="#"><i class="fa-solid fa-circle-info"></i> More</a>
                     <a href="#"><i class="fa-regular fa-newspaper"></i>Terms and Policies</a>
                     <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>
+                    <div class="form-check form-switch ms-2">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
+                        <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                      </div>
                     <hr>
                     <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
                 </div>
@@ -121,25 +123,25 @@
                         <a class="nav-link" aria-current="page" href="#">Hesap</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link text-muted" href="#">Profil</a>
+                        <a class="nav-link text-secondary" href="#">Profil</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link text-muted" href="#">Güvenlılık ve Gizlilik</a>
+                        <a class="nav-link text-secondary" href="#">Güvenlılık ve Gizlilik</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link text-muted" href="#">Besleme Ayarları</a>
+                        <a class="nav-link text-secondary" href="#">Besleme Ayarları</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link text-muted" href="#">Bildirimler</a>
+                        <a class="nav-link text-secondary" href="#">Bildirimler</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link text-muted" href="#">E-postalar</a>
+                        <a class="nav-link text-secondary" href="#">E-postalar</a>
                     </li>
                     <li class="nav-item ms-2">
-                        <a class="nav-link text-muted" href="#">Abonelikler</a>
+                        <a class="nav-link text-secondary" href="#">Abonelikler</a>
                     </li>
                     <li class="nav-item  ms-2">
-                        <a class="nav-link text-muted" href="#">Sohbet ve Mesajlaşma</a>
+                        <a class="nav-link text-secondary" href="#">Sohbet ve Mesajlaşma</a>
                     </li>
                 </ul>
             </div>
@@ -153,17 +155,17 @@
                     <hr>
                     <div class="row">
                         <h6>Görünen İsim</h6>
-                        <p class="text-muted">Bir görünen ad belirleyin. Bu, kullanıcı adınızı değiştirmez.</p>
+                        <p class="text-secondary">Bir görünen ad belirleyin. Bu, kullanıcı adınızı değiştirmez.</p>
                         <input type="text" class="rounded-2" placeholder="Görünen İsim">
                     </div>
                     <div class="row mt-4">
                         <h6>Hakkında</h6>
-                        <p class="text-muted">Profilinizde gösterilen kendinizin kısa bir açıklaması</p>
+                        <p class="text-secondary">Profilinizde gösterilen kendinizin kısa bir açıklaması</p>
                         <input type="text" class="rounded-2" placeholder="Hakkında">
                     </div>
                     <div class="row mt-4">
                         <h6>Sosyal Bağlantılar</h6>
-                        <p class="text-muted">Profilinizi ziyaret eden kişiler sosyal bağlantılarınızı görecektir.</p>
+                        <p class="text-secondary">Profilinizi ziyaret eden kişiler sosyal bağlantılarınızı görecektir.</p>
                         <button type="button" class="btn btn-secondary rounded-5 w-25" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
                                 + Add social link

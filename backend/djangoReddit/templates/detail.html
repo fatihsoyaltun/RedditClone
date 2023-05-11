@@ -1,0 +1,881 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a7148fea42.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header id="nav">
+    <nav class="nav navUst">
+        <a href="#" class="logo">
+            <img src="img/Reddit-Logo.png" alt="Desktop Logo">
+            <img src="img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo" style="height: auto; width: 60px;">
+        </a>
+        <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
+        <div class="arama">
+            <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
+            <input class="search" type="text" placeholder="Search Reddit">
+        </div>
+        <ul class="right mt-3 me-5 ">
+            <li><a class="sol" href="#" style="border: hidden;"> <i class="fa-solid fa-qrcode" style=" margin-right: 3px;"></i>Get App</a></li>
+        </ul>
+        <button id="myBtn">Log In</button>
+
+        <div id="myModal" class="modal1">
+            <div class="modal-content1">
+                <span class="close">&times;</span>
+                <div class="container">
+                    <div class="preOr">
+
+                        <div class="text1">
+                            <h1 class="top">Log In</h1>
+                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Quod eum veritatis consectetur tempora sed
+                                harum, magni sequi vero. Quas praesentium</p>
+                        </div>
+                        <div class="continueWith">
+                            <button class="buttons"><svg version="1.1" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 48 48" class="LgbsSe-Bz112c">
+                                    <g>
+                                        <path fill="#EA4335"
+                                            d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z">
+                                        </path>
+                                        <path fill="#4285F4"
+                                            d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z">
+                                        </path>
+                                        <path fill="#FBBC05"
+                                            d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z">
+                                        </path>
+                                        <path fill="#34A853"
+                                            d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z">
+                                        </path>
+                                        <path fill="none" d="M0 0h48v48H0z"></path>
+                                    </g>
+                                </svg>Continue with Google</button>
+                            <button class="buttons"><svg xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 384 512"><!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                                    <path
+                                        d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+                                </svg>Continue with Apple</button>
+                        </div>
+                    </div>
+
+                    <div class="or">
+                        <h3><span>OR</span></h3>
+                    </div>
+
+                    <div class="postOr">
+                        <input class="inputs" type="text" placeholder="Username">
+                        <input class="inputs" type="password" placeholder="Password">
+                        <h6>Forgot your <a href="#">username</a> or <a href="#">password?</a></h6>
+                        <button class="loginbutton">Log In</button>
+                        <h6>New to Reddit? <a href="">Sign Up!</a></h6>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="dropdown2">
+            <button class="dropbtn"><i class="fa-regular fa-user"></i> <i
+                    class="fa-solid fa-chevron-down"></i></button>
+            <div class="dropdown-content1">
+                <a href="#"><i class="fa-solid fa-circle-question"></i> Help Center</a>
+                <a href="#"><i class="fa-solid fa-circle-info"></i> More</a>
+                <a href="#"><i class="fa-regular fa-newspaper"></i>Terms and Policies</a>
+                <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>
+                <div class="form-check form-switch ms-2">
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
+                  <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                </div>
+                <hr>
+                <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
+            </div>
+        </div>
+
+
+
+
+    </nav>
+
+  </header>
+  <main class="row row-detay" style="margin-top: 5rem;">
+    <nav class="col-3 hepsi1">
+      <div class="hepsi">
+        <div class="row">
+          <div class="">
+            <div class="fixed">
+              <div class="navbar">
+                <ul class="list-unstyled">
+                  <li class="navbarBaslik mt-3">FEEDS</li>
+                  <li>
+                    <a href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="bi bi-star"></i> Popular</a>
+                  </li>
+                  <li class="navbarBaslik mt-4 ">TOPICS</li>
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#"><i class="bi bi-controller"></i> Gaming <i class="bi bi-chevron-compact-down"></i>
+                        </a>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Valheim</a></li>
+                        <li><a class="dropdown-item" href="#">Genshin Impact</a></li>
+                        <li><a class="dropdown-item" href="#">Minecraft</a></li>
+                        <li><a class="dropdown-item" href="#">Pokimane</a></li>
+                        <li><a class="dropdown-item" href="#">Halo Infinite</a></li>
+                        <li><a class="dropdown-item" href="#">Call of Duty: Warzone</a></li>
+                        <li><a class="dropdown-item" href="#">Path of Exile</a></li>
+                        <li><a class="dropdown-item" href="#">Hollow Knight: Silksong</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Escape from Tarkov</a></li>
+                        <li><a class="dropdown-item" href="#">Watch Dogs: Legion</a></li>
+
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown ">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#"><i class="bi bi-box"></i> Sports <i class="bi bi-chevron-compact-down"></i> </a>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">NFL</a></li>
+                        <li><a class="dropdown-item" href="#">NBA</a></li>
+                        <li><a class="dropdown-item" href="#">Megan Anderson</a></li>
+                        <li><a class="dropdown-item" href="#">Atlanta Hawks</a></li>
+                        <li><a class="dropdown-item" href="#">Los Angeles Lakers</a></li>
+                        <li><a class="dropdown-item" href="#">Boston Celtics</a></li>
+                        <li><a class="dropdown-item" href="#">Arsenal F.C.</a></li>
+                        <li><a class="dropdown-item" href="#">Philadelphia 76ers</a></li>
+                        <li><a class="dropdown-item" href="#">Premier League</a></li>
+                        <li><a class="dropdown-item" href="#">UFC</a></li>
+
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#"><i class="bi bi-briefcase"></i> Business, Economics a...
+                          <i class="bi bi-chevron-compact-down"></i></a>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">GameStop</a></li>
+                        <li><a class="dropdown-item" href="#">Moderna</a></li>
+                        <li><a class="dropdown-item" href="#">Pfizer</a></li>
+                        <li><a class="dropdown-item" href="#">Johnson & Johnson</a></li>
+                        <li><a class="dropdown-item" href="#">AstraZeneca</a></li>
+                        <li><a class="dropdown-item" href="#">Walgreens</a></li>
+                        <li><a class="dropdown-item" href="#">Best Buy</a></li>
+                        <li><a class="dropdown-item" href="#">Novavax</a></li>
+                        <li><a class="dropdown-item" href="#">SpaceX</a></li>
+                        <li><a class="dropdown-item" href="#">Tesla</a></li>
+
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#"><i class="bi bi-currency-bitcoin"></i> Crypto <i
+                            class="bi bi-chevron-compact-down"></i> </a>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Cardano</a></li>
+                        <li><a class="dropdown-item" href="#">Dogecoin</a></li>
+                        <li><a class="dropdown-item" href="#">Algorand</a></li>
+                        <li><a class="dropdown-item" href="#">Bitcoin</a></li>
+                        <li><a class="dropdown-item" href="#">Litecoin</a></li>
+                        <li><a class="dropdown-item" href="#">Basic Attention Token</a></li>
+                        <li><a class="dropdown-item" href="#">Bitcoin Cash</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#"><i class="bi bi-tv"></i> Television <i class="bi bi-chevron-compact-down"></i> </a>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">The Real Housewives of
+                            Atla...</a></li>
+                        <li><a class="dropdown-item" href="#">The Bachelor</a></li>
+                        <li><a class="dropdown-item" href="#">Sister Wives</a></li>
+                        <li><a class="dropdown-item" href="#">90 Day Fiance</a></li>
+                        <li><a class="dropdown-item" href="#">Wife Swap</a></li>
+                        <li><a class="dropdown-item" href="#">The Amazing Race Australia</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Married at First Sight</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">The Real Housewives of
+                            Dall...</a></li>
+                        <li><a class="dropdown-item" href="#">My 600-lb Life</a></li>
+                        <li><a class="dropdown-item" href="#">Last Week Tonight with
+                            John...</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#"><i class="bi bi-star"></i> Celebrity <i class="bi bi-chevron-compact-down"></i></a>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Kim Kardashian</a></li>
+                        <li><a class="dropdown-item" href="#">Doja Cat</a></li>
+                        <li><a class="dropdown-item" href="#">Iggy Azalea</a></li>
+                        <li><a class="dropdown-item" href="#">Jamie Lee Curtis</a></li>
+                        <li><a class="dropdown-item" href="#">Natalie Portman</a></li>
+                        <li><a class="dropdown-item" href="#">Henry Cavill</a></li>
+                        <li><a class="dropdown-item" href="#">Millie Bobby Brown</a></li>
+                        <li><a class="dropdown-item" href="#">Tom Hiddleston</a></li>
+                        <li><a class="dropdown-item" href="#">Keanu Reeves
+
+                          </a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="dropdown">
+                      <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a href="#"><i class=" bi bi-three-dots"></i> More <i
+                            class="bi bi-chevron-compact-down"></i></a>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Animals and Pets</a></li>
+                        <li><a class="dropdown-item" href="#">Anime</a></li>
+                        <li><a class="dropdown-item" href="#">Art</a></li>
+                        <li><a class="dropdown-item" href="#">Cars and Motor Vehicles</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#">Crafts and DIY</a></li>
+                        <li><a class="dropdown-item" href="#">Culture, Race, and
+                            Ethnicity</a></li>
+                        <li><a class="dropdown-item" href="#">Ethics and Philosophy</a></li>
+                        <li><a class="dropdown-item" href="#">Fashion</a></li>
+                        <li><a class="dropdown-item" href="#">Food and Drink</a></li>
+                        <li><a class="dropdown-item" href="#">History</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <hr class="navbarHr">
+              <div class="navbar_alt mb-5">
+                <p class="navbar_alt_p">Create an account to follow <br> your favorite communities
+                  <br> and
+                  start taking part in <br> conversations.
+                </p>
+                <div class="navbar_alt_button">
+                  <!-- Button trigger modal -->
+                  <button type="button" class="btn btn-kirmizi" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Join Reddit
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:50px ;" class="modal fade" id="exampleModal" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+              <p class="mt-2"><b>Sign Up</b></p>
+              <small class="mt-2">By continuing, you are setting up a Reddit account and agree to our
+                <a href="#">User Agreement</a> and<a href="#">Privacy Policy</a>.</small>
+              <div class="form-check mt-3 ">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                <label class="form-check-label" for="flexCheckDefault">
+                  <small>I agree to get emails about cool stuff on Reddit</small>
+                </label>
+              </div>
+
+              <div class="navbar_alt_button_button1 mt-5">
+                <button type="button" class="btn navbar_alt_button_button2"><i class="bi bi-google"></i>
+                  Google ile devam edin</button>
+              </div>
+
+              <div class="navbar_alt_button_button1 mt-3">
+                <button type="button " class="btn navbar_alt_button_button2"><i class="bi bi-apple"></i>
+                  Continue with Apple</button>
+              </div>
+              <div class="mt-3"
+                style="display: flex; align-items: center; width: 350px; height: 50px; text-align: center; ">
+                <div style="flex-grow: 1; border-top: 1px solid rgb(207, 205, 205);"></div>
+                <span style="padding: 0 10px; color: rgb(165, 164, 164);">OR</span>
+                <div style="flex-grow: 1; border-top: 1px solid rgb(207, 205, 205);"></div>
+              </div>
+              <div class="col">
+                <input type="text" class="form-control navbar_alt_formcontrol mt-3" placeholder="Email" aria-label="">
+              </div>
+              <button type="button" class="btn btn-kirmizi2" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Continue
+              </button>
+              <small class="mt-2">Already a redditor? <a href="#">Log In</a></small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container row col-12 col-md-9 ">
+      <div class="row">
+        <div class="col-md-8 md-12">
+          <div class="row">
+            <div class="col">
+              <div class="card rounded-4">
+                <div class="card-body ">
+                  <div class="card-title d-flex">
+                    <div class="right  d-flex ">
+
+                      <img src="img/smile-profil.png" width="35" alt="">
+
+
+
+
+                      <div class="hesap">
+                        <a href="" class="text-decoration-none ">
+                          <h6>r/AskReddit</h6>
+                        </a> <!-- POP UP !!!!!!!!!!!!! -->
+                        <div class="pop-up" style=" width: 17rem;">
+                          <div class="container">
+                            <div class="row">
+                              <img src="img/smile-profil.png" style="width: 50px!important; " alt="">
+                              <a href="" class="text-decoration-none w-50 p-0">
+                                <h6 class="">r/AskReddit</h6>
+                              </a>
+                            </div>
+                            <div class="row">
+                              <div class="cizgi d-flex">
+                                <div class="col-6">
+                                  <h6>40.7 m </h6>
+                                  <p>Members</p>
+                                </div>
+                                <hr class="dikcizgi">
+                                <div class="col-6 ms-3">
+                                  <h6>71.4 k</h6>
+                                  <p>Online</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <p>r/AskReddit is the place to ask and answer thought-provoking
+                                questions</p>
+                            </div>
+                            <button class="rounded-5 w-100">View Community</button>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
+
+                      <small class="text-secondary">Posted by</small>
+                      <div class="hesap">
+                        <a href="" class="text-decoration-none ">kubra</a>
+                        <div class="pop-up" style="height: 17rem; width: 17rem;">
+                          <div class="container">
+                            <div class="row">
+                              <img src="smile-profil.png" style="width: 50px!important; " alt="">
+                              <a href="" class="text-decoration-none ">
+                                <h6>r/AskReddit</h6>
+                              </a>
+                            </div>
+                            <div class="row">
+                              <div class="cizgi d-flex">
+                                <div class="col-6">
+                                  <h6>40.7 m </h6>
+                                  <p>Members</p>
+                                </div>
+                                <hr class="dikcizgi">
+                                <div class="col-6 ms-3">
+                                  <h6>71.4 k</h6>
+                                  <p>Online</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <p>r/AskReddit is the place to ask and answer thought-provoking
+                                questions</p>
+                            </div>
+                            <button class="rounded-5 w-100">View Community</button>
+                          </div>
+                        </div>
+
+                      </div>
+
+
+
+
+                      
+                      <small class="text-secondary d-inline-flex time">{time}</small>
+                    </div>
+                    <div class="left d-flex">
+                      <button class="join text-black">Join</button>
+                    </div>
+                  </div>
+                  <p class="card-text mt-2">Ortam nasıl olmuş ? şekil dimi</p>
+                  <div class="post-img">
+                    <img src="img/bigi.webp 09-17-57-264.webp" alt="">
+                  </div>
+
+
+                  <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
+                    <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
+                      Comments</button>
+
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-arrow-90deg-right"> Share</i>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
+                              Link</i></a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
+                              Embed</i></a></li>
+                      </ul>
+                    </div>
+                    <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
+                        Save</i></button>
+
+                    <div class="btn-group" role="group">
+                      <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        ...
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
+                              Hide</i></a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
+                              Mute
+                              r/ArsivUnutmaz</i></a>
+                        </li>
+                      </ul>
+                    </div>
+                    <button type="button" class="btn" style=" border: none "> <i class="fa-solid fa-heart"></i></button>
+                    <p>1.2k</p>
+                    <button type=" button" class="btn" style=" border: none"> <i
+                        class="fa-solid fa-heart-crack"></i></button>
+                  </div>
+                </div>
+              </div>
+              <section class=" write-comment ms-2">
+                <div class="container">
+                  <div class="row">
+                    <div class="top d-flex" style="font-size: small;">
+                      <p>Comment as </p>
+                      <a href="" class="ms-2">kubra</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <input type="text" class="form-control kufirstyorum" placeholder="What are your thoughts"
+                      aria-label="Recipient's username" aria-describedby="basic-addon2">
+                  </div>
+                  <div class="row">
+                    <div class="duzenleme d-flex mt-0 " style="width: 640px;">
+                      <div class="duzenleme-right d-flex">
+                        <button type="button" class="btn d-buton " data-bs-toggle="modal"
+                          data-bs-target="#staticBackdrop">
+                          <i class="bi bi-emoji-heart-eyes-fill"></i>
+                        </button>
+                        <div class="emoji modal fade modal-dialog modal-dialog-scrollable" id="staticBackdrop"
+                          data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h6 class="modal-title" id="staticBackdropLabel" style="font-size: smaller;">
+                                  R/TURKEY EMOJIS</h6>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                  aria-label="Close"></button>
+                              </div>
+                              <div class="modal-body">
+                                <button class="bi-emoji-angry"></button>
+                                <button class="bi-emoji-heart-eyes"></button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <button type="button" class="btn  d-buton" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                          data-bs-title="Add an image">
+                          <i class="bi bi-image"></i>
+                        </button>
+                        <button type="button" class="btn d-buton" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                          data-bs-title="Bold">
+                          <i class="bi bi-type-bold"></i>
+                        </button>
+                        <button type="button" class="btn d-buton" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                          data-bs-title="Italics">
+                          <i class="bi bi-type-italic"></i>
+                        </button>
+                        <div class="dropdown">
+                          <button class="btn d-buton dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            ...
+                          </button>
+                          <ul class="dropdown-menu">
+                            <li style="float: left;"><button type="button" class="btn" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" data-bs-title="link">
+                                <i class="bi bi-link-45deg"></i>
+                              </button>
+                            </li>
+                            <li style="float: left;"><button class="dropdown-item" type="button"><i
+                                  class="bi bi-list-ul"></i></button></li>
+                            <li style="float: left;"><button class="dropdown-item" type="button"><i
+                                  class="bi bi-list-ol"></i></button></li>
+                            <li style="float: left;"><button class="dropdown-item" type="button"><i
+                                  class="bi bi-align-top"></i></button></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="duzenleme-left">
+                        <button class="btn btn-secondary rounded-4 ">Comment</button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex mt-3">
+                    <div class="dropdown">
+                      <a class="btn  dropdown-toggle border-primary" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Sort:By
+                      </a>
+
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Best</a></li>
+                        <li><a class="dropdown-item" href="#">Top</a></li>
+                        <li><a class="dropdown-item" href="#">New</a></li>
+                        <li><a class="dropdown-item" href="#">Controversial</a></li>
+                        <li><a class="dropdown-item" href="#">Old</a></li>
+                        <li><a class="dropdown-item" href="#">Q&A</a></li>
+                      </ul>
+                    </div>
+                    <div class="arama  rounded-2 d-flex ms-3" style="border: solid gray 1px; width: 200px!important;">
+                      <i class="fa-solid fa-magnifying-glass mt-2" style="color:#bbbbbb;"></i>
+                      <input class="search" type="text" placeholder="Search Reddit">
+                    </div>
+                  </div>
+
+                </div>
+              </section>
+              <hr>
+
+              <section class="comments">
+                <div class="container">
+                  <div class="row">
+                    <div class="d-flex">
+                      <img src="smile-profil.png" style="width: 40px! important; " alt="">
+                      <a href="" class="text-decoration-none hesap ms-2">
+                        <h6>r/AskReddit</h6>
+                      </a>
+                      <p class="text-secondary ms-2">time</p>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <p>yorum</p>
+                    <img src="" alt="">
+                  </div>
+                  <div class="row">
+                    <div class="d-flex">
+                      <button type="button" class="btn style=" border: none; "><i class=" bi bi-caret-up "></i></button>
+                       <b>Vote</b>
+                       <button type=" button" class="btn style=" border: none; "><i class=" bi bi-caret-down "></i></button>
+                       <button type=" button" class="btn buttons" onclick="yorum()"><i
+                          class="bi bi-chat-square"></i>Reply</button>
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          <i class="bi bi-arrow-90deg-right"> Share</i>
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy Link</i></a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill"> Embed</i></a></li>
+                        </ul>
+                      </div>
+                      <div class="btn-group" role="group">
+                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                          aria-expanded="false">
+                          ...
+                        </button>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-gift"> Give Award</i></a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-bookmark"> Save</i></a></li>
+                          <li><a class="dropdown-item" href="#"><i class="bi bi-bell"> Follow</i></a></li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <!-- COMMENTTTTTTTTTTTTTTTTTTTTTTTTTTTT -->
+                    <section class="write-comments ms-2 mt-3">
+                      <div class="container">
+                        <div class="row">
+                          <input type="text" style="height: 150px; width: 40rem;" class="form-control kualtyorum"
+                            placeholder="What are your thoughts" aria-label="Recipient's username"
+                            aria-describedby="basic-addon2">
+                        </div>
+                        <div class="row">
+                          <div class="duzenleme d-flex mt-0" style="width: 640px;">
+                            <div class="duzenleme-right d-flex">
+                              <button type="button" class="btn d-buton " data-bs-toggle="modal"
+                                data-bs-target="#staticBackdrop">
+                                <i class="bi bi-emoji-heart-eyes-fill"></i>
+                              </button>
+                              <div class="emoji modal fade modal-dialog modal-dialog-scrollable" id="staticBackdrop"
+                                data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+                                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h6 class="modal-title" id="staticBackdropLabel" style="font-size: smaller;">
+                                        R/TURKEY EMOJIS
+                                      </h6>
+                                      <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                      <button class="bi-emoji-angry"></button>
+                                      <button class="bi-emoji-heart-eyes"></button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <button type="button" class="btn  d-buton" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" data-bs-title="Add an image">
+                                <i class="bi bi-image"></i>
+                              </button>
+                              <button type="button" class="btn d-buton" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" data-bs-title="Bold">
+                                <i class="bi bi-type-bold"></i>
+                              </button>
+                              <button type="button" class="btn d-buton" data-bs-toggle="tooltip"
+                                data-bs-placement="bottom" data-bs-title="Italics">
+                                <i class="bi bi-type-italic"></i>
+                              </button>
+                              <div class="dropdown">
+                                <button class="btn d-buton dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                  aria-expanded="false">
+                                  ...
+                                </button>
+                                <ul class="dropdown-menu">
+                                  <li style="float: left;"><button type="button" class="btn" data-bs-toggle="tooltip"
+                                      data-bs-placement="bottom" data-bs-title="link">
+                                      <i class="bi bi-link-45deg"></i>
+                                    </button>
+                                  </li>
+                                  <li style="float: left;"><button class="dropdown-item" type="button"><i
+                                        class="bi bi-list-ul"></i></button></li>
+                                  <li style="float: left;"><button class="dropdown-item" type="button"><i
+                                        class="bi bi-list-ol"></i></button></li>
+                                  <li style="float: left;"><button class="dropdown-item" type="button"><i
+                                        class="bi bi-align-top"></i></button></li>
+                                </ul>
+                              </div>
+                              <div class="duzenleme-left">
+                                <button class="btn btn-secondary rounded-4 ">Comment</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                    </section>
+                    <!-- COMMENTTTTTTTTTTTTTTTTTTTTTT -->
+
+
+                  </div>
+
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 md-12">
+          <div class="card">
+            <img src="kapak.webp" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title ">
+                <img src="smile-profil.png" alt="">
+                <a href="">r/Turkey</a>
+              </h5>
+              <p class="card-text">This subreddit is for news and discussion about Turkey. Posts both in English and
+                Turkish are welcome. Bu subreddit Türkiye ile ilgili haber ve sohbet ortamıdır. Türkçe veya İngilizce
+                yazabilirsiniz.</p>
+              <p><i class="bi bi-calendar text-secondary">Time</i></p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <div class="row">
+                  <div class="cizgi d-flex">
+                    <div class="col-6">
+                      <h6>40.7 m </h6>
+                      <p>Members</p>
+                    </div>
+                    <div class="col-6 ms-3">
+                      <h6>71.4 k</h6>
+                      <p>Online</p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="list-group-item">
+                <button type="button" class="btn btn-primary w-100 rounded-4">Join</button>
+              </li>
+              <li class="list-group-item">
+                <div class="dropdown">
+                  <button class="btn btn-light dropdown-toggle text-primary rounded-4" ; type="button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Community options
+                  </button>
+                  <ul class="dropdown-menu kucommunity" style="width:15rem;">
+                    <li style="float: left;">
+                      <p class="dropdown-item"><i class="bi bi-eye"> Community theme</i></p>
+                    </li>
+                    <li style="float: left;">
+                      <div class="form-check form-switch" style="float: left;">
+                        <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked"
+                          checked>
+                        <label class="form-check-label" for="flexSwitchCheckChecked"></label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+
+          <div class=" kuyankisim  accordion mt-5" id="accordionExample">
+            <div class="accordion-item">
+              <div class="header-top m-3">
+                <b>r/Turkey Rules</b>
+              </div>
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne">
+                  Accordion Item #1
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse
+                  plugin adds the appropriate classes that we use to style each element. These classes control the
+                  overall
+                  appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with
+                  custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go
+                  within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class=" kuyankisim card mt-5" style="width: 18rem;">
+            <div class="card-body">
+              <b>Rule Violation Protocol</b>
+              <p>
+              <ol>
+                <li>One Warning</li>
+                <li>After the warning, increasing ban lengths from 1, 7, and 30 days after each infraction</li>
+                <li>Permanent ban after repetitive refusal to adjust behavior</li>
+              </ol>
+              <ul>
+                <li>Mods will exercise discretion in modifying this general guideline as necessary</li>
+              </ul>
+              </p>
+            </div>
+          </div>
+
+          <div class=" kuyankisim card" style="width: 18rem;">
+            <div class="card-header">
+              Bağlantılarımız
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item ">
+                <button type="button" class="btn btn-outline-primary mt-2 rounded-4 w-100">r/Turkey Wiki</button>
+                <button type="button" class="btn btn-outline-secondary mt-3 rounded-4 w-100">Partnered Discord</button>
+                <button type="button" class="btn btn-outline-success mt-3 rounded-4 w-100">Details of the Rules</button>
+                <button type="button" class="btn btn-outline-danger mt-3 rounded-4 w-100">Moderatör Alımları</button>
+                <button type="button" class="btn btn-outline-warning mt-3 rounded-4 w-100">Doğruluk Kontrolü</button>
+                <button type="button" class="btn btn-outline-info mt-3 rounded-4 w-100">Gizlilik</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class=" kuyankisim card mt-5">
+            <div class="card-header">
+              <b>Moderators</b>
+            </div>
+            <div class="card-body">
+              <blockquote class="blockquote mb-0">
+                <button type="button" class="btn btn-outline-primary w-100 rounded-5"><i class="bi bi-envelope">Message
+                    the mods</i></button>
+                <div class="moderatorler mt-3">
+                  <div class="row">
+                    <a href="" style="font-size: smaller;">u/NotVladeDivac</a>
+                  </div>
+                  <a href="" class="text-decoration-none" style="font-size: x-small; margin-left: 6rem;">VIEW ALL
+                    MODERATORS</a>
+                </div>
+              </blockquote>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <a href="#nav" id="ica"><i id="ic" class="fas fa-arrow-alt-circle-up"></i></a>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>

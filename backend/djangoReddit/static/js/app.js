@@ -6,28 +6,15 @@ let navbarAlt=document.querySelector(".navbar_alt")
 
 // Get the button that opens the modal
 
-navbarDropdown.addEventListener("click",function name() {
-  if (hepsi1.className=="col-3 hepsi1") {
-    hepsi1.classList.add("block");
-    hepsi1.style.transition = " 2s";
-    hepsi1.style.display="block"
-   }else{
-       hepsi1.classList.remove("block")
-       hepsi1.style.display="none"
-      
-   }
-   navbarAlt.style.display="none"
-})
 
-var btn = document.getElementById("myBtn");
+
+
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {

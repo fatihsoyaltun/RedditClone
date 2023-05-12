@@ -6,3 +6,13 @@ def index(request):
 
 def begeni(request):
     return render(request, 'begenilerim.html')
+
+def detail(request):
+    return render(request, 'detail.html')
+
+def icerik(request):
+    return render(request, 'icerik.html')
+
+def post(request):
+    return render(request, 'post.html')
+

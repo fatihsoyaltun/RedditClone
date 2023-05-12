@@ -783,7 +783,7 @@ detay sayfası
 
 .profil-navbar{
   margin-top: 5rem;
-  margin-left: 10rem;
+ 
   margin-right: 3rem;
   
 }
@@ -837,7 +837,9 @@ detay sayfası
 .last-cocuk-list{
   display: flex;
   flex-direction: column;
-  position: relative;
+  position: relative; 
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .last-cocuk-list a{
@@ -846,6 +848,9 @@ detay sayfası
 
 .last-cocuk-list a:hover{
   color: #007bff ;
+}
+.last-cocuk-list11:hover  .last-cocuk-list{
+  background-color: white;
 }
 
 .last-cocuk-list1,.last-cocuk-list2,.last-cocuk-list3,.last-cocuk-list4,.last-cocuk-list5,.last-cocuk-list6,.last-cocuk-list7,.last-cocuk-list8,.last-cocuk-list9,.last-cocuk-list10{

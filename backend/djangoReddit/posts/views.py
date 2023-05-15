@@ -1,4 +1,8 @@
-
+from django.shortcuts import render , redirect
+from django.contrib import messages
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate , login , logout
+from user.forms import *
 from django.shortcuts import render
 from .models import *
 
@@ -10,11 +14,6 @@ def index(request):
     }
     return render(request, 'index.html',context)
 
-from django.shortcuts import render , redirect
-from django.contrib import messages
-from django.contrib.auth.models import User
-from django.contrib.auth import authenticate , login , logout
-from user.forms import *
 
 # Create your views here.
 def index(request):

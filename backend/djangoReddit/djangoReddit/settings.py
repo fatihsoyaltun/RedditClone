@@ -32,6 +32,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'ckeditor',
     'posts',
     'user',
     'django.contrib.admin',
@@ -122,6 +123,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS =[
+    os.path.join('ckeditor/static/ckeditor'),
     BASE_DIR / 'static'
 ]
 

@@ -1,3 +1,15 @@
+
+from django.shortcuts import render
+from .models import *
+
+# Create your views here.
+def index(request):
+    posts=Post.objects.all()
+    context={
+        'posts':posts
+    }
+    return render(request, 'index.html',context)
+
 from django.shortcuts import render , redirect
 from django.contrib import messages
 from django.contrib.auth.models import User
@@ -36,6 +48,7 @@ def index(request):
         'password2': password2,
     }
     return render(request, 'index.html' , context)
+
 
 def begeni(request):
     return render(request, 'begenilerim.html')

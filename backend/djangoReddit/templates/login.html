@@ -1,0 +1,31 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %}
+ <title>GirisYap</title>
+{% endblock title %}
+
+
+
+{% block content %}
+
+<div class="container" style="margin-top: 100px;">
+    <div class="card w-50 p-5" style="margin-left: 250px;">
+      <div class="container  ">
+    <div class="btn-group btn-secondary  w-100">
+        <h3>Giriş Yap</h3>
+      </div>
+      <form action="" method="POST" >
+        {% csrf_token %}
+        <label for="">Kullanıcı Adı</label>
+        <input type="text" name="username" class="form-control" id="">
+        <label for="">Sifre</label>
+        <input type="password" name="password" id="" class="form-control">
+        <input type="submit" value="Giris Yap" class="btn btn-warning mt-4 w-100">
+      </form>
+</div>
+
+{% endblock content %}
+
+
+

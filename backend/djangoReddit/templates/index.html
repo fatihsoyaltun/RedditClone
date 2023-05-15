@@ -32,13 +32,21 @@
                 <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
                 <input class="search" type="text" placeholder="Search Reddit">
             </div>
+            {% if user.is_authenticated %}
+            <button><i class="bi bi-arrow-up-right-circle"></i></button>
+            <button><i class="bi bi-chat-dots"></i></button>
+            <button><i class="bi bi-bell"></i></button>
+            <button><i class="bi bi-plus-lg"></i></button>
+            {% else %}
+            <button id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
+            {% endif %}
+           
             <ul class="right mt-3 me-5 ">
                 <li><a class="sol" href="#" style="border: hidden;"> <i class="fa-solid fa-qrcode"
                             style=" margin-right: 3px;"></i>Get App</a></li>
             </ul>
-            <button id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
-
-
+            
+            {% if user.is_authenticated %}
             <div class="dropdown2">
                 <button class="dropbtn"><i class="fa-regular fa-user"></i> <i
                         class="fa-solid fa-chevron-down"></i></button>
@@ -55,6 +63,10 @@
                     <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
                 </div>
             </div>
+            {% else %}
+            {% endif %}
+
+            
 
 
 
@@ -66,7 +78,7 @@
 
     {% if messages %}
     {% for mesaj in messages  %}
-      <div class="alert alert-{{mesaj.tags}} text-center">
+      <div class="alert alert-{{mesaj.tags}} text-center mt-5" style="margin-left:19rem ">
         {{mesaj}}
       </div>
     {% endfor %}

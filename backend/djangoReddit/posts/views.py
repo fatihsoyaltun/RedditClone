@@ -7,16 +7,13 @@ from django.shortcuts import render
 from .models import *
 
 # Create your views here.
-def index(request):
-    posts=Post.objects.all()
-    context={
-        'posts':posts
-    }
-    return render(request, 'index.html',context)
+   
 
 
 # Create your views here.
 def index(request):
+    posts=Post.objects.all()
+    
     username = ''
     email = ''
     password1 = ''
@@ -45,6 +42,7 @@ def index(request):
         'email': email,
         'password1': password1,
         'password2': password2,
+        'posts':posts
     }
     return render(request, 'index.html' , context)
 

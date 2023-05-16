@@ -47,22 +47,57 @@
             
             {% if user.is_authenticated %}
             <div class="dropdown2">
+                <button class="kudropbtn d-flex">
+                    <div class="kugirislihesap d-flex" style="font-size: smaller;">
+                        <div class="kusaggi">
+                            <img src="" alt="">
+                        </div>
+                        <div class="kusolgi">
+                            <b>kubra</b>
+                            <p><i class="fa-regular fa-star text-secondary"> 1 karma</i></p>
+                        </div>
+                    </div>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </button>
+                <div class="dropdown-content1">
+                    <a href="#"><i class="fa-solid fa-circle-question"></i> Help Center</a>
+                    <a href="#"><i class="fa-solid fa-circle-info"></i> More</a>
+                    <a href="#"><i class="fa-regular fa-newspaper"></i>Terms and Policies</a>
+                    <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>    
+                    <div class="form-check form-switch ms-2">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
+                        <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                      </div>
+                    <hr>
+                    {% if user.is_authenticated  %}
+                    <a href="/logout/"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log Out</a>
+                    {% else %}
+                    <a href="/login/"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
+                    {% endif %}
+                    
+                </div>
+            </div>
+            {% else %}
+            <div class="dropdown2">
                 <button class="dropbtn"><i class="fa-regular fa-user"></i> <i
                         class="fa-solid fa-chevron-down"></i></button>
                 <div class="dropdown-content1">
                     <a href="#"><i class="fa-solid fa-circle-question"></i> Help Center</a>
                     <a href="#"><i class="fa-solid fa-circle-info"></i> More</a>
                     <a href="#"><i class="fa-regular fa-newspaper"></i>Terms and Policies</a>
-                    <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>
+                    <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>    
                     <div class="form-check form-switch ms-2">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
                         <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                      </div>
+                    </div>
                     <hr>
-                    <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
+                    {% if user.is_authenticated  %}
+                    <a href="/logout/"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log Out</a>
+                    {% else %}
+                    <a href="/login/"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
+                    {% endif %}
                 </div>
             </div>
-            {% else %}
             {% endif %}
 
             
@@ -376,7 +411,7 @@
                                 <input type="password" name="password1" class="form-control mt-2 rounded-5" id="" placeholder="Sifre Giriniz">    
                                 <input type="password" name="password2" class="form-control mt-2 rounded-5" id="" placeholder="Sifrenizi Tekrar Giriniz">    
                             </div>
-                            <button type="button" class="btn btn-kirmizi2" data-bs-toggle="modal"
+                            <button type="submit" class="btn btn-kirmizi2" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">
                                 Continue
                             </button>

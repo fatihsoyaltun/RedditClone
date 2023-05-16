@@ -8,4 +8,5 @@ urlpatterns =[
     path('profilayarlar/', profilayarlar, name='profilayarlar'),
     path('genelayarlar/', genelayarlar, name='genelayarlar'),
     path('login/', giris , name='login'),
+    path('logout/', cikis , name='logout'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

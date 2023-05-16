@@ -9,4 +9,6 @@ urlpatterns =[
     path('begeni/', begeni, name='begeni'),
     path('detail/<int:id>', detail, name='detail'),
     path('post/', post, name='post'),
+    path('icerik/', icerik, name='icerik'),
+
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

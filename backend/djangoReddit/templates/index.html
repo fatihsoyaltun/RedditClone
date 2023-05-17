@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block title %}
-     <title>ANA SAYFA</title>
+    <title>ANA SAYFA</title>
     {% endblock title %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
@@ -21,31 +21,76 @@
 
     <header id="nav">
         <nav class="nav navUst">
-            <a href="#" class="logo">
+            <a href="/" class="logo">
                 <!-- HTML kodu -->
                 <img src="/static/img/Reddit-Logo.png" alt="Desktop Logo">
-                <img src="/static/img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo" style="height: auto; width: 60px;">
+                <img src="/static/img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo"
+                    style="height: auto; width: 60px;">
             </a>
-            <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
-            <div class="arama">
-                <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
-                <input class="search" type="text" placeholder="Search Reddit">
+            <div class="nav-orta">
+                <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
+                {% if user.is_authenticated %}
+                <div class="arama ">
+                    <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
+                    <input class="search" type="text">
+                </div>
+                {% else %}
+                <div class="arama">
+                    <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
+                    <input class="search" type="text" placeholder="Search Reddit">
+                </div>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                <div>
+                    <a href="" class="border-0 ms-4 "><i class="bi bi-arrow-up-right-circle"></i></a>
+                    <a href="" class="border-0 ms-4"><i class="bi bi-chat-dots"></i></a>
+                    <a href="" class="border-0 ms-4"><i class="bi bi-bell"></i></a>
+                    <a href="/post/" class="border-0 ms-4"><i class="bi bi-plus-lg"></i></a>
+                </div>
+                {% else %}
+                <button id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
+                {% endif %}
+
+                <ul class="right mt-3 s-15 ">
+                    <li><a class="sol" href="#" style="border: hidden;"> <i class="fa-solid fa-qrcode"
+                                style=" margin-right: 3px;"></i>Get App</a></li>
+                </ul>
             </div>
             {% if user.is_authenticated %}
-            <button><i class="bi bi-arrow-up-right-circle"></i></button>
-            <button><i class="bi bi-chat-dots"></i></button>
-            <button><i class="bi bi-bell"></i></button>
-            <button><i class="bi bi-plus-lg"></i></button>
+            <div class="dropdown2">
+                <button class="kudropbtn  d-flex border-0" style="background:none;">
+                    <div class="kugirislihesap d-flex" style="font-size: smaller;">
+                        <div class="kusaggi">
+                            <img style="height: 40px; width:40px" class="rounded-5"
+                                src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" alt="">
+                        </div>
+                        <div class="kusolgi ms-3 mt-2">
+                            <b>kubra</b>
+                        </div>
+                    </div>
+                    <i class="bi bi-chevron-compact-down ms-2 mt-2"></i>
+                </button>
+                <div class="dropdown-content1">
+                    <a href="#"><i class="fa-solid fa-circle-question"></i> Help Center</a>
+                    <a href="#"><i class="fa-solid fa-circle-info"></i> More</a>
+                    <a href="#"><i class="fa-regular fa-newspaper"></i>Terms and Policies</a>
+                    <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>
+                    <div class="form-check form-switch ms-2">
+                        <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
+                        <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch"
+                            id="flexSwitchCheckChecked" checked>
+                    </div>
+                    <hr>
+                    {% if user.is_authenticated %}
+                    <a href="/logout/"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log Out</a>
+                    {% else %}
+                    <a href="/login/"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
+                    {% endif %}
+
+                </div>
+            </div>
             {% else %}
-            <button id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
-            {% endif %}
-           
-            <ul class="right mt-3 me-5 ">
-                <li><a class="sol" href="#" style="border: hidden;"> <i class="fa-solid fa-qrcode"
-                            style=" margin-right: 3px;"></i>Get App</a></li>
-            </ul>
-            
-            {% if user.is_authenticated %}
             <div class="dropdown2">
                 <button class="dropbtn"><i class="fa-regular fa-user"></i> <i
                         class="fa-solid fa-chevron-down"></i></button>
@@ -56,16 +101,20 @@
                     <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>
                     <div class="form-check form-switch ms-2">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
-                        <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
-                      </div>
+                        <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch"
+                            id="flexSwitchCheckChecked" checked>
+                    </div>
                     <hr>
-                    <a href="#"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
+                    {% if user.is_authenticated %}
+                    <a href="/logout/"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log Out</a>
+                    {% else %}
+                    <a href="/login/"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In / Sign Up</a>
+                    {% endif %}
                 </div>
             </div>
-            {% else %}
             {% endif %}
 
-            
+
 
 
 
@@ -76,16 +125,16 @@
 
 
     {% if messages %}
-    {% for mesaj in messages  %}
-      <div class="alert alert-{{mesaj.tags}} text-center mt-5" style="margin-left:19rem ">
+    {% for mesaj in messages %}
+    <div class="alert alert-{{mesaj.tags}} text-center mt-5" style="margin-left:19rem ">
         {{mesaj}}
-      </div>
+    </div>
     {% endfor %}
     {% else %}
     {% endif %}
 
-   
-    
+
+
 
 
     {% block content %}
@@ -369,18 +418,21 @@
                             </div>
                             <form action="" method="POST">
                                 {% csrf_token %}
-                            <div class="col">
-                                <input type="text" class="form-control rounded-5" name="username" id="" placeholder="Username">
-                                <input type="text" class="form-control navbar_alt_formcontrol mt-2" name="email" placeholder="Email"
-                                    aria-label="">
-                                <input type="password" name="password1" class="form-control mt-2 rounded-5" id="" placeholder="Sifre Giriniz">    
-                                <input type="password" name="password2" class="form-control mt-2 rounded-5" id="" placeholder="Sifrenizi Tekrar Giriniz">    
-                            </div>
-                            <button type="button" class="btn btn-kirmizi2" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                                Continue
-                            </button>
-                        </form>
+                                <div class="col">
+                                    <input type="text" class="form-control rounded-5" name="username" id=""
+                                        placeholder="Username">
+                                    <input type="text" class="form-control navbar_alt_formcontrol mt-2" name="email"
+                                        placeholder="Email" aria-label="">
+                                    <input type="password" name="password1" class="form-control mt-2 rounded-5" id=""
+                                        placeholder="Sifre Giriniz">
+                                    <input type="password" name="password2" class="form-control mt-2 rounded-5" id=""
+                                        placeholder="Sifrenizi Tekrar Giriniz">
+                                </div>
+                                <button type="submit" class="btn btn-kirmizi2" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Continue
+                                </button>
+                            </form>
                             <small class="mt-2">Already a redditor? <a href="#">Log In</a></small>
                         </div>
                     </div>
@@ -389,147 +441,152 @@
         </nav>
         <div class="row col-12 col-md-9 ">
             <section class="col-lg-8">
-                {% for post in posts  %}
-                <div class="container">
-                    <div class="card rounded-4">
-                        <div class="card-body ">
-                            <div class="card-title d-flex">
-                                <div class="right  d-flex ">
 
-                                    <img src="/static/img/smile-profil.png" width="35" alt="">
+                {% for post in posts %}
+                
+                    <div class="container">
+                        <div class="card rounded-4">
+                            <div class="card-body ">
+                                <div class="card-title d-flex">
+                                    <div class="right  d-flex ">
 
-                                    <div class="hesap">
-                                        <a href="" class="text-decoration-none ">
-                                            <h6>{{post.grup}}</h6>
-                                        </a> <!-- POP UP !!!!!!!!!!!!! -->
-                                        <div class="pop-up" style=" width: 17rem;">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <img src="/static/img/smile-profil.png" style="width: 50px!important; "
-                                                        alt="">
-                                                    <a href="" class="text-decoration-none w-50 p-0">
-                                                        <h6 class="">{{post.grup}}</h6>
-                                                    </a>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="cizgi d-flex">
-                                                        <div class="col-6">
-                                                            <h6>40.7 m </h6>
-                                                            <p>Members</p>
-                                                        </div>
-                                                        <hr class="dikcizgi">
-                                                        <div class="col-6 ms-3">
-                                                            <h6>71.4 k</h6>
-                                                            <p>Online</p>
+                                        <img src="/static/img/smile-profil.png" width="35" alt="">
+
+                                        <div class="hesap">
+                                            <a href="" class="text-decoration-none ">
+                                                <h6>{{post.grup}}</h6>
+                                            </a> <!-- POP UP !!!!!!!!!!!!! -->
+                                            <div class="pop-up" style=" width: 17rem;">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <img src="/static/img/smile-profil.png"
+                                                            style="width: 50px!important; " alt="">
+                                                        <a href="" class="text-decoration-none w-50 p-0">
+                                                            <h6 class="">{{post.grup}}</h6>
+                                                        </a>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="cizgi d-flex">
+                                                            <div class="col-6">
+                                                                <h6>40.7 m </h6>
+                                                                <p>Members</p>
+                                                            </div>
+                                                            <hr class="dikcizgi">
+                                                            <div class="col-6 ms-3">
+                                                                <h6>71.4 k</h6>
+                                                                <p>Online</p>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                </div>
-                                                <div class="row">
-                                                    <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                        questions</p>
-                                                </div>
-                                                <button class="rounded-5 w-100">View Community</button>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <small>Posted by</small>
-                                    <div class="hesap">
-                                        <a href="" class="text-decoration-none ">{{post.title}}</a>
-                                        <div class="pop-up" style="height: 17rem; width: 17rem;">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <img src="smile-profil.png" style="width: 50px!important; " alt="">
-                                                    <a href="" class="text-decoration-none ">
-                                                        <h6>{{post.grup}}</h6>
-                                                    </a>
-                                                </div>
-                                                <div class="row">
-                                                    <div class="cizgi d-flex">
-                                                        <div class="col-6">
-                                                            <h6>40.7 m </h6>
-                                                            <p>Members</p>
-                                                        </div>
-                                                        <hr class="dikcizgi">
-                                                        <div class="col-6 ms-3">
-                                                            <h6>71.4 k</h6>
-                                                            <p>Online</p>
-                                                        </div>
+                                                    <div class="row">
+                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
+                                                            questions</p>
                                                     </div>
+                                                    <button class="rounded-5 w-100">View Community</button>
                                                 </div>
-                                                <div class="row">
-                                                    <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                        questions</p>
-                                                </div>
-                                                <button class="rounded-5 w-100">View Community</button>
                                             </div>
                                         </div>
 
+                                        <small>Posted by</small>
+                                        <div class="hesap">
+                                            <a href="" class="text-decoration-none ">{{post.title}}</a>
+                                            <div class="pop-up" style="height: 17rem; width: 17rem;">
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <img src="smile-profil.png" style="width: 50px!important; "
+                                                            alt="">
+                                                        <a href="" class="text-decoration-none ">
+                                                            <h6>{{post.grup}}</h6>
+                                                        </a>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="cizgi d-flex">
+                                                            <div class="col-6">
+                                                                <h6>40.7 m </h6>
+                                                                <p>Members</p>
+                                                            </div>
+                                                            <hr class="dikcizgi">
+                                                            <div class="col-6 ms-3">
+                                                                <h6>71.4 k</h6>
+                                                                <p>Online</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
+                                                            questions</p>
+                                                    </div>
+                                                    <button class="rounded-5 w-100">View Community</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+
+
+
+                                        <small class=" d-inline-flex time">{time}</small>
                                     </div>
-
-
-
-
-
-                                    <small class=" d-inline-flex time">{time}</small>
+                                    <div class="left d-flex">
+                                        <button class="join text-black">Join</button>
+                                    </div>
                                 </div>
-                                <div class="left d-flex">
-                                    <button class="join text-black">Join</button>
+                                <p class="card-text mt-2">{{post.content}}</p>
+                                <div class="post-img">
+                                    {% if post.image %}
+                                    <img src="{{post.image.url}}" alt="">
+                                    {% endif %}
                                 </div>
-                            </div>
-                            <p class="card-text mt-2">{{post.content}}</p>
-                            <div class="post-img">
-                                {% if post.image %}
-                                <img src="{{post.image.url}}" alt="">
-                                {% endif %}
-                            </div>
 
 
-                            <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
-                                <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
-                                    Comments</button>
+                                <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
+                                    <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
+                                        Comments</button>
 
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        <i class="bi bi-arrow-90deg-right"> Share</i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
-                                                    Link</i></a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
-                                                    Embed</i></a></li>
-                                    </ul>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn buttons dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            <i class="bi bi-arrow-90deg-right"> Share</i>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
+                                                        Link</i></a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
+                                                        Embed</i></a></li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
+                                            Save</i></button>
+
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn buttons dropdown-toggle"
+                                            data-bs-toggle="dropdown" aria-expanded="false">
+                                            ...
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
+                                                        Hide</i></a></li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
+                                                        Mute
+                                                        r/ArsivUnutmaz</i></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <button type="button" class="btn" style=" border: none "> <i
+                                            class="fa-solid fa-heart"></i></button>
+                                    <p>1.2k</p>
+                                    <button type=" button" class="btn" style=" border: none"> <i
+                                            class="fa-solid fa-heart-crack"></i></button>
                                 </div>
-                                <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
-                                        Save</i></button>
-
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                        aria-expanded="false">
-                                        ...
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
-                                                    Hide</i></a></li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
-                                        </li>
-                                        <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
-                                                    Mute
-                                                    r/ArsivUnutmaz</i></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <button type="button" class="btn" style=" border: none "> <i
-                                        class="fa-solid fa-heart"></i></button>
-                                <p>1.2k</p>
-                                <button type=" button" class="btn" style=" border: none"> <i
-                                        class="fa-solid fa-heart-crack"></i></button>
                             </div>
                         </div>
                     </div>
-                </div>
+                
                 {% endfor %}
+
             </section>
             <aside class=" col-md-4">
                 <div class="flip-card side-bar">

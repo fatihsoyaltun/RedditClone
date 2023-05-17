@@ -1,7 +1,6 @@
 from django.shortcuts import render , redirect
 from django.contrib.auth import authenticate , login , logout
 from django.contrib import messages
-
 from .forms import *
 
 # Create your views here.
@@ -21,6 +20,12 @@ def giris(request):
             return redirect('login')
     else:
         return render(request, 'login.html')
+    
+
+def cikis(request):
+    logout(request)
+    messages.success(request , 'Çıkıs Yapıldı')
+    return redirect('index')    
 
 def profilayarlar(request):
     return render(request, 'settingsProfil.html')

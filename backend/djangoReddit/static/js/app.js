@@ -17,9 +17,7 @@ var span = document.getElementsByClassName("close")[0];
 
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
+
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
@@ -43,16 +41,16 @@ function scrollFunction() {
 
 //detay kübra
 
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-const myModal = document.getElementById('myModal')
-const myInput = document.getElementById('myInput')
+// const myModal = document.getElementById('myModal')
+// const myInput = document.getElementById('myInput')
 
 
-myModal.addEventListener('shown.bs.modal', () => {
-  myInput.focus()
-})
+// myModal.addEventListener('shown.bs.modal', () => {
+//   myInput.focus()
+// })
 
 function yorum() {
   const commentInput = document.querySelector(".write-comments");
@@ -120,3 +118,16 @@ if (localStorage.getItem('theme') === 'dark') {
 }
 
 
+
+navbarDropdown.addEventListener("click",function name() {
+  if (hepsi1.className=="col-3 hepsi1") {
+    hepsi1.classList.add("block");
+    hepsi1.style.transition = " 2s";
+    hepsi1.style.display="block"
+   }else{
+       hepsi1.classList.remove("block")
+       hepsi1.style.display="none"
+      
+   }
+   navbarAlt.style.display="none"
+})

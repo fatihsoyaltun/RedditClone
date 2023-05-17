@@ -117,5 +117,17 @@ if (localStorage.getItem('theme') === 'dark') {
   
 }
 
-console.log("asdas")
 
+
+navbarDropdown.addEventListener("click",function name() {
+  if (hepsi1.className=="col-3 hepsi1") {
+    hepsi1.classList.add("block");
+    hepsi1.style.transition = " 2s";
+    hepsi1.style.display="block"
+   }else{
+       hepsi1.classList.remove("block")
+       hepsi1.style.display="none"
+      
+   }
+   navbarAlt.style.display="none"
+})

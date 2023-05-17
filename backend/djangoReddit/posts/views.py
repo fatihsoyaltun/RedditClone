@@ -59,3 +59,8 @@ def icerik(request):
 def post(request):
     return render(request, 'post.html')
 
+def kaydet(request):
+    return render(request, 'saved.html')
+
+def topluluk(request):
+    return render(request, 'topluluklar.html')

@@ -26,11 +26,43 @@
                 <img src="/static/img/Reddit-Logo.png" alt="Desktop Logo">
                 <img src="/static/img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo" style="height: auto; width: 60px;">
             </a>
+
             <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
             <div class="arama">
                 <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
                 <input class="search" type="text" placeholder="Search Reddit">
             </div>
+
+                <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
+                {% if user.is_authenticated %}
+                <div class="arama ">
+                    <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
+                    <input class="search" type="text">
+                </div>
+                {% else %}
+                <div class="arama w-50">
+                    <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
+                    <input class="search " type="text" placeholder="Search Reddit">
+                </div>
+                {% endif %}
+
+                {% if user.is_authenticated %}
+                <div class="fs-5">
+                    <a href="" class="border-0"><i class="bi bi-arrow-up-right-circle"></i></a>
+                    <a href="" class="border-0" style="margin-left: 40px;"><i class="bi bi-chat-dots"></i></a>
+                    <a href="" class="border-0" style="margin-left: 40px;"><i class="bi bi-bell"></i></a>
+                    <a href="/post/" class="border-0" style="margin-left: 40px;"><i class="bi bi-plus-lg"></i></a>
+                </div>
+                {% else %}
+                <button id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
+                {% endif %}
+
+                <ul class="right mt-3 s-15 ">
+                    <li><a class="sol" href="#" style="border: hidden;"> <i class="fa-solid fa-qrcode"
+                                style=" margin-right: 3px;"></i>Get App</a></li>
+                </ul>
+            
+
             {% if user.is_authenticated %}
             <button><i class="bi bi-arrow-up-right-circle"></i></button>
             <button><i class="bi bi-chat-dots"></i></button>
@@ -119,8 +151,13 @@
 
 
     {% if messages %}
+
     {% for mesaj in messages  %}
       <div class="alert alert-{{mesaj.tags}} text-center mt-5" style="margin-left:19rem ">
+
+    {% for mesaj in messages %}
+    <div class="alert alert-{{mesaj.tags}} text-center" style="margin-left:17rem; margin-top: 70px;">
+
         {{mesaj}}
       </div>
     {% endfor %}

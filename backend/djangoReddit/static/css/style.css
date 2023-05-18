@@ -17,6 +17,7 @@ ul li{
 
 
 
+
 .navUst{
   /* background-color: white; */
   background-color: white;
@@ -30,6 +31,14 @@ ul li{
   z-index: 997;
   width: 100%;
 }
+
+/* .nav-orta{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 60%;
+} */
+
 
 /* .nav-orta{
 display: flex;
@@ -1061,6 +1070,40 @@ main .col-10,.col-lg-8{
 }
 
 
+  @media screen and (max-width: 900px) {
+    .first-article a:nth-child(4){
+      display: none;
+    }
+    .first-article{
+      grid-template-columns: repeat(3,1fr);
+    }
+ }
+
+  @media screen and (max-width: 650px) {
+    .right , .right h6{
+        font-size:.8rem;
+    }
+    main .col-10,.col-lg-8{
+        padding: 0;
+    }
+    .col-lg-8 .container{
+        padding-right: 3px;
+    }
+    .kufirstyorum{
+      
+      height: 100px;
+      width: 40rem;
+    }
+    .first-article a:nth-child(3){
+      display: none;
+    }
+    .first-article{
+      grid-template-columns: repeat(2,1fr);
+    }
+ }
+
+
+
 #ica{
 text-decoration: none;
 color: #808182;
@@ -1681,9 +1724,16 @@ grid-template-columns: repeat(3,1fr);
 gap: 10px;
 }
 .kutu{
+
 height: 300px;
 background-color: #e9eeed;
 border-radius: 20px;
+
+  height: 300px;
+  background-color: #ddebe9;
+  border-radius: 90px;
+  
+
 }
 .kutu:nth-child(n){
 background-color: #FFC0CB;
@@ -1709,4 +1759,12 @@ z-index: 9999;
 
 .yonlendirme{
 cursor: pointer;
+}
+
+.kutusag{
+  transform: translate(-60px, -50px);
+}
+
+.kutopsagimg{
+  
 }

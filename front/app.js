@@ -122,13 +122,12 @@ darkModeToggle.addEventListener('click', () => {
 
 
 const navprofil = document.querySelector(".dropbtn");
-const card = document.querySelector(".card");
+
 
 
 if (localStorage.getItem('theme') === 'dark') {
   navprofil.style.background = "none"
   navprofil.classList.add('dark-mode');
-  card.classList.add('dark-mode');
   body.classList.add('dark-mode');
   
 }

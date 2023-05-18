@@ -1,0 +1,112 @@
+{% extends 'index.html' %}
+{% load static %}
+
+
+{% block content %}
+{% include "profil_nav.html" %}
+    <section style="margin-top: 2rem;">
+        <div class="container">
+            <div class="row">
+                <h5>Kullanıcı Ayarlar </h5>
+            </div>
+            <div class="row mt-4">
+                <ul class="d-flex flex-wrap list-unstyled nav-underline ayarlarnav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#">Hesap</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link text-secondary" href="#">Profil</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link text-secondary" href="#">Güvenlılık ve Gizlilik</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link text-secondary" href="#">Besleme Ayarları</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link text-secondary" href="#">Bildirimler</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link text-secondary" href="#">E-postalar</a>
+                    </li>
+                    <li class="nav-item ms-2">
+                        <a class="nav-link text-secondary" href="#">Abonelikler</a>
+                    </li>
+                    <li class="nav-item  ms-2">
+                        <a class="nav-link text-secondary" href="#">Sohbet ve Mesajlaşma</a>
+                    </li>
+                </ul>
+            </div>
+            <hr>
+            <div class="row">
+                <h5>Profili Özelleştir</h5>
+            </div>
+            <div class="row mt-3">
+                <div class="col-8">
+                    <b class="text-secondary" style="font-size: x-small;">Profil Bilgisi</b>
+                    <hr>
+                    <div class="row">
+                        <h6>Görünen İsim</h6>
+                        <p class="text-secondary">Bir görünen ad belirleyin. Bu, kullanıcı adınızı değiştirmez.</p>
+                        <input type="text" class="rounded-2" placeholder="Görünen İsim">
+                    </div>
+                    <div class="row mt-4">
+                        <h6>Hakkında</h6>
+                        <p class="text-secondary">Profilinizde gösterilen kendinizin kısa bir açıklaması</p>
+                        <input type="text" class="rounded-2" placeholder="Hakkında">
+                    </div>
+                    <div class="row mt-4">
+                        <h6>Sosyal Bağlantılar</h6>
+                        <p class="text-secondary">Profilinizi ziyaret eden kişiler sosyal bağlantılarınızı görecektir.</p>
+                        <button type="button" class="btn btn-secondary rounded-5 w-25" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                + Add social link
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                Add Social Link</h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- Button trigger modal -->
+                                            <button type="button" class="btn btn-secondary rounded-5 " data-bs-toggle="modal"
+                                                data-bs-target="#exampleModal2" onclick="openSecondModal()">
+                                                <i class="bi bi-instagram">Instagram</i>
+                                            </button>
+                                            <!-- Modal 1-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Modal 2-->
+                            <div class="modal fade" id="exampleModal2" tabindex="-1"
+                                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                                Add social link</h1>
+                                            <button type="button" class="btn btn-secondary">Save</button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <button class="rounded-5 btn border-0" style="background-color: #8a8484;"><i
+                                                    class="bi bi-instagram ">Instagram</i></button>
+                                            <br>
+                                            <input class="mt-2 w-100 rounded-2" type="text" name="" id=""
+                                                placeholder="username">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+{% endblock content %}

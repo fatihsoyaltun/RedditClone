@@ -443,7 +443,7 @@
 
                 {% for post in posts %}
                 
-                    <div class="container">
+                    <div class="container yonlendirme" onclick="yonlendir('{{ post.id }}')">
                         <div class="card rounded-4">
                             <div class="card-body ">
                                 <div class="card-title d-flex">
@@ -492,7 +492,7 @@
                                             <div class="pop-up" style="height: 17rem; width: 17rem;">
                                                 <div class="container">
                                                     <div class="row">
-                                                        <img src="smile-profil.png" style="width: 50px!important; "
+                                                        <img src="/static/img/smile-profil.png" style="width: 50px!important; "
                                                             alt="">
                                                         <a href="" class="text-decoration-none ">
                                                             <h6>{{post.grup}}</h6>

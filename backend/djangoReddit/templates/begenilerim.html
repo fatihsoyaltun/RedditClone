@@ -9,10 +9,12 @@
 
 
 {% block content %}
-    <section style="margin-top: 150px;">
+{% include "profil_nav.html" %}
+    <section style="margin-top: 100px;">
         <div class="container">
             <div class="row">
                 <div class="col-8 kubegeni8card">
+                    
                     <div class="card mb-3" style="height: 170px;">
                         <div class="row ">
                             <div class="col-2">
@@ -147,19 +149,19 @@
                 </div>
                 <div class=" col-4 kubegeniyancard">
                     <div>
-                        <img src="img/sari.png"  class="card-img-top" style="height: 90px;" alt="...">
+                        <img src="https://media.istockphoto.com/id/1357394965/tr/foto%C4%9Fraf/abstract-yellow-and-black-are-light-pattern-with-the-gradient-is-the-with-floor-wall-metal.jpg?s=612x612&w=0&k=20&c=Y-j1bOVXHEr336bYnwCdM9YZw-cs2743oFWcVgwSUyo="  class="card-img-top" style="height: 90px;" alt="...">
                         <div class="kucard-body">
                             <button class="kuekleme border-1" style="width: 40px; border-radius: 100px; height: 40px;"><i
                                     class="bi bi-plus-circle-dotted"></i></button>
                             <div class="box kuproresmi w-25  rounded-3"  style="height:80px;">
-                                <img src="img/images.png" style="width: 100%; height: auto;" class="kubproresim" alt="">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" style="width: 100%; height: auto;" class="kubproresim" alt="">
                                 <button onsubmit="return checkProfilePicture()" class="kuekleme2 border-1"
                                     style="width: 35px; border-radius: 100px; height: 35px;"><i
                                         class="bi bi-plus-circle-dotted"></i></button>
                                 <p class="kuhesap">kubra</p>
                             </div>
                             <button style="margin-left: 260px; border: none; background: none;"
-                                class="kuayarlar "><a href=""><i class="bi bi-gear"></i></a></button>
+                                class="kuayarlar "><a href="/profilayarlar/"><i class="bi bi-gear"></i></a></button>
                         </div>
                         <div class="kucard-footer ">
                             <button type="button" class="btn createavatar w-100">Create
@@ -168,7 +170,7 @@
                                 <div class="cizgi d-flex">
                                     <div class="col-6">
                                         <h6>Karma </h6>
-                                        <p><i class="fa-regular fa-star text-secondary"> 1</i></p>
+                                        <p class="text-secondary"><i class="bi bi-brightness-low text-secondary"></i> 1</p>
                                     </div>
                                     <div class="col-6 ms-3">
                                         <h6>Cake Day</h6>

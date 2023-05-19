@@ -240,7 +240,7 @@
                   <div class="card-title d-flex">
                     <div class="right  d-flex ">
 
-                      <img src="img/smile-profil.png" width="35" alt="">
+                      <img src="/static/img/smile-profil.png" width="35" alt="">
 
 
 
@@ -285,13 +285,13 @@
 
                       <small class="text-secondary">Posted by</small>
                       <div class="hesap">
-                        <a href="" class="text-decoration-none ">kubra</a>
+                        <a href="" class="text-decoration-none ">{{posts.title}}</a>
                         <div class="pop-up" style="height: 17rem; width: 17rem;">
                           <div class="container">
                             <div class="row">
                               <img src="smile-profil.png" style="width: 50px!important; " alt="">
                               <a href="" class="text-decoration-none ">
-                                <h6>r/AskReddit</h6>
+                                <h6>{{posts.grup}}</h6>
                               </a>
                             </div>
                             <div class="row">
@@ -327,9 +327,11 @@
                       <button class="join text-black">Join</button>
                     </div>
                   </div>
-                  <p class="card-text mt-2">Ortam nasıl olmuş ? şekil dimi</p>
+                  <p class="card-text mt-2">{{posts.content}}</p>
                   <div class="post-img">
-                    <img src="img/bigi.webp 09-17-57-264.webp" alt="">
+                    {% if posts.image %}
+                    <img src="{{posts.image.url}}" alt="">
+                    {% endif %}
                   </div>
 
 

@@ -1322,11 +1322,14 @@ detay sayfası
   display: none;
 }
 .createavatar{
-  background: linear-gradient(to right , purple , pink);
+  background: linear-gradient(to right , rgb(245, 67, 2) , rgb(233, 152, 95));
   margin-top: 7rem;
 }
 .kubeghesap:hover  .pop-up{
   display: block;
+}
+.kubegeniyancard{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 /*kübra begeni*/
 
@@ -1562,13 +1565,15 @@ body.dark-mode .card{
 body.dark-mode .kuproresmi button i , body.dark-mode .kucard-body button i{
   color: black;
 }
-body.dark-mode .kuayarlar a .bi-gear{
+body.dark-mode .kuayarlar a .bi-gear , body.dark-mode .girisyap, body.dark-mode form label{
   color: white;
 }
 body.dark-mode .preOr h1 , body.dark-mode .preOr p{
   color:black;
 }
-
+body.dark-mode .kutopsol .baslik h4 , body.dark-mode .content i , body.dark-mode .kutopsol b{
+  color: black;
+}
 /* DARKMODE */
 
 
@@ -1663,29 +1668,47 @@ body.dark-mode .preOr h1 , body.dark-mode .preOr p{
   grid-template-columns: repeat(3,1fr);
   gap: 10px;
   }
-  .kutu{
+.kutu{
   height: 300px;
   background-color: #e9eeed;
   border-radius: 20px;
-  }
-  .kutu:nth-child(n){
-  background-color: #FFC0CB;
-  }
-  
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.kutu:nth-child(3n+1) {
+  background-color: #fffdf6; /* Birinci satırdaki kutu rengi */
+}
+
+.kutu:nth-child(3n+2) {
+  background-color: #faf6e9; /* İkinci satırdaki kutu rengi */
+}
+
+.kutu:nth-child(3n+3) {
+  background-color: #ece8d9; /* Üçüncü satırdaki kutu rengi */
+}
   
   .toplulukcont{
   width: 97%;
   margin: auto;
   }
   
-  .boxproku{
-  position: relative;
+  .a{
+    border-radius: 50%;
   }
-  .takipimghesap:nth-child(n){
-  position: absolute;
-  left: 15px;
-  z-index: 9999;
+
+  .a:nth-child(2){
+    transform: translate(-16px,2px);
   }
+  .a:nth-child(3){
+    transform: translate(-27px,1px);
+
+  }
+  .a:nth-child(4){
+    transform: translate(-39px,1px);
+  } 
+  .a:nth-child(5){
+    transform: translate(-52px,1px);
+  } */
   
   
   /* Toplulukkkkkkk */
@@ -1693,3 +1716,6 @@ body.dark-mode .preOr h1 , body.dark-mode .preOr p{
   .yonlendirme{
   cursor: pointer;
   }
+.girisyap{
+  border: none;
+}

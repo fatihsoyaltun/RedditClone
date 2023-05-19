@@ -50,8 +50,12 @@ def index(request):
 def begeni(request):
     return render(request, 'begenilerim.html')
 
-def detail(request):
-    return render(request, 'detail.html')
+def detail(request,postId):
+    posts=Post.objects.get(id=postId)
+    context = {
+        'posts':posts
+    }
+    return render(request, 'detail.html',context)
 
 def icerik(request):
     return render(request, 'icerik.html')

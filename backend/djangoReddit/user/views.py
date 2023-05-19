@@ -32,3 +32,6 @@ def profilayarlar(request):
 
 def genelayarlar(request):
     return render(request, 'UserSettings.html')
+
+def profil(request):
+    return render(request , 'profil.html')

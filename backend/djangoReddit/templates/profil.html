@@ -1,0 +1,130 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block title %}
+<title>Profil</title>
+{% endblock title %}
+
+{% block content %}
+{% include "profil_nav.html" %}
+
+<section style="margin-top: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <section class="col-lg-7">
+                    <div class="icerikIcon d-flex justify-content-between  ">
+                        <div class="icerikIconSol d-flex align-items-center">
+                            <div class="icerikIconA icerikIconA1 "><a href="#"><i class="bi bi-fire"></i>  Hot</a></div>
+                            <div class="icerikIconA"><a href="#"><i class="bi bi-rainbow"></i>  New</a></div>
+                            <div class="icerikIconA"><a href="#"><i class="bi bi-arrow-bar-up"></i>  Top</a></div>
+                            
+                        </div>
+    
+                    </div>
+                </section>
+            </div>
+            <div class=" col-4 kubegeniyancard">
+                <div>
+                    <img src="https://media.istockphoto.com/id/1357394965/tr/foto%C4%9Fraf/abstract-yellow-and-black-are-light-pattern-with-the-gradient-is-the-with-floor-wall-metal.jpg?s=612x612&w=0&k=20&c=Y-j1bOVXHEr336bYnwCdM9YZw-cs2743oFWcVgwSUyo="  class="card-img-top" style="height: 90px;" alt="...">
+                    <div class="kucard-body">
+                        <button class="kuekleme border-1" style="width: 40px; border-radius: 100px; height: 40px;"><i
+                                class="bi bi-plus-circle-dotted"></i></button>
+                        <div class="box kuproresmi w-25  rounded-3"  style="height:80px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" style="width: 100%; height: auto;" class="kubproresim" alt="">
+                            <button onsubmit="return checkProfilePicture()" class="kuekleme2 border-1"
+                                style="width: 35px; border-radius: 100px; height: 35px;"><i
+                                    class="bi bi-plus-circle-dotted"></i></button>
+                            <p class="kuhesap">kubra</p>
+                        </div>
+                        <button style="margin-left: 260px; border: none; background: none;"
+                            class="kuayarlar "><a href="/profilayarlar/"><i class="bi bi-gear"></i></a></button>
+                    </div>
+                    <div class="kucard-footer ">
+                        <button type="button" class="btn createavatar w-100">Create
+                            Avatar</button>
+                        <div class="row mt-4">
+                            <div class="cizgi d-flex">
+                                <div class="col-6">
+                                    <h6>Karma </h6>
+                                    <p class="text-secondary"><i class="bi bi-brightness-low text-secondary"></i> 1</p>
+                                </div>
+                                <div class="col-6 ms-3">
+                                    <h6>Cake Day</h6>
+                                    <p><i class="bi bi-balloon text-secondary">birthday</i></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-secondary rounded-5" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            + Add social link
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="exampleModal" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            Add Social Link</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <!-- Button trigger modal -->
+                                        <button type="button" class="btn btn-secondary rounded-5 " data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal2" onclick="openSecondModal()">
+                                            <i class="bi bi-instagram">Instagram</i>
+                                        </button>
+                                        <!-- Modal 1-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal 2-->
+                        <div class="modal fade" id="exampleModal2" tabindex="-1"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                            Add social link</h1>
+                                        <button type="button" class="btn btn-secondary">Save</button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <button class="rounded-5 btn border-0" style="background-color: #8a8484;"><i
+                                                class="bi bi-instagram ">Instagram</i></button>
+                                        <br>
+                                        <input class="mt-2 w-100 rounded-2" type="text" name="" id=""
+                                            placeholder="username">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-100 bg-primary mt-3 rounded-3 border-0 createavatar p-1">New
+                            Post</button>
+                        <div class="dropup-center dropup">
+                            <ul class="kubegenidropdown-menu list-unstyled mt-3">
+                                <li><button class="rounded-3 text-primary border-0" style="background: none;">Profile
+                                        moderation</button></li>
+                                <li><button style="background: none;" class="rounded-3 text-primary border-0 mt-3">Add
+                                        to custom feed</button></li>
+                            </ul>
+                            <button onclick="kumoreoptions()" style="margin-left: 14rem;" class="btn btn style mt-3"
+                                margin-left: 15rem;" mt-3" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <h6 class="text-primary">More Options</h6>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>                         
+</section>
+
+
+
+{% endblock content %}

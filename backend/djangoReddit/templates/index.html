@@ -1,3 +1,5 @@
+{% load humanize %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -60,11 +62,12 @@
             </ul>
 
             {% if user.is_authenticated %}
+            <a href="/profil/" class="text-decoration-none">
             <div class="dropdown2">
                 <button class="kudropbtn  d-flex border-0" style="background:none;">
                     <div class="kugirislihesap d-flex" style="font-size: smaller;">
                         <div class="kusaggi">
-                            <img style="height: 40px; width:40px" class="rounded-5"
+                            <img style="height: 35px; width:35px" class="rounded-5"
                                 src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" alt="">
                         </div>
                         <div class="kusolgi ms-3 mt-2">
@@ -92,6 +95,7 @@
 
                 </div>
             </div>
+            </a>
             {% else %}
             <div class="dropdown2">
                 <button class="dropbtn"><i class="fa-regular fa-user"></i> <i
@@ -452,7 +456,7 @@
                             <div class="card-title d-flex">
                                 <div class="right  ">
 
-                                    <img src="/static/img/smile-profil.png" width="35" alt="">
+                                    <img src="https://i.pinimg.com/564x/bb/aa/22/bbaa22c230379f4fc0a0e3a538c80772.jpg" width="35" class="me-1" style="border-radius: 50%;" alt="">
 
                                     <div class="hesap">
                                         <a href="" class="text-decoration-none ">
@@ -496,18 +500,18 @@
                                                 <div class="row">
                                                     <img src="/static/img/smile-profil.png" width="5" alt="">
                                                     <a href="" class="text-decoration-none w-50">
-                                                        <h6>{{post.grup}}</h6>
+                                                        <h6 style="color: orange;">{{post.title}}</h6>
                                                     </a>
                                                 </div>
                                                 <div class="row">
                                                     <div class="cizgi d-flex">
                                                         <div class="col-6">
-                                                            <h6>40.7 m </h6>
+                                                            <h6 style="color: orange;">40.7 m </h6>
                                                             <p>Members</p>
                                                         </div>
                                                         <hr class="dikcizgi">
                                                         <div class="col-6 ms-3">
-                                                            <h6>71.4 k</h6>
+                                                            <h6 style="color: orange;">71.4 k</h6>
                                                             <p>Online</p>
                                                         </div>
                                                     </div>
@@ -521,7 +525,7 @@
                                         </div>
 
                                     </div>
-                                    <small class=" d-inline-flex time">{time}</small>
+                                    <small class=" d-inline-flex time">{{ post.created_at|naturaltime }}</small>
                                 </div>
                                 <div class="left d-flex">
                                     <button class="join text-black">Join</button>

@@ -1,6 +1,7 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block title %}
+{% load humanize %}
 <title>ANA SAYFA</title>
 {% endblock title %}
   {% block content %}
@@ -254,7 +255,7 @@
                             <div class="row">
                               <img src="img/smile-profil.png" style="width: 50px!important; " alt="">
                               <a href="" class="text-decoration-none w-50 p-0">
-                                <h6 class="">r/AskReddit</h6>
+                                <h6 class="h6">r/AskReddit</h6>
                               </a>
                             </div>
                             <div class="row">
@@ -283,8 +284,8 @@
 
 
 
-                      <small class="text-secondary">Posted by</small>
-                      <div class="hesap">
+                      <small class="">Posted by</small>
+                      <div class="hesap1">
                         <a href="" class="text-decoration-none ">{{posts.userName}}</a>
                         <div class="pop-up" style="height: 17rem; width: 17rem;">
                           <div class="container">
@@ -321,7 +322,7 @@
 
 
                       
-                      <small class="text-secondary d-inline-flex time">{time}</small>
+                      <small class=" d-inline-flex time">{{ post.created_at|naturaltime }}</small>
                     </div>
                     <div class="left d-flex">
                       <button class="join text-black">Join</button>

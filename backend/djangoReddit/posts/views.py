@@ -7,6 +7,7 @@ from django.shortcuts import render
 from .models import *
 
 
+
 # Create your views here.
    
 
@@ -62,6 +63,7 @@ def icerik(request):
     return render(request, 'icerik.html')
 
 def post(request):
+    
     return render(request, 'post.html')
 
 def kaydet(request):

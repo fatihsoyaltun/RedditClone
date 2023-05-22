@@ -3,11 +3,14 @@ let mybutton = document.getElementById("ica");
 let navbarDropdown=document.querySelector(".navbar-dropdown")
 let hepsi1=document.querySelector(".hepsi1")
 let navbarAlt=document.querySelector(".navbar_alt")
+let alerttt=document.querySelector("#alerttt")
 
-
+console.log(alerttt)
 // Get the button that opens the modal
 
-
+alerttt.addEventListener("click",function(){
+    alerttt.style.display="none "
+})
 
 
 

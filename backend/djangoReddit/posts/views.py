@@ -6,6 +6,7 @@ from user.forms import *
 from django.shortcuts import render
 from .models import *
 
+
 # Create your views here.
    
 

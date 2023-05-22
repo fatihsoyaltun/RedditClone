@@ -13,4 +13,4 @@ urlpatterns =[
     path('icerik/', icerik, name='icerik'),
     path('topluluk/' , topluluk , name='topluluk')
 
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

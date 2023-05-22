@@ -72,7 +72,7 @@
                                 src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" alt="">
                         </div>
                         <div class="kusolgi ms-3 mt-2">
-                            <b>kubra</b>
+                            <b>{{request.user}}</b>
                         </div>
                     </div>
                     <i class="bi bi-chevron-compact-down ms-2 mt-2"></i>
@@ -133,8 +133,9 @@
 
     {% if messages %}
     {% for mesaj in messages %}
-    <div class="alert alert-{{mesaj.tags}} text-center" style="margin-left:17rem; margin-top: 70px;">
+    <div class="alert alert-{{mesaj.tags}} text-center" id="alerttt" style="margin-left:17rem; margin-top: 70px;">
         {{mesaj}}
+        <i class="bi bi-x "></i>
     </div>
     {% endfor %}
     {% else %}

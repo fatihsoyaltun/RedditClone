@@ -9,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib import messages
 
 
+
 # Create your views here.
    
 
@@ -67,6 +68,7 @@ def icerik(request):
 
 @login_required(login_url='login')
 def post(request):
+    
     postcontent = ''
     postimg= ''
     #sayfada çalıştırılan bir post methodu var mı?

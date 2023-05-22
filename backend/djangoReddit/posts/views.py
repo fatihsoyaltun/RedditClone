@@ -5,6 +5,8 @@ from django.contrib.auth import authenticate , login , logout
 from user.forms import *
 from django.shortcuts import render
 from .models import *
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 
 # Create your views here.
@@ -61,8 +63,31 @@ def detail(request,postId):
 def icerik(request):
     return render(request, 'icerik.html')
 
+
+
+@login_required(login_url='login')
 def post(request):
-    return render(request, 'post.html')
+    postcontent = ''
+    postimg= ''
+    #sayfada çalıştırılan bir post methodu var mı?
+    if request.method=='POST':
+        postcontent = request.POST['postcontent']
+        postimg = request.FILES['postimg']
+
+        newPost = Post.objects.create(
+            content = postcontent,
+            image = postimg,
+            yazar = request.user,
+            
+        )
+        newPost.save()
+
+    context = {
+        'postcontent':postcontent,
+        'postimg':postimg
+    }      
+
+    return render(request, 'post.html', context)
 
 def kaydet(request):
     return render(request, 'saved.html')

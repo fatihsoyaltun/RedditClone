@@ -68,7 +68,7 @@ def icerik(request):
 
 @login_required(login_url='login')
 def post(request):
-    return render(request, 'post.html')
+    
     postcontent = ''
     postimg= ''
     #sayfada çalıştırılan bir post methodu var mı?

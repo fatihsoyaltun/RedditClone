@@ -136,3 +136,7 @@ navbarDropdown.addEventListener("click",function name() {
    }
    navbarAlt.style.display="none"
 })
+
+
+
+var editor = new FroalaEditor('#example');

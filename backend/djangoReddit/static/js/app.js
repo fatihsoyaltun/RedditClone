@@ -3,18 +3,12 @@ let mybutton = document.getElementById("ica");
 let navbarDropdown=document.querySelector(".navbar-dropdown")
 let hepsi1=document.querySelector(".hepsi1")
 let navbarAlt=document.querySelector(".navbar_alt")
-let yonlendirme=document.querySelectorAll(".yonlendirme")
+
 
 // Get the button that opens the modal
 
 
-function yonlendir(id) {
-  yonlendirme.forEach(element => {
-  element.addEventListener('click',function () {
-    window.location.href = "/detail/"+id ;
-    })
-});
-}
+
 
 
 

@@ -9,6 +9,9 @@ class Post(models.Model):
     content = models.TextField(max_length=1000 )
     image=models.FileField( upload_to='posts/' , null=True, blank=True )
     created_at = models.DateTimeField(auto_now_add=True,null=True, verbose_name='oluşturulma tarihi')
+    # like = models.ManyToManyField(related_name='likes' , verbose_name='Begenenler' , blank=True)
+    # dislike = models.ManyToManyField(related_name='dislikes' , verbose_name='Begenmeyenler' , blank=True)
+    
 
     def __str__(self):
         return self.content

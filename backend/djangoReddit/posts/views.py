@@ -17,7 +17,7 @@ from django.contrib import messages
 # Create your views here.
 def index(request):
     posts=Post.objects.all()
-    
+
     username = ''
     email = ''
     password1 = ''
@@ -40,7 +40,8 @@ def index(request):
                 messages.success(request, 'Basariyla kayit oldunuz.')   
                 return redirect('index')   
         else:
-            messages.error(request, 'Parolalar eslesmiyor.')    
+            messages.error(request, 'Parolalar eslesmiyor.')   
+    if  
     context = {
         'username': username,
         'email': email,

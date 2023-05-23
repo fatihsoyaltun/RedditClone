@@ -57,8 +57,10 @@ def begeni(request):
 
 def detail(request,postId):
     posts=Post.objects.get(id=postId)
+    posts1=Post.objects.all()
     context = {
-        'posts':posts
+        'posts':posts,
+        'posts1':posts1
     }
     return render(request, 'detail.html',context)
 
@@ -80,16 +82,16 @@ def post(request):
         newPost = Post.objects.create(
             content = postcontent,
             image = postimg,
-            yazar = request.user,
-            
+            yazar=request.user
         )
         newPost.save()
+        return redirect('index')  
 
     context = {
         'postcontent':postcontent,
-        'postimg':postimg
+        'postimg':postimg,
     }      
-
+   
     return render(request, 'post.html', context)
 
 def kaydet(request):

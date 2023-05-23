@@ -5,12 +5,13 @@ let hepsi1=document.querySelector(".hepsi1")
 let navbarAlt=document.querySelector(".navbar_alt")
 let alerttt=document.querySelector("#alerttt")
 
-console.log(alerttt)
-// Get the button that opens the modal
 
-alerttt.addEventListener("click",function(){
-    alerttt.style.display="none "
-})
+  const myTimeout = setTimeout(display, 2300);
+  function display() {
+    alerttt.style.display="none"
+  }
+  
+
 
 
 

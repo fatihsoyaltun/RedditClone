@@ -416,6 +416,7 @@ cursor: pointer;
     position: relative;
     max-height: 500px; 
     overflow-y: auto;
+    padding-bottom:0;
   }
 
 
@@ -471,7 +472,18 @@ cursor: pointer;
     .navbar a {
       float: none;
       display: block;
-  
+    }
+    .girisresponsive{
+      width:100%;
+    }
+    .girisyap{
+      font-size: smaller;
+    }
+    form label{
+      font-size: smaller;
+    }
+    form input{
+      width: 100%;
     }
   }
 
@@ -1619,18 +1631,19 @@ body.dark-mode .navUst .dropdown2:hover , body.dark-mode .navUst .kugirislihesap
 body.dark-mode .navUst  div:hover{
   background: none;
 }
-body .logo .mobile-logo1{
-  display: none;
-}
-body.dark-mode .logo .mobile-logo{
-  display: none;
-}
-body.dark-mode .logo .mobile-logo1{
-  display: block;
-}
 
 /* DARKMODE */
+.mobile-logo1 {
+  display: none;
+}
 
+body.dark-mode .mobile-logo {
+  display: none;
+}
+
+body.dark-mode .mobile-logo1 {
+  display: block;
+}
 
 
 
@@ -1813,23 +1826,23 @@ body.dark-mode .logo .mobile-logo1{
 
 
 .boxproku img:nth-child(1){
-  right: 30px;
+  right: 69px;
   top: 0;
 } 
 .boxproku img:nth-child(2){
-  right: 25px;
+  right: 53px;
   top: 0;
 } 
 .boxproku img:nth-child(3){
-  right: 20px;
+  right: 41px;
   top: 0;
 } 
 .boxproku img:nth-child(4){
-  right: 15px;
+  right: 28px;
   top: 0;
 } 
 .boxproku img:nth-child(5){
-  right: 10px;
+  right: 13px;
   top: 0;
 }
   /* Toplulukkkkkkk */
@@ -1844,4 +1857,8 @@ body.dark-mode .logo .mobile-logo1{
 
 .none{
   display: none !important;
+}
+.btn-warning{
+  --bs-btn-bg: #ff5107;
+  --bs-btn-border-color: #ff5107;
 }

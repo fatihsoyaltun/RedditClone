@@ -94,8 +94,7 @@ function kumoreoptions() {
 // JavaScript kodu
 const darkModeToggle = document.querySelector('.dark-mode-toggle');
 const body = document.querySelector('body');
-const logo = document.querySelector('mobile-logo');
-const darkLogo = document.querySelector('.mobile-logo1');
+
 
 // kaydedilen tema ayarını kontrol edin ve temayı yükle
 if (localStorage.getItem('theme') === 'dark') {
@@ -107,19 +106,18 @@ darkModeToggle.addEventListener('click', () => {
   if (body.classList.contains('dark-mode')) {
     body.classList.remove('dark-mode');
     localStorage.setItem('theme', 'light');
-    logo.style.display = 'none';
-    darkLogo.style.display = 'block'; // tema ayarını kaydedin
+     // tema ayarını kaydedin
   } else {
     body.classList.add('dark-mode');
     localStorage.setItem('theme', 'dark');
-    logo.style.display = 'block';
-    darkLogo.style.display = 'none'; // tema ayarını kaydedin
+     // tema ayarını kaydedin
   }
 });
 
 
 const navprofil = document.querySelector(".dropbtn");
-
+const logo = document.querySelector('.mobile-logo');
+const darkLogo = document.querySelector('.mobile-logo1');
 
 
 if (localStorage.getItem('theme') === 'dark') {
@@ -128,6 +126,7 @@ if (localStorage.getItem('theme') === 'dark') {
   body.classList.add('dark-mode');
   
 }
+
 
 
 

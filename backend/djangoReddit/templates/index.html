@@ -32,6 +32,8 @@
                 <img src="/static/img/Reddit-Logo.png" alt="Desktop Logo">
                 <img src="/static/img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo"
                     style="height: auto; width: 60px;">
+                <img src="https://www.logo.wine/a/logo/Reddit/Reddit-Wordmark-White-Dark-Background-Logo.wine.svg" alt="Mobile Logo" class="mobile-logo1"
+                    style="height: auto; width: 60px;">    
             </a>
             <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
             {% if user.is_authenticated %}
@@ -47,6 +49,7 @@
             {% endif %}
 
             {% if user.is_authenticated %}
+            <div class="fs-5 girislibtnku">
             <div class="fs-5">
                 <a href="" class="border-0"><i class="bi bi-arrow-up-right-circle"></i></a>
                 <a href="" class="border-0" style="margin-left: 40px;"><i class="bi bi-chat-dots"></i></a>
@@ -56,7 +59,7 @@
             {% else %}
             <button id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
             {% endif %}
-
+            <ul class="right mt-3 s-15 ">
             <ul class="right1 mt-3 s-15 ">
                 <li><a class="sol" href="#" style="border: hidden;"> <i class="fa-solid fa-qrcode"
                             style=" margin-right: 3px;"></i>Get App</a></li>
@@ -82,12 +85,14 @@
                     <a href="#"><i class="fa-solid fa-circle-info"></i> More</a>
                     <a href="#"><i class="fa-regular fa-newspaper"></i>Terms and Policies</a>
                     <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>
-                    <div class="form-check form-switch ms-2">
-                        <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
-                        <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch"
-                            id="flexSwitchCheckChecked" checked>
-                    </div>
-                    <hr>
+                    <a href="#">
+                        <div class="form-check form-switch ms-2">
+                            <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
+                            <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch"
+                                id="flexSwitchCheckChecked" checked>
+                        </div>
+                    </a>
+                    <hr class="denemeku">
                     {% if user.is_authenticated %}
                     <a href="/logout/"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log Out</a>
                     {% else %}
@@ -452,6 +457,23 @@
 
                 {% for post in posts %}
 
+                <div class="container yonlendirme" onclick="yonlendir('{{ post.id }}')">
+                    <div class="card rounded-4">
+                        <div class="card-body ">
+                            <div class="card-title d-flex">
+                                <div class="right  d-flex ">
+
+                                    <img src="/static/img/smile-profil.png" width="35" alt="">
+
+                                    <div class="hesap">
+                                        <a href="" class="text-decoration-none ">
+                                            <h6>{{post.grup}}</h6>
+                                        </a> <!-- POP UP !!!!!!!!!!!!! -->
+                                        <div class="pop-up" style=" width: 17rem;">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <img src="/static/img/smile-profil.png"
+                                                        style="width: 50px!important; " alt="">
                 <div class="container yonlendirme">
                     <div class="card rounded-4">
                         <div class="card-body ">
@@ -495,6 +517,15 @@
                                     </div>
 
                                     <small>Posted by</small>
+                                    <div class="hesap">
+                                        <a href="" class="text-decoration-none ">{{post.title}}</a>
+                                        <div class="pop-up" style="height: 17rem; width: 17rem;">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <img src="/static/img/smile-profil.png"
+                                                        style="width: 50px!important; " alt="">
+                                                    <a href="" class="text-decoration-none ">
+                                                        <h6>{{post.grup}}</h6>
                                     <div class="hesap1">
                                         <a href="" class="text-decoration-none ">{{post.userName}}</a>
                                         <div class="pop-up" >
@@ -508,11 +539,13 @@
                                                 <div class="row">
                                                     <div class="cizgi d-flex">
                                                         <div class="col-6">
+                                                            <h6>40.7 m </h6>
                                                             <h6 style="color: orange;">40.7 m </h6>
                                                             <p>Members</p>
                                                         </div>
                                                         <hr class="dikcizgi">
                                                         <div class="col-6 ms-3">
+                                                            <h6>71.4 k</h6>
                                                             <h6 style="color: orange;">71.4 k</h6>
                                                             <p>Online</p>
                                                         </div>
@@ -527,12 +560,22 @@
                                         </div>
 
                                     </div>
+
+
+
+
+
+                                    <small class=" d-inline-flex time">{time}</small>
                                     <small class=" d-inline-flex time">{{ post.created_at|naturaltime }}</small>
                                 </div>
                                 <div class="left d-flex">
                                     <button class="join text-black">Join</button>
                                 </div>
                             </div>
+                            <p class="card-text mt-2">{{post.content}}</p>
+                            <div class="post-img">
+                                {% if post.image %}
+                                <img src="{{post.image.url}}" alt="">
                             <p class="card-text mt-2"><a href="{% url 'detail' post.id %}" class="text-dark text-decoration-none"> {{post.content}}</a></p>
                             <div class="post-img">
                                 {% if post.image %}

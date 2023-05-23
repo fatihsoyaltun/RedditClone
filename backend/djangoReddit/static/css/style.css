@@ -81,9 +81,9 @@ input.search{
     outline: none;
 }
 .navUst div:hover{
-    background-color: #FFFFFF;
+  background-color: #FFFFFF;
     
-}
+} 
 .sol{
     background-color: #c5c5c5;
     border: 1px solid black;
@@ -343,7 +343,7 @@ cursor: pointer;
 
 .logo .mobile-logo{
   display: none;
-}
+} 
 
 
 .navbar-dropdown{
@@ -1573,7 +1573,7 @@ body.dark-mode .dropdown2 .dropdown-content1 a{
 body.dark-mode .navUst{
   background-color: #212122;
 }
-body.dark-mode .dropdown-content1 a:hover , body.dark-mode .icerikIcondropdown1:hover , body.dark-mode .icerikIconA:hover , body.dark-mode .icerikIconSag:hover , body.dark-mode .dropdown-menu li a:hover , body.dark-mode .icerikSagKisimCardAltButton:hover{
+body.dark-mode .dropdown-content1 a:hover , body.dark-mode .icerikIcondropdown1:hover , body.dark-mode .icerikIconA:hover , body.dark-mode .icerikIconSag:hover , body.dark-mode .dropdown-menu li a:hover , body.dark-mode .icerikSagKisimCardAltButton:hover , body.dark-mode .dropdown-content1 .form-check:hover{
   background-color: #5e5873;
 }
 body.dark-mode .dropdown-menu li a i{
@@ -1598,13 +1598,13 @@ body.dark-mode .accordion-header{
 body.dark-mode .duzenleme i{
   color: #47484a;
 }
-body.dark-mode .card{
+body.dark-mode .card , body.dark-mode .kubegeniyancard{
   box-shadow: rgba(170, 170, 173, 0.25) 0px 13px 27px -5px, rgba(176, 172, 172, 0.3) 0px 8px 16px -8px;
 }
 body.dark-mode .kuproresmi button i , body.dark-mode .kucard-body button i{
   color: black;
 }
-body.dark-mode .kuayarlar a .bi-gear , body.dark-mode .girisyap, body.dark-mode form label{
+body.dark-mode .kuayarlar a .bi-gear , body.dark-mode .girisyap, body.dark-mode form label , body.dark-mode .dropdown2 .kusolgi{
   color: white;
 }
 body.dark-mode .preOr h1 , body.dark-mode .preOr p{
@@ -1613,6 +1613,22 @@ body.dark-mode .preOr h1 , body.dark-mode .preOr p{
 body.dark-mode .kutopsol .baslik h4 , body.dark-mode .content i , body.dark-mode .kutopsol b{
   color: black;
 }
+body.dark-mode .navUst .dropdown2:hover , body.dark-mode .navUst .kugirislihesap:hover , body.dark-mode .navUst .kugirislihesap .kusolgi:hover , body.dark-mode .navUst .kugirislihesap .kusaggi:hover , body.dark-mode .navUst i:hover{
+  background-color: #47484a;
+} 
+body.dark-mode .navUst  div:hover{
+  background: none;
+}
+body .logo .mobile-logo1{
+  display: none;
+}
+body.dark-mode .logo .mobile-logo{
+  display: none;
+}
+body.dark-mode .logo .mobile-logo1{
+  display: block;
+}
+
 /* DARKMODE */
 
 

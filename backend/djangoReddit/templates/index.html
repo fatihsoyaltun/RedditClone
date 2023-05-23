@@ -32,6 +32,8 @@
                 <img src="/static/img/Reddit-Logo.png" alt="Desktop Logo">
                 <img src="/static/img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo"
                     style="height: auto; width: 60px;">
+                <img src="https://www.logo.wine/a/logo/Reddit/Reddit-Wordmark-White-Dark-Background-Logo.wine.svg" alt="Mobile Logo" class="mobile-logo1"
+                    style="height: auto; width: 60px;">    
             </a>
             <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
             {% if user.is_authenticated %}
@@ -54,7 +56,7 @@
                 <a href="/post/" class="border-0" style="margin-left: 40px;"><i class="bi bi-plus-lg"></i></a>
             </div>
             {% else %}
-            <button id="myBtn" data-bs-toggle="modal" data-bs-target="#exampleModal">Log In</button>
+            <a href="/login/"><button id="myBtn" >Log In</button></a>
             {% endif %}
 
             <ul class="right1 mt-3 s-15 ">
@@ -135,7 +137,6 @@
     {% for mesaj in messages %}
     <div class="alert alert-{{mesaj.tags}} text-center" id="alerttt" style="margin-left:17rem; margin-top: 70px;">
         {{mesaj}}
-        <i class="bi bi-x "></i>
     </div>
     {% endfor %}
     {% else %}
@@ -206,7 +207,7 @@
                     <div>
                         <div class="fixed">
                             <div class="navbar">
-                                <ul class="list-unstyled" style="padding: 1rem;">
+                                <ul class="list-unstyled" style="padding: 1rem 1rem 0rem 1rem ; margin-bottom:0 ;">
                                     <li class="navbarBaslik mt-3">FEEDS</li>
                                     <li>
                                         <a href="#"><i class="bi bi-house-door-fill"></i> Home</a>
@@ -576,12 +577,15 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <button type="button" class="btn" style=" border: none "> <i
+                                <form action="" method="POST" class="d-flex">
+                                    <button type="submit" class="btn" name="like" style=" border: none" value="Like ({{post.like.all.count}})"> <i
                                         class="fa-solid fa-heart"></i></button>
                                 <p>1.2k</p>
-                                <button type=" button" class="btn" style=" border: none"> <i
+                                <button type="submit" class="btn" name="dislike" style=" border: none" value="Dislike ({{post.dislike.all.count}})"> <i
                                         class="fa-solid fa-heart-crack"></i></button>
-                            </div>
+                                </form>
+                                
+                            
                         </div>
                     </div>
                 </div>

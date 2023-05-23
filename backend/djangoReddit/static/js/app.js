@@ -3,18 +3,16 @@ let mybutton = document.getElementById("ica");
 let navbarDropdown=document.querySelector(".navbar-dropdown")
 let hepsi1=document.querySelector(".hepsi1")
 let navbarAlt=document.querySelector(".navbar_alt")
-let yonlendirme=document.querySelectorAll(".yonlendirme")
-
-// Get the button that opens the modal
+let alerttt=document.querySelector("#alerttt")
 
 
-function yonlendir(id) {
-  yonlendirme.forEach(element => {
-  element.addEventListener('click',function () {
-    window.location.href = "/detail/"+id ;
-    })
-});
-}
+  const myTimeout = setTimeout(display, 2300);
+  function display() {
+    alerttt.style.display="none"
+  }
+  
+
+
 
 
 
@@ -145,3 +143,7 @@ navbarDropdown.addEventListener("click",function name() {
    }
    navbarAlt.style.display="none"
 })
+
+
+
+var editor = new FroalaEditor('#example');

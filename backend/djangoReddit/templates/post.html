@@ -9,15 +9,20 @@
                     <nav>
                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
                           <button class="nav-link active postNavLink" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true"><i class="bi bi-stickies"></i> Post</button>
-                          <button class="nav-link postNavLink" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false"><i class="bi bi-images"></i> Images & Video</button>
-                          <button class="nav-link postNavLink" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false"><i class="bi bi-link-45deg"></i> Link</button>
-                          <button class="nav-link postNavLink" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact2" type="button" role="tab" aria-controls="nav-contact2" aria-selected="false"><i class="bi bi-list-columns-reverse"></i> Poll</button>
-                        </div>
+                      </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
-                        <input type="text" name="" id="" placeholder="Title" class="w-100 mt-3">
+                        <form action="" method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <input type="textarea" name="postcontent" value="{{postcontent}}" id="" placeholder="Content" class="w-100 mt-3" style="height: 100px;">
+                            <input type="file" class="mt-4" name="postimg">
+                            
+                       
+
+     
                         <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-                            <p>Ckeditör eklenecek</p>
+                            
+                            <p > </p>
                             <div class="postNavButtons d-flex mt-4 ">
                                 <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> OC</button>
                                 <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> Spoiler</button>
@@ -34,140 +39,11 @@
 
                             <div class="postNavButtonsAlt postNavButtons d-flex justify-content-end">
                                 <button type="button" class="btn btn-outline-secondary postNavButtons1 ">Save Draft</button>
-                                <button type="button" class="btn btn-outline-secondary postNavButtons2 ">Post</button>
+                                <button type="submit" class="btn btn-outline-secondary postNavButtons2 ">Post</button>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">
-                           <div class="dosyasec">
-                            <input type="file" id="dosyaSec" multiple>
-                           </div>
-                           <div class="postNavButtons d-flex mt-4 ">
-                            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> OC</button>
-                            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> Spoiler</button>
-                            <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> NSFW</button>
-                            <div class="dropdown postNavButtons ">
-                                <button class="btn btn-secondary dropdown-toggle postNavDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <i class="bi bi-tags"></i> Flair <i class="bi bi-chevron-compact-down"></i>
-                                </button>
-                                <ul class="dropdown-menu">
-                                  <li><a class="dropdown-item" href="#">Flair</a></li>
-                                </ul>
-                              </div>
-                        </div>
-                        <hr>
-                        <div class="postNavButtonsAlt postNavButtons d-flex justify-content-end">
-                            <button type="button" class="btn btn-outline-secondary postNavButtons1 ">Cancel</button>
-                            <button type="button" class="btn btn-outline-secondary postNavButtons2 ">Post</button>
-                        </div>
 
-                            
-                        </div>
-                        <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-                            <input type="text" name="" id="" placeholder="Url" class="w-100 mt-3 pb-4">
-                            
-                            <div class="postNavButtons d-flex mt-4 ">
-                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> OC</button>
-                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> Spoiler</button>
-                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> NSFW</button>
-                                <div class="dropdown postNavButtons ">
-                                    <button class="btn btn-secondary dropdown-toggle postNavDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="bi bi-tags"></i> Flair <i class="bi bi-chevron-compact-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">Flair</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
-
-                            <div class="postNavButtonsAlt postNavButtons d-flex justify-content-end">
-                                <button type="button" class="btn btn-outline-secondary postNavButtons1 ">Save Draft</button>
-                                <button type="button" class="btn btn-outline-secondary postNavButtons2 ">Post</button>
-                            </div>
-
-
-                        </div>
-                        <div class="tab-pane fade" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">
-                            <p>Ck Editör eklenecek</p>
-
-                            <div class="optionkismi">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col-md-8">
-                                            <div class="optionkismiinput">
-                                                <input type="text" class="form-control mt-2" placeholder="Option 1" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                <input type="text" class="form-control mt-2" placeholder="Option 2" aria-label="Recipient's username" aria-describedby="button-addon2">
-                                                
-                                            </div>
-                                            <div class="optionkismibuttontarih">
-                                                <div class="row d-flex justify-content-between">
-                                                    <div class="col-md-6">
-                                                        <button type="button" class="btn btn-secondary addoption">Add Option</button>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="dropdown">
-                                                            <button class="btn btn-secondary dropdown-toggle addbutton" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                                Voting length: 3 days <i class="bi bi-chevron-down"></i>
-                                                            </button>
-                                                            <ul class="dropdown-menu">
-                                                              <li><a class="dropdown-item" href="#">1 Day</a></li>
-                                                              <li><a class="dropdown-item" href="#">2 Days</a></li>
-                                                              <li><a class="dropdown-item" href="#">3 Days</a></li>
-                                                              <li><a class="dropdown-item" href="#">4 Days</a></li>
-                                                              <li><a class="dropdown-item" href="#">5 Days</a></li>
-                                                              <li><a class="dropdown-item" href="#">6 Days</a></li>
-                                                              <li><a class="dropdown-item" href="#">7 Days</a></li>
-                                                            </ul>
-                                                          </div>
-                                                    </div>
-
-                                                </div>
-                                                
-                                                
-                                            </div>
-                                            
-                                        </div>
-                                        <div class="col-md-4 optionkismiol">
-                                            <small><i class="bi bi-question-circle"></i> Tips on Better Polls</small>
-                                            <ol type="1">
-                                                <li>
-                                                    Suggest short clear options
-                                                </li>
-                                                <li>
-                                                    The more options, the better
-                                                </li>
-                                                <li>
-                                                    Choose the poll duration
-                                                </li>
-                                                <li>
-                                                    Options can't be edited after post creation
-                                                </li>
-                                            </ol>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="postNavButtons d-flex mt-4 ">
-                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> OC</button>
-                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> Spoiler</button>
-                                <button type="button" class="btn btn-outline-secondary"><i class="bi bi-plus-lg"></i> NSFW</button>
-                                <div class="dropdown postNavButtons ">
-                                    <button class="btn btn-secondary dropdown-toggle postNavDropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                        <i class="bi bi-tags"></i> Flair <i class="bi bi-chevron-compact-down"></i>
-                                    </button>
-                                    <ul class="dropdown-menu">
-                                      <li><a class="dropdown-item" href="#">Flair</a></li>
-                                    </ul>
-                                  </div>
-                            </div>
-                            <hr>
-                            <div class="postNavButtonsAlt postNavButtons d-flex justify-content-end">
-                                <button type="button" class="btn btn-outline-secondary postNavButtons1 ">Save Draft</button>
-                                <button type="button" class="btn btn-outline-secondary postNavButtons2 ">Post</button>
-                            </div>
-
-
-                        </div>
+                    </form>
                         
                     </div>
                     

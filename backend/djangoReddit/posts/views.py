@@ -41,7 +41,28 @@ def index(request):
                 return redirect('index')   
         else:
             messages.error(request, 'Parolalar eslesmiyor.')   
-      
+    # if request.method == 'POST':
+    #     if request.user.is_authenticated:
+    #         if 'like' in request.POST:
+    #             if request.user.profile in post.like.all():
+    #                 post.like.remove(request.user.profile)
+    #                 post.save()
+    #                 return redirect ('index')
+    #             else:
+    #                 post.like.add(request.user.profile)
+    #                 post.dislike.remove(request.user.profile)
+    #                 post.save()
+    #                 return redirect('index')
+    #         if 'dislike' in request.POST:
+    #             if request.user.profile in post.dislike.all():
+    #                 post.dislike.remove()
+    #                 post.save()
+    #                 return redirect('index')
+    #             else:
+    #                 post.dislike.add(request.user.profile)
+    #                 post.like.remove(request.user.profile)
+    #                 post.save()
+    #                 return redirect('index')     
     context = {
         'username': username,
         'email': email,

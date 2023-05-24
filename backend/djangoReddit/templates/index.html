@@ -578,10 +578,11 @@
                                     </ul>
                                 </div>
                                 <form action="" method="POST" class="d-flex">
-                                    <button type="submit" class="btn" name="like" style=" border: none" value="Like ({{post.like.all.count}})"> <i
+                                    {%csrf_token%}
+                                    <button type="submit" class="btn" name="like" style=" border: none" value="Like"> <i
                                         class="fa-solid fa-heart"></i></button>
-                                <p>1.2k</p>
-                                <button type="submit" class="btn" name="dislike" style=" border: none" value="Dislike ({{post.dislike.all.count}})"> <i
+                                <!-- <p >({{post.like.all.count}}) </p> -->
+                                <button type="submit" class="btn" name="dislike" style=" border: none" value="Dislike"> <i
                                         class="fa-solid fa-heart-crack"></i></button>
                                 </form>
                                 

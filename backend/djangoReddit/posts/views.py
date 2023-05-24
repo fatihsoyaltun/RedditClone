@@ -41,7 +41,7 @@ def index(request):
                 return redirect('index')   
         else:
             messages.error(request, 'Parolalar eslesmiyor.')   
-    if  
+      
     context = {
         'username': username,
         'email': email,

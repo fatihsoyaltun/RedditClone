@@ -37,14 +37,15 @@
             </a>
             <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
             {% if user.is_authenticated %}
-            <div class="arama ">
-                <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
-                <input class="search" type="text">
-            </div>
-            {% else %}
             <div class="arama w-50">
                 <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
-                <input class="search " type="text" placeholder="Search Reddit">
+                <input class="search w-100" type="text">
+            </div>
+            {% else %}
+            
+            <div class="arama w-50">
+                <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
+                <input class="search w-100 " type="text" placeholder="Search Reddit">
             </div>
             {% endif %}
 
@@ -59,10 +60,7 @@
             <a href="/login/"><button id="myBtn" >Log In</button></a>
             {% endif %}
 
-            <ul class="right1 mt-3 s-15 ">
-                <li><a class="sol" href="#" style="border: hidden;"> <i class="fa-solid fa-qrcode"
-                            style=" margin-right: 3px;"></i>Get App</a></li>
-            </ul>
+         
 
             {% if user.is_authenticated %}
           
@@ -589,8 +587,8 @@
                             
                         </div>
                     </div>
+                    </div>
                 </div>
-
                 {% endfor %}
 
             </section>

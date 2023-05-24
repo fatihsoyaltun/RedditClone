@@ -19,12 +19,13 @@
                         <input type="textarea" name="postcontent" value="{{postcontent}}" id="" placeholder="Content"
                             class="w-100 mt-3" style="height: 100px;">
                         <label for="cars">Paylaşılacak Grup</label>
+                        
                         <select name="cars" id="cars">
-                            <option value="volvo">Volvo</option>
-                            <option value="saab">Saab</option>
-                            <option value="opel">Opel</option>
-                            <option value="audi">Audi</option>
+                            {% for toplulukad in topplulukadı %}
+                            <option value="volvo">{{toplulukad.toplulukadı}}</option>
+                            {% endfor %}
                         </select>
+                        
                         <input type="file" class="mt-4" name="postimg">
 
 

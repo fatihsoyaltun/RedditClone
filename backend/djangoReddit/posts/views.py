@@ -120,3 +120,6 @@ def kaydet(request):
 
 def topluluk(request):
     return render(request, 'topluluklar.html')
+
+def toplulukolusturma(request):
+    return render(request, 'toplulukolusturma.html')

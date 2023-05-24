@@ -73,6 +73,7 @@
     height: 48px;
 }
 .search{
+    padding:.8rem ;
     border: none;
     border-radius: 15px;
     background-color:transparent;
@@ -80,9 +81,25 @@
 input.search{
     outline: none;
 }
+
+.olartık{
+  transform: translateY(10px);
+}
+
+.nav-icon a:nth-child(1){
+  color: rgb(255, 176, 0);
+}
+.nav-icon a:nth-child(2){
+  color: rgb(255, 102, 172);
+}
+.nav-icon a:nth-child(3){
+  color: rgb(148, 224, 68);
+}
+.nav-icon a:nth-child(4){
+  color: #0dd3bb;
+}
 .navUst div:hover{
-  background-color: #FFFFFF;
-    
+  color: #FFFFFF;
 } 
 .sol{
     background-color: #c5c5c5;

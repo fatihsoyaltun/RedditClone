@@ -447,7 +447,7 @@
             </div>
         </nav>
         <div class="row col-12 col-md-9 ">
-            <section class="col-lg-8">
+            <section class="col-lg-8 d-flex flex-column-reverse">
 
                 {% for post in posts %}
 
@@ -460,10 +460,12 @@
                                     <img src="https://i.pinimg.com/564x/bb/aa/22/bbaa22c230379f4fc0a0e3a538c80772.jpg" width="35" class="me-1" style="border-radius: 50%;" alt="">
 
                                     <div class="hesap">
-                                        <a href="" class="text-decoration-none ">
-                                            <h6 class="h6">{{post.grup}}</h6>
+                                       
+                                        <a href="{% url 'icerik' post.grup.id %}" class="text-decoration-none ">
+                                            <h6 class="h6">{{ post.grup }}</h6>
                                         </a> <!-- POP UP !!!!!!!!!!!!! -->
                                         <div class="pop-up" >
+                                        
                                             <div class="container">
                                                 <div class="row">
                                                     <img src="/static/img/smile-profil.png" width="5" alt="">

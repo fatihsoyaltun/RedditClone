@@ -92,7 +92,8 @@ def icerik(request):
 
 @login_required(login_url='login')
 def post(request):
-    
+    topplulukadı=Toplulukolusturma.objects.all()
+
     postcontent = ''
     postimg= ''
     #sayfada çalıştırılan bir post methodu var mı?
@@ -111,6 +112,7 @@ def post(request):
     context = {
         'postcontent':postcontent,
         'postimg':postimg,
+        'topplulukadı':topplulukadı
     }      
    
     return render(request, 'post.html', context)

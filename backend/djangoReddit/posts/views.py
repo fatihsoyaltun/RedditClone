@@ -88,8 +88,15 @@ def detail(request,postId):
     }
     return render(request, 'detail.html',context)
 
-def icerik(request):
-    return render(request, 'icerik.html')
+def icerik(request, toplulukId):
+    topluluk = Toplulukolusturma.objects.get(id=toplulukId)
+    posts = Post.objects.filter(grup=topluluk)
+    context = {
+        'topluluk': topluluk,
+        'posts': posts
+    } 
+
+    return render(request, 'icerik.html', context)
 
 
 
@@ -99,15 +106,18 @@ def post(request):
 
     postcontent = ''
     postimg= ''
+    grup=''
     #sayfada çalıştırılan bir post methodu var mı?
     if request.method=='POST':
         postcontent = request.POST['postcontent']
-        postimg = request.FILES['postimg']
-
+        if request.FILES.get('postimg'):
+            postimg = request.FILES['postimg']
+        grup=request.POST['grup']
         newPost = Post.objects.create(
             content = postcontent,
             image = postimg,
-            yazar=request.user
+            yazar=request.user,
+            grup_id=grup
         )
         newPost.save()
         return redirect('index')  
@@ -124,7 +134,12 @@ def kaydet(request):
     return render(request, 'saved.html')
 
 def topluluk(request):
-    return render(request, 'topluluklar.html')
+    topplulukadı=Toplulukolusturma.objects.all()
+
+    context = {
+       'topplulukadı':topplulukadı      
+    }    
+    return render(request, 'topluluklar.html',context)
 
 def toplulukolusturma(request):
     return render(request, 'toplulukolusturma.html')

@@ -20,9 +20,9 @@
                             class="w-100 mt-3" style="height: 100px;">
                         <label for="cars">Paylaşılacak Grup</label>
                         
-                        <select name="cars" id="cars">
+                        <select name="grup" id="cars">
                             {% for toplulukad in topplulukadı %}
-                            <option value="volvo">{{toplulukad.toplulukadı}}</option>
+                            <option value="{{toplulukad.id}} ">{{toplulukad.toplulukadı}}</option>
                             {% endfor %}
                         </select>
                         

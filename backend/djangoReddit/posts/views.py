@@ -89,10 +89,12 @@ def detail(request,postId):
     return render(request, 'detail.html',context)
 
 def icerik(request, toplulukId):
+    posts=Post.objects.all()
     topluluk = Toplulukolusturma.objects.get(id=toplulukId)
-    posts = Post.objects.filter(grup=topluluk)
+    posts1 = Post.objects.filter(grup=topluluk)
     context = {
         'topluluk': topluluk,
+        'posts1': posts1,
         'posts': posts
     } 
 

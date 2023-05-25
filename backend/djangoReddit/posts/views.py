@@ -23,46 +23,49 @@ def index(request):
     password1 = ''
     password2 = ''
     if request.method == 'POST':
-        username = request.POST['username']
-        email = request.POST['email']
-        password1 = request.POST['password1']
-        password2 = request.POST['password2']
-        if password1 == password2:
-            if User.objects.filter(username=username).exists():
-                messages.error(request, 'Bu kullanıcı adı kullanılıyor.')
-            elif User.objects.filter(email=email).exists():
-                messages.error(request, 'Bu email zaten alinmis.')    
-            elif len(password1) < 8:
-                messages.error(request, 'Parola en az 8 karakter olmali.')  
+        if 'register' in request.POST:
+            username = request.POST['username']
+            email = request.POST['email']
+            password1 = request.POST['password1']
+            password2 = request.POST['password2']
+            if password1 == password2:
+                if User.objects.filter(username=username).exists():
+                    messages.error(request, 'Bu kullanıcı adı kullanılıyor.')
+                elif User.objects.filter(email=email).exists():
+                    messages.error(request, 'Bu email zaten alinmis.')    
+                elif len(password1) < 8:
+                    messages.error(request, 'Parola en az 8 karakter olmali.')  
+                else:
+                    user = User.objects.create_user(username=username, email=email, password=password1)
+                    user.save()
+                    messages.success(request, 'Basariyla kayit oldunuz.')   
+                    return redirect('index')   
             else:
-                user = User.objects.create_user(username=username, email=email, password=password1)
-                user.save()
-                messages.success(request, 'Basariyla kayit oldunuz.')   
-                return redirect('index')   
-        else:
-            messages.error(request, 'Parolalar eslesmiyor.')   
-    # if request.method == 'POST':
-    #     if request.user.is_authenticated:
-    #         if 'like' in request.POST:
-    #             if request.user.profile in post.like.all():
-    #                 post.like.remove(request.user.profile)
-    #                 post.save()
-    #                 return redirect ('index')
-    #             else:
-    #                 post.like.add(request.user.profile)
-    #                 post.dislike.remove(request.user.profile)
-    #                 post.save()
-    #                 return redirect('index')
-    #         if 'dislike' in request.POST:
-    #             if request.user.profile in post.dislike.all():
-    #                 post.dislike.remove()
-    #                 post.save()
-    #                 return redirect('index')
-    #             else:
-    #                 post.dislike.add(request.user.profile)
-    #                 post.like.remove(request.user.profile)
-    #                 post.save()
-    #                 return redirect('index')     
+                messages.error(request, 'Parolalar eslesmiyor.')   
+    if request.method == 'POST':
+        if request.user.is_authenticated:
+            postId = request.POST['postId']
+            post = Post.objects.get(id = postId)
+            if 'like' in request.POST:
+                if request.user.profile in post.like.all():
+                    post.like.remove(request.user.profile)
+                    post.save()
+                    return redirect ('index')
+                else:
+                    post.like.add(request.user.profile)
+                    post.dislike.remove(request.user.profile)
+                    post.save()
+                    return redirect('index')
+            if 'dislike' in request.POST:
+                if request.user.profile in post.dislike.all():
+                    post.dislike.remove()
+                    post.save()
+                    return redirect('index')
+                else:
+                    post.dislike.add(request.user.profile)
+                    post.like.remove(request.user.profile)
+                    post.save()
+                    return redirect('index')     
     context = {
         'username': username,
         'email': email,

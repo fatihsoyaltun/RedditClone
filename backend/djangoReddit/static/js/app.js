@@ -146,3 +146,6 @@ navbarDropdown.addEventListener("click",function name() {
 
 
 var editor = new FroalaEditor('#example');
+
+
+

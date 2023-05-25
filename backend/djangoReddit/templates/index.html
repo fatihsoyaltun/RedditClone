@@ -12,11 +12,13 @@
     {% endblock title %}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,100;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,100;1,400&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet' type='text/css' />
+    <link href='https://cdn.jsdelivr.net/npm/froala-editor@latest/css/froala_editor.pkgd.min.css' rel='stylesheet'
+        type='text/css' />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
@@ -27,13 +29,16 @@
 
     <header id="nav">
         <nav class="nav navUst">
-            <a href="/" class="logo">
+            <a href="/" class="logo text-decoration-none">
                 <!-- HTML kodu -->
-                <img src="/static/img/Reddit-Logo.png" alt="Desktop Logo">
+                <img src="/static/img/Reddit-Logo.png" alt="Desktop Logo" class="day">
+                <div class="night" >
+                     <img src="data:image/png;base64,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" alt="Desktop Logo"   style="border-radius: 50%; width: 50px; height: auto; margin-top: 5px; float: left;">
+                    <b class="text-white mt-2  text-decoration-none ms-2 " style="float: left;">reddit</b>
+                </div>
                 <img src="/static/img/Reddit-Logo.png" alt="Mobile Logo" class="mobile-logo"
                     style="height: auto; width: 60px;">
-                <img src="https://www.logo.wine/a/logo/Reddit/Reddit-Wordmark-White-Dark-Background-Logo.wine.svg" alt="Mobile Logo" class="mobile-logo1"
-                    style="height: auto; width: 60px;">    
+                
             </a>
             <div style="cursor: pointer;" class="navbar-dropdown"><i class="bi bi-menu-up"></i></div>
             {% if user.is_authenticated %}
@@ -42,7 +47,7 @@
                 <input class="search w-100" type="text">
             </div>
             {% else %}
-            
+
             <div class="arama w-50">
                 <i class="fa-solid fa-magnifying-glass" style="color:#bbbbbb;"></i>
                 <input class="search w-100 " type="text" placeholder="Search Reddit">
@@ -51,19 +56,19 @@
 
             {% if user.is_authenticated %}
             <div class="fs-5 nav-icon">
-               <a href="" class="border-0 olartık" ><i class="bi bi-arrow-up-right-circle "></i></a>
+                <a href="" class="border-0 olartık"><i class="bi bi-arrow-up-right-circle "></i></a>
                 <a href="" class="border-0" style="margin-left: 40px;"><i class="bi bi-chat-dots"></i></a>
                 <a href="" class="border-0" style="margin-left: 40px;"><i class="bi bi-bell"></i></a>
-                 <a href="/post/" class="border-0" style="margin-left: 40px;"><i class="bi bi-plus-lg"></i></a>
+                <a href="/post/" class="border-0" style="margin-left: 40px;"><i class="bi bi-plus-lg"></i></a>
             </div>
             {% else %}
-            <a href="/login/"><button id="myBtn" >Log In</button></a>
+            <a href="/login/"><button id="myBtn">Log In</button></a>
             {% endif %}
 
-         
+
 
             {% if user.is_authenticated %}
-          
+
             <div class="dropdown2">
                 <button class="kudropbtn  d-flex border-0" style="background:none;">
                     <div class="kugirislihesap d-flex" style="font-size: smaller;">
@@ -81,7 +86,7 @@
                     <a href="#"><i class="fa-solid fa-circle-question"></i> Help Center</a>
                     <a href="#"><i class="fa-solid fa-circle-info"></i> More</a>
                     <a href="#"><i class="fa-regular fa-newspaper"></i>Terms and Policies</a>
-                    <a href="#"><i class="fa-solid fa-bullhorn"></i> Advertise on Reddit</a>
+                    <a href="/toplulukolusturma/"><i class="bi bi-shield-fill-plus"></i> Create Community</a>
                     <div class="form-check form-switch ms-2">
                         <label class="form-check-label" for="flexSwitchCheckChecked">Dark Mode</label>
                         <input class="form-check-input dark-mode-toggle" type="checkbox" role="switch"
@@ -221,7 +226,7 @@
                                                 <a href="#"><i class="bi bi-controller"></i> Gaming <i
                                                         class="bi bi-chevron-compact-down"></i> </a>
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu scrol-kaldir">
                                                 <li><a class="dropdown-item" href="#">Valheim</a></li>
                                                 <li><a class="dropdown-item" href="#">Genshin Impact</a></li>
                                                 <li><a class="dropdown-item" href="#">Minecraft</a></li>
@@ -244,7 +249,7 @@
                                                 <a href="#"><i class="bi bi-box"></i> Sports <i
                                                         class="bi bi-chevron-compact-down"></i> </a>
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu scrol-kaldir">
                                                 <li><a class="dropdown-item" href="#">NFL</a></li>
                                                 <li><a class="dropdown-item" href="#">NBA</a></li>
                                                 <li><a class="dropdown-item" href="#">Megan Anderson</a></li>
@@ -266,7 +271,7 @@
                                                 <a href="#"><i class="bi bi-briefcase"></i> Business, Economics a...
                                                     <i class="bi bi-chevron-compact-down"></i></a>
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu scrol-kaldir">
                                                 <li><a class="dropdown-item" href="#">GameStop</a></li>
                                                 <li><a class="dropdown-item" href="#">Moderna</a></li>
                                                 <li><a class="dropdown-item" href="#">Pfizer</a></li>
@@ -288,7 +293,7 @@
                                                 <a href="#"><i class="bi bi-currency-bitcoin"></i> Crypto <i
                                                         class="bi bi-chevron-compact-down"></i> </a>
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu scrol-kaldir">
                                                 <li><a class="dropdown-item" href="#">Cardano</a></li>
                                                 <li><a class="dropdown-item" href="#">Dogecoin</a></li>
                                                 <li><a class="dropdown-item" href="#">Algorand</a></li>
@@ -306,7 +311,7 @@
                                                 <a href="#"><i class="bi bi-tv"></i> Television <i
                                                         class="bi bi-chevron-compact-down"></i> </a>
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu scrol-kaldir">
                                                 <li><a class="dropdown-item" href="#">The Real Housewives of
                                                         Atla...</a></li>
                                                 <li><a class="dropdown-item" href="#">The Bachelor</a></li>
@@ -332,7 +337,7 @@
                                                 <a href="#"><i class="bi bi-star"></i> Celebrity <i
                                                         class="bi bi-chevron-compact-down"></i></a>
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu scrol-kaldir">
                                                 <li><a class="dropdown-item" href="#">Kim Kardashian</a></li>
                                                 <li><a class="dropdown-item" href="#">Doja Cat</a></li>
                                                 <li><a class="dropdown-item" href="#">Iggy Azalea</a></li>
@@ -354,7 +359,7 @@
                                                 <a href="#"><i class=" bi bi-three-dots"></i> More <i
                                                         class="bi bi-chevron-compact-down"></i></a>
                                             </button>
-                                            <ul class="dropdown-menu">
+                                            <ul class="dropdown-menu scrol-kaldir">
                                                 <li><a class="dropdown-item" href="#">Animals and Pets</a></li>
                                                 <li><a class="dropdown-item" href="#">Anime</a></li>
                                                 <li><a class="dropdown-item" href="#">Art</a></li>
@@ -435,7 +440,7 @@
                                     <input type="password" name="password2" class="form-control mt-2 rounded-5" id=""
                                         placeholder="Sifrenizi Tekrar Giriniz">
                                 </div>
-                                <button type="submit" class="btn btn-kirmizi2" data-bs-toggle="modal"
+                                <button type="submit" name="register" class="btn btn-kirmizi2" data-bs-toggle="modal"
                                     data-bs-target="#exampleModal">
                                     Continue
                                 </button>
@@ -457,13 +462,14 @@
                             <div class="card-title d-flex">
                                 <div class="right  ">
 
-                                    <img src="https://i.pinimg.com/564x/bb/aa/22/bbaa22c230379f4fc0a0e3a538c80772.jpg" width="35" class="me-1" style="border-radius: 50%;" alt="">
+                                    <img src="https://i.pinimg.com/564x/bb/aa/22/bbaa22c230379f4fc0a0e3a538c80772.jpg"
+                                        width="35" class="me-1" style="border-radius: 50%;" alt="">
 
                                     <div class="hesap">
                                         <a href="" class="text-decoration-none ">
                                             <h6 class="h6">{{post.grup}}</h6>
                                         </a> <!-- POP UP !!!!!!!!!!!!! -->
-                                        <div class="pop-up" >
+                                        <div class="pop-up">
                                             <div class="container">
                                                 <div class="row">
                                                     <img src="/static/img/smile-profil.png" width="5" alt="">
@@ -496,7 +502,7 @@
                                     <small>Posted by</small>
                                     <div class="hesap1">
                                         <a href="" class="text-decoration-none ">{{post.yazar}}</a>
-                                        <div class="pop-up" >
+                                        <div class="pop-up">
                                             <div class="container">
                                                 <div class="row">
                                                     <img src="/static/img/smile-profil.png" width="5" alt="">
@@ -532,10 +538,12 @@
                                     <button class="join text-black">Join</button>
                                 </div>
                             </div>
-                            <p class="card-text mt-2"><a href="{% url 'detail' post.id %}" class="text-dark text-decoration-none"> {{post.content}}</a></p>
+                            <p class="card-text mt-2"><a href="{% url 'detail' post.id %}"
+                                    class="text-dark text-decoration-none"> {{post.content}}</a></p>
                             <div class="post-img">
                                 {% if post.image %}
-                                <a href="{% url 'detail' post.id %}" class="text-dark text-decoration-none"> <img src="{{post.image.url}}" alt=""></a>
+                                <a href="{% url 'detail' post.id %}" class="text-dark text-decoration-none"> <img
+                                        src="{{post.image.url}}" alt=""></a>
                                 {% endif %}
                             </div>
 
@@ -577,16 +585,17 @@
                                 </div>
                                 <form action="" method="POST" class="d-flex">
                                     {%csrf_token%}
+                                    <input type="hidden" name="postId" value="{{post.id}}">
                                     <button type="submit" class="btn" name="like" style=" border: none" value="Like"> <i
-                                        class="fa-solid fa-heart"></i></button>
-                                <!-- <p >({{post.like.all.count}}) </p> -->
-                                <button type="submit" class="btn" name="dislike" style=" border: none" value="Dislike"> <i
-                                        class="fa-solid fa-heart-crack"></i></button>
+                                            class="fa-solid fa-heart"></i></button>
+                                    <p>({{post.like.all.count}}) </p>
+                                    <button type="submit" class="btn" name="dislike" style=" border: none"
+                                        value="Dislike" > <i class="fa-solid fa-heart-crack"></i></button>
                                 </form>
-                                
-                            
+
+
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
                 {% endfor %}
@@ -755,7 +764,8 @@
 
     <a href="#nav" id="ica"><i id="ic" class="fas fa-arrow-alt-circle-up"></i></a>
 
-    <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>  	
+    <script type='text/javascript'
+        src='https://cdn.jsdelivr.net/npm/froala-editor@latest/js/froala_editor.pkgd.min.js'></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>

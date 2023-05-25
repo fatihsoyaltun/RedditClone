@@ -1668,16 +1668,19 @@ body.dark-mode .navUst  div:hover{
 }
 
 /* DARKMODE */
-.mobile-logo1 {
+.night {
   display: none;
 }
 
-body.dark-mode .mobile-logo {
+body.dark-mode .day {
   display: none;
 }
 
-body.dark-mode .mobile-logo1 {
+body.dark-mode .night {
   display: block;
+}
+.btn-group form p{
+  margin-top: 15px;
 }
 
 
@@ -1896,4 +1899,11 @@ body.dark-mode .mobile-logo1 {
 .btn-warning{
   --bs-btn-bg: #ff5107;
   --bs-btn-border-color: #ff5107;
+}
+
+.scrol-kaldir{
+    overflow-y: hidden; /* Yatay scroll'u gizler */
+    overflow-x: visible; /* Dikey scroll'u gösterir */
+    max-height: none; /* Maksimum yükseklik ayarını kaldırır */
+    white-space: nowrap; /* Uzun metinlerin satır sonunda kesilmesini önler */
 }

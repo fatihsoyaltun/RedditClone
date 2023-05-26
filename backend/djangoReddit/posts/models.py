@@ -2,6 +2,7 @@ from django.db import models
 from django.contrib.auth.models import User
 from user.models import *
 
+
 # Create your models here.
 class Toplulukolusturma(models.Model):
     toplulukadı=models.CharField(max_length=100, null=True)

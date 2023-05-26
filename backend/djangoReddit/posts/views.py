@@ -170,3 +170,6 @@ def toplulukolusturma(request):
         'toplulukpp':toplulukpp
     }     
     return render(request, 'toplulukolusturma.html',context)
+
+def view_404(request, exception):
+    return redirect('/')

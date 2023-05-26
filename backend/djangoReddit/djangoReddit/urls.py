@@ -19,11 +19,17 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from posts.views import *
-
+from django.urls import path, include, re_path
+from django.views.static import serve
+from posts.views import *
 
 
 urlpatterns = [
+    re_path(r'^media/(?P<path>.*)$', serve,{'document_root':settings.MEDIA_ROOT}),
+    re_path(r'^static/(?P<path>.*)$', serve,{'document_root':settings.STATIC_ROOT}),
     path('admin/', admin.site.urls),
     path('', include('posts.urls')),
     path('', include('user.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+handler404='posts.views.view_404'

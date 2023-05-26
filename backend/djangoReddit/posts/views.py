@@ -17,7 +17,7 @@ from django.contrib import messages
 # Create your views here.
 def index(request):
     posts=Post.objects.all()
-
+    topplulukadı=Toplulukolusturma.objects.all()
     username = ''
     email = ''
     password1 = ''
@@ -71,7 +71,8 @@ def index(request):
         'email': email,
         'password1': password1,
         'password2': password2,
-        'posts':posts
+        'posts':posts,
+        'topplulukadı':topplulukadı
     }
     return render(request, 'index.html' , context)
 
@@ -89,13 +90,11 @@ def detail(request,postId):
     return render(request, 'detail.html',context)
 
 def icerik(request, toplulukId):
-    posts=Post.objects.all()
     topluluk = Toplulukolusturma.objects.get(id=toplulukId)
-    posts1 = Post.objects.filter(grup=topluluk)
+    posts1 = Post.objects.filter(grup_id=topluluk)
     context = {
         'topluluk': topluluk,
         'posts1': posts1,
-        'posts': posts
     } 
 
     return render(request, 'icerik.html', context)
@@ -143,5 +142,31 @@ def topluluk(request):
     }    
     return render(request, 'topluluklar.html',context)
 
+@login_required(login_url='login')
 def toplulukolusturma(request):
-    return render(request, 'toplulukolusturma.html')
+    toplulukadı = ''
+    toplulukbg= ''
+    toplulukpp=''
+    #sayfada çalıştırılan bir post methodu var mı?
+    if request.method=='POST':
+        toplulukadı = request.POST['toplulukadı']
+        if request.FILES.get('toplulukbg'):
+            toplulukbg = request.FILES['toplulukbg']
+        if request.FILES.get('toplulukpp'):
+            toplulukpp = request.FILES['toplulukpp']
+        
+        newTopluluk = Toplulukolusturma.objects.create(
+            toplulukadı = toplulukadı,
+            toplulukbackgroundimg = toplulukbg,
+            toplulukprofileimg=toplulukpp
+        )
+
+        newTopluluk.save()
+        return redirect('topluluk')  
+
+    context = {
+        'toplulukadı':toplulukadı,
+        'toplulukbg':toplulukbg,
+        'toplulukpp':toplulukpp
+    }     
+    return render(request, 'toplulukolusturma.html',context)

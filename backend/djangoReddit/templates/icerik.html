@@ -256,7 +256,7 @@
                         alt="">
                 </li>
                 <li>
-                    <p class="icerikProfilP2 ps-3 pe-3 " >{{topluluk.toplulukadı}}</p>
+                    <p class="icerikProfilP2 ps-3 pe-3 ">{{topluluk.toplulukadı}}</p>
                 </li>
                 <li>
                     <div class="icerikSagKisimCardButton icerikSagKisimCardButton2">
@@ -271,8 +271,7 @@
                     </div>
                 </li>
                 <li class="icerikProfilButtonLi">
-                    <button type="button"
-                        class="btn btn-secondary icerikProfilButton ms-md-4">
+                    <button type="button" class="btn btn-secondary icerikProfilButton ms-md-4">
                         <p class="icerikProfilButtonYazi">Join</p>
                     </button>
                 </li>
@@ -284,7 +283,7 @@
             <a href="#"> <small>FAQ</small></a>
         </div>
         <section class="col-lg-7">
-            <div class="icerikIcon d-flex justify-content-between  ">
+            <div class="icerikIcon d-flex justify-content-between ">
                 <div class="icerikIconSol d-flex align-items-center">
                     <div class="icerikIconA icerikIconA1 "><a href="#"><i class="bi bi-fire"></i> Hot</a></div>
                     <div class="icerikIconA"><a href="#"><i class="bi bi-rainbow"></i> New</a></div>
@@ -323,19 +322,20 @@
                 </div>
 
             </div>
+            <section class="col-lg-8 icerikpaylasim d-flex flex-column-reverse">
+                {% for post in posts1 %}
 
-            <section class="col-lg-8 icerikpaylasim ">
                 <div class="container yonlendirme">
                     <div class="card rounded-4">
                         <div class="card-body ">
                             <div class="card-title d-flex">
                                 <div class="right  ">
 
-                                    <img src="{{topluluk.toplulukprofileimg.url}}"
-                                        width="35" class="me-1" style="border-radius: 50%;" alt="">
+                                    <img src="{{topluluk.toplulukprofileimg.url}}" width="35" class="me-1"
+                                        style="border-radius: 50%;" alt="">
 
                                     <div class="hesap">
-                                       
+
                                         <a href="" class="text-decoration-none ">
                                             <h6 class="h6">{{topluluk.toplulukadı}}</h6>
                                         </a> <!-- POP UP !!!!!!!!!!!!! -->
@@ -371,7 +371,7 @@
 
                                     <small>Posted by</small>
                                     <div class="hesap1">
-                                        <a href="" class="text-decoration-none ">{{post.yazar}}</a>
+                                        <a href="{% url 'profil' post.yazar.id %}" class="text-decoration-none ">{{post.yazar}}</a>
                                         <div class="pop-up">
                                             <div class="container">
                                                 <div class="row">
@@ -408,8 +408,8 @@
                                     <button class="join text-black">Join</button>
                                 </div>
                             </div>
-                            <p class="card-text mt-2"><a href=""
-                                    class="text-dark text-decoration-none"> {{post.content}}</a></p>
+                            <p class="card-text mt-2"><a href="" class="text-dark text-decoration-none">
+                                    {{post.content}}</a></p>
                             <div class="post-img">
                                 {% if post.image %}
                                 <a href="{% url 'detail' post.id %}" class="text-dark text-decoration-none"> <img
@@ -460,7 +460,7 @@
                                             class="fa-solid fa-heart"></i></button>
                                     <p>({{post.like.all.count}}) </p>
                                     <button type="submit" class="btn" name="dislike" style=" border: none"
-                                        value="Dislike" > <i class="fa-solid fa-heart-crack"></i></button>
+                                        value="Dislike"> <i class="fa-solid fa-heart-crack"></i></button>
                                 </form>
 
 
@@ -468,7 +468,11 @@
                         </div>
                     </div>
                 </div>
+
+                {% endfor %}
             </section>
+
+
         </section>
 
 

@@ -37,6 +37,7 @@ def index(request):
                     messages.error(request, 'Parola en az 8 karakter olmali.')  
                 else:
                     user = User.objects.create_user(username=username, email=email, password=password1)
+                    Profile
                     user.save()
                     messages.success(request, 'Basariyla kayit oldunuz.')   
                     return redirect('index')   

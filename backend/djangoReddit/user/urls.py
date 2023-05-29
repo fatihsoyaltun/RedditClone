@@ -10,4 +10,4 @@ urlpatterns =[
     path('login/', giris , name='login'),
     path('logout/', cikis , name='logout'),
     path('profil/<int:profilId>' , profil , name='profil'),
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+]

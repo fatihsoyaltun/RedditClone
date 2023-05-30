@@ -381,7 +381,24 @@
                                     </li>
                                 </ul>
                             </div>
+                            {% if user.is_authenticated %}
                             <hr class="navbarHr">
+                            <div class="navbar_alt mb-5">
+                                <p class="navbar_alt_p">Create an account to follow <br> your favorite communities
+                                    <br> and
+                                    start taking part in <br> conversations.
+                                </p>
+                                <div class="navbar_alt_button">
+                                    <!-- Button trigger modal -->
+                                    <a href="/logout/" >
+                                    <button type="button" class="btn btn-kirmizi">
+                                        logout Reddit
+                                    </button>
+                                    </a>
+                                </div>
+                            </div>
+                            {% else %}
+                              <hr class="navbarHr">
                             <div class="navbar_alt mb-5">
                                 <p class="navbar_alt_p">Create an account to follow <br> your favorite communities
                                     <br> and
@@ -395,6 +412,7 @@
                                     </button>
                                 </div>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>

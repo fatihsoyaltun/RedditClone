@@ -12,8 +12,11 @@ def giris(request):
 
         user = authenticate(request , username = username , password = password)
 
+
+
         if user is not None:
             login(request , user)
+            
             messages.success(request , 'Giris Yapildi')
             return redirect('index')
         else:

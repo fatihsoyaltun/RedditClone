@@ -10,7 +10,8 @@ urlpatterns =[
     path('kaydet/', kaydet, name='kaydet'),
     path('detail/<int:postId>', detail, name='detail'),
     path('post/', post, name='post'),
-    path('icerik/', icerik, name='icerik'),
-    path('topluluk/' , topluluk , name='topluluk')
+    path('icerik/<int:toplulukId>/', icerik, name='icerik'),
+    path('topluluk/' , topluluk , name='topluluk'),
+    path('toplulukolusturma/', toplulukolusturma, name='toplulukolusturma'),
 
 ]  + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

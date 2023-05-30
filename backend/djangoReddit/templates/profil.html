@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
 {% load static %}
-
+{% load humanize %}
 {% block title %}
 <title>Profil</title>
 {% endblock title %}
@@ -11,34 +11,185 @@
 <section style="margin-top: 100px;">
     <div class="container">
         <div class="row">
-            <div class="col-8">
+            <div class="col-12 col-lg-8">
                 <section class="col-lg-7">
                     <div class="icerikIcon d-flex justify-content-between  ">
                         <div class="icerikIconSol d-flex align-items-center">
-                            <div class="icerikIconA icerikIconA1 "><a href="#"><i class="bi bi-fire"></i>  Hot</a></div>
-                            <div class="icerikIconA"><a href="#"><i class="bi bi-rainbow"></i>  New</a></div>
-                            <div class="icerikIconA"><a href="#"><i class="bi bi-arrow-bar-up"></i>  Top</a></div>
-                            
+                            <div class="icerikIconA icerikIconA1 "><a href="#"><i class="bi bi-fire"></i> Hot</a></div>
+                            <div class="icerikIconA"><a href="#"><i class="bi bi-rainbow"></i> New</a></div>
+                            <div class="icerikIconA"><a href="#"><i class="bi bi-arrow-bar-up"></i> Top</a></div>
                         </div>
-    
                     </div>
                 </section>
+                <div class="mt-5">
+                    <section class="d-flex flex-column-reverse" >
+                    {% for post in  posts1 %}
+                   
+                        <div class="container yonlendirme">
+                            <div class="card rounded-4">
+                                <div class="card-body ">
+                                    <div class="card-title d-flex">
+                                        <div class="right  ">
+        
+                                            <img src="{{post.grup.toplulukprofileimg.url}}"
+                                                width="35" class="me-1" style="border-radius: 50%;" alt="">
+        
+                                            <div class="hesap">
+                                               
+                                                <a href="" class="text-decoration-none ">
+                                                    <h6 class="h6">{{ post.grup }}</h6>
+                                                </a> <!-- POP UP !!!!!!!!!!!!! -->
+                                                <div class="pop-up">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <img src="/static/img/smile-profil.png" width="5" alt="">
+                                                            <a href="" class="text-decoration-none w-50 p-0">
+                                                                <h6 class="">{{ post.grup }}</h6>
+                                                            </a>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="cizgi d-flex">
+                                                                <div class="col-6">
+                                                                    <h6>40.7 m </h6>
+                                                                    <p>Members</p>
+                                                                </div>
+                                                                <hr class="dikcizgi">
+                                                                <div class="col-6 ms-3">
+                                                                    <h6>71.4 k</h6>
+                                                                    <p>Online</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <p>r/AskReddit is the place to ask and answer thought-provoking
+                                                                questions</p>
+                                                        </div>
+                                                        <button class="rounded-5 w-100">View Community</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+        
+                                            <small>Posted by</small>
+                                            <div class="hesap1">
+                                                <a href="" class="text-decoration-none ">{{post.yazar}}</a>
+                                                <div class="pop-up">
+                                                    <div class="container">
+                                                        <div class="row">
+                                                            <img src="/static/img/smile-profil.png" width="5" alt="">
+                                                            <a href="" class="text-decoration-none w-50">
+                                                                <h6 style="color: orange;">{{post.yazar}}</h6>
+                                                            </a>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="cizgi d-flex">
+                                                                <div class="col-6">
+                                                                    <h6 style="color: orange;">40.7 m </h6>
+                                                                    <p>Members</p>
+                                                                </div>
+                                                                <hr class="dikcizgi">
+                                                                <div class="col-6 ms-3">
+                                                                    <h6 style="color: orange;">71.4 k</h6>
+                                                                    <p>Online</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <p>r/AskReddit is the place to ask and answer thought-provoking
+                                                                questions</p>
+                                                        </div>
+                                                        <button class="rounded-5 w-100">View Community</button>
+                                                    </div>
+                                                </div>
+        
+                                            </div>
+                                            <small class=" d-inline-flex time">{{ post.created_at|naturaltime }}</small>
+                                        </div>
+                                        <div class="left d-flex">
+                                            <button class="join text-black">Join</button>
+                                        </div>
+                                    </div>
+                                    <p class="card-text mt-2"><a href=""
+                                            class="text-dark text-decoration-none"> {{post.content}}</a></p>
+                                    <div class="post-img">
+                                        {% if post.image %}
+                                        <a href="{% url 'detail' post.id %}" class="text-dark text-decoration-none"> <img
+                                                src="{{post.image.url}}" alt=""></a>
+                                        {% endif %}
+                                    </div>
+        
+        
+                                    <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
+                                        <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
+                                            Comments</button>
+        
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                <i class="bi bi-arrow-90deg-right"> Share</i>
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
+                                                            Link</i></a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
+                                                            Embed</i></a></li>
+                                            </ul>
+                                        </div>
+                                        <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
+                                                Save</i></button>
+        
+                                        <div class="btn-group" role="group">
+                                            <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                                                aria-expanded="false">
+                                                ...
+                                            </button>
+                                            <ul class="dropdown-menu">
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
+                                                            Hide</i></a></li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
+                                                </li>
+                                                <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
+                                                            Mute
+                                                            r/ArsivUnutmaz</i></a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <form action="" method="POST" class="d-flex">
+                                            {%csrf_token%}
+                                            <input type="hidden" name="postId" value="{{post.id}}">
+                                            <button type="submit" class="btn" name="like" style=" border: none" value="Like"> <i
+                                                    class="fa-solid fa-heart"></i></button>
+                                            <p>({{post.like.all.count}}) </p>
+                                            <button type="submit" class="btn" name="dislike" style=" border: none"
+                                                value="Dislike" > <i class="fa-solid fa-heart-crack"></i></button>
+                                        </form>
+        
+        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    
+                    {% endfor %}
+                </section>
+                </div>
             </div>
-            <div class=" col-4 kubegeniyancard">
+            <div class=" col-4 kubegeniyancard h-100">
                 <div>
-                    <img src="https://media.istockphoto.com/id/1357394965/tr/foto%C4%9Fraf/abstract-yellow-and-black-are-light-pattern-with-the-gradient-is-the-with-floor-wall-metal.jpg?s=612x612&w=0&k=20&c=Y-j1bOVXHEr336bYnwCdM9YZw-cs2743oFWcVgwSUyo="  class="card-img-top" style="height: 90px;" alt="...">
+                    <img src="https://media.istockphoto.com/id/1357394965/tr/foto%C4%9Fraf/abstract-yellow-and-black-are-light-pattern-with-the-gradient-is-the-with-floor-wall-metal.jpg?s=612x612&w=0&k=20&c=Y-j1bOVXHEr336bYnwCdM9YZw-cs2743oFWcVgwSUyo="
+                        class="card-img-top" style="height: 90px;" alt="...">
                     <div class="kucard-body">
                         <button class="kuekleme border-1" style="width: 40px; border-radius: 100px; height: 40px;"><i
                                 class="bi bi-plus-circle-dotted"></i></button>
-                        <div class="box kuproresmi w-25  rounded-3"  style="height:80px;">
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg" style="width: 100%; height: auto;" class="kubproresim" alt="">
+                        <div class="box kuproresmi w-25  rounded-3" style="height:80px;">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Default_pfp.jpg"
+                                style="width: 100%; height: auto; border-radius: 50%;" class="kubproresim" alt="">
                             <button onsubmit="return checkProfilePicture()" class="kuekleme2 border-1"
                                 style="width: 35px; border-radius: 100px; height: 35px;"><i
                                     class="bi bi-plus-circle-dotted"></i></button>
-                            <p class="kuhesap">kubra</p>
+                            <p class="kuhesap">{{ topluluk.username }}</p>
                         </div>
-                        <button style="margin-left: 260px; border: none; background: none;"
-                            class="kuayarlar "><a href="/profilayarlar/"><i class="bi bi-gear"></i></a></button>
+                        <button style=" border: none; background: none;" class="kuayarlar "><a
+                                href="/profilayarlar/"><i class="bi bi-gear"></i></a></button>
                     </div>
                     <div class="kucard-footer ">
                         <button type="button" class="btn createavatar w-100">Create
@@ -61,8 +212,8 @@
                             + Add social link
                         </button>
                         <!-- Modal -->
-                        <div class="modal fade" id="exampleModal" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -73,8 +224,9 @@
                                     </div>
                                     <div class="modal-body">
                                         <!-- Button trigger modal -->
-                                        <button type="button" class="btn btn-secondary rounded-5 " data-bs-toggle="modal"
-                                            data-bs-target="#exampleModal2" onclick="openSecondModal()">
+                                        <button type="button" class="btn btn-secondary rounded-5 "
+                                            data-bs-toggle="modal" data-bs-target="#exampleModal2"
+                                            onclick="openSecondModal()">
                                             <i class="bi bi-instagram">Instagram</i>
                                         </button>
                                         <!-- Modal 1-->
@@ -83,8 +235,8 @@
                             </div>
                         </div>
                         <!-- Modal 2-->
-                        <div class="modal fade" id="exampleModal2" tabindex="-1"
-                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
@@ -102,8 +254,8 @@
                                 </div>
                             </div>
                         </div>
-                        <button class="w-100 bg-primary mt-3 rounded-3 border-0 createavatar p-1">New
-                            Post</button>
+                        <a href="/post/ " style="color: black;" class="text-decoration-none d-block text-center w-100 bg-primary mt-3 rounded-3 border-0 createavatar p-1">New 
+                            Post</a>
                         <div class="dropup-center dropup">
                             <ul class="kubegenidropdown-menu list-unstyled mt-3">
                                 <li><button class="rounded-3 text-primary border-0" style="background: none;">Profile
@@ -122,7 +274,7 @@
                 </div>
             </div>
         </div>
-    </div>                         
+    </div>
 </section>
 
 

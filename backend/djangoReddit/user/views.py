@@ -2,6 +2,7 @@ from django.shortcuts import render , redirect
 from django.contrib.auth import authenticate , login , logout
 from django.contrib import messages
 from .forms import *
+from posts.models import *
 
 # Create your views here.
 def giris(request):
@@ -33,5 +34,13 @@ def profilayarlar(request):
 def genelayarlar(request):
     return render(request, 'UserSettings.html')
 
-def profil(request):
-    return render(request , 'profil.html')
+def profil(request,profilId):
+    posts=Post.objects.all()
+    topluluk = User.objects.get(id=profilId)
+    posts1 = Post.objects.filter(yazar_id=topluluk  )
+    context = {
+        'topluluk': topluluk,
+        'posts1': posts1,
+        'posts': posts
+    } 
+    return render(request , 'profil.html',context)

@@ -248,14 +248,14 @@
 
                       <div class="hesap">
                         <a href="" class="text-decoration-none ">
-                          <h6>r/AskReddit</h6>
+                          <h6>{{posts.grup}}</h6>
                         </a> <!-- POP UP !!!!!!!!!!!!! -->
                         <div class="pop-up" style=" width: 17rem;">
                           <div class="container">
                             <div class="row">
-                              <img src="img/smile-profil.png" style="width: 50px!important; " alt="">
+                              <img src="/static/img/smile-profil.png" style="width: 50px!important; " alt="">
                               <a href="" class="text-decoration-none w-50 p-0">
-                                <h6 class="h6">r/AskReddit</h6>
+                                <h6 class="h6">{{posts.grup}}</h6>
                               </a>
                             </div>
                             <div class="row">
@@ -286,13 +286,13 @@
 
                       <small class="">Posted by</small>
                       <div class="hesap1">
-                        <a href="" class="text-decoration-none ">{{posts.userName}}</a>
+                        <a href="" class="text-decoration-none ">{{posts.yazar}}</a>
                         <div class="pop-up" style="height: 17rem; width: 17rem;">
                           <div class="container">
                             <div class="row">
-                              <img src="smile-profil.png" style="width: 50px!important; " alt="">
+                              <img src="/static/img/smile-profil.png"  width="5" alt="">
                               <a href="" class="text-decoration-none ">
-                                <h6>{{posts.grup}}</h6>
+                                <h6>{{posts.yazar}}</h6>
                               </a>
                             </div>
                             <div class="row">
@@ -322,7 +322,7 @@
 
 
                       
-                      <small class=" d-inline-flex time">{{ post.created_at|naturaltime }}</small>
+                      <small class=" d-inline-flex time">{{ posts.created_at|naturaltime }}</small>
                     </div>
                     <div class="left d-flex">
                       <button class="join text-black">Join</button>

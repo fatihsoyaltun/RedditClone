@@ -1,262 +1,264 @@
 {% extends 'index.html' %}
 {% load static %}
 {% block title %}
+{% load humanize %}
 <title>icerik</title>
 {% endblock title %}
 
-    {% block content %}
-    <main class="row " style="margin-top: 5rem;">
-        <nav class="col-md-3 hepsi1">
-            <div class="hepsi">
-                <div class="row">
-                    <div class="">
-                        <div class="fixed">
-                            <div class="navbar">
-                                <ul class="list-unstyled">
-                                    <li class="navbarBaslik mt-3">FEEDS</li>
-                                    <li>
-                                        <a href="#"><i class="bi bi-house-door-fill"></i> Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="#"><i class="bi bi-star"></i> Popular</a>
-                                    </li>
-                                    <li class="navbarBaslik mt-4 ">TOPICS</li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <a href="#"><i class="bi bi-controller"></i> Gaming <i
-                                                        class="bi bi-chevron-compact-down"></i> </a>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Valheim</a></li>
-                                                <li><a class="dropdown-item" href="#">Genshin Impact</a></li>
-                                                <li><a class="dropdown-item" href="#">Minecraft</a></li>
-                                                <li><a class="dropdown-item" href="#">Pokimane</a></li>
-                                                <li><a class="dropdown-item" href="#">Halo Infinite</a></li>
-                                                <li><a class="dropdown-item" href="#">Call of Duty: Warzone</a></li>
-                                                <li><a class="dropdown-item" href="#">Path of Exile</a></li>
-                                                <li><a class="dropdown-item" href="#">Hollow Knight: Silksong</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">Escape from Tarkov</a></li>
-                                                <li><a class="dropdown-item" href="#">Watch Dogs: Legion</a></li>
+{% block content %}
+<main class="row " style="margin-top: 5rem;">
+    <nav class="col-md-3 hepsi1">
+        <div class="hepsi">
+            <div class="row">
+                <div class="">
+                    <div class="fixed">
+                        <div class="navbar">
+                            <ul class="list-unstyled">
+                                <li class="navbarBaslik mt-3">FEEDS</li>
+                                <li>
+                                    <a href="#"><i class="bi bi-house-door-fill"></i> Home</a>
+                                </li>
+                                <li>
+                                    <a href="#"><i class="bi bi-star"></i> Popular</a>
+                                </li>
+                                <li class="navbarBaslik mt-4 ">TOPICS</li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <a href="#"><i class="bi bi-controller"></i> Gaming <i
+                                                    class="bi bi-chevron-compact-down"></i> </a>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Valheim</a></li>
+                                            <li><a class="dropdown-item" href="#">Genshin Impact</a></li>
+                                            <li><a class="dropdown-item" href="#">Minecraft</a></li>
+                                            <li><a class="dropdown-item" href="#">Pokimane</a></li>
+                                            <li><a class="dropdown-item" href="#">Halo Infinite</a></li>
+                                            <li><a class="dropdown-item" href="#">Call of Duty: Warzone</a></li>
+                                            <li><a class="dropdown-item" href="#">Path of Exile</a></li>
+                                            <li><a class="dropdown-item" href="#">Hollow Knight: Silksong</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Escape from Tarkov</a></li>
+                                            <li><a class="dropdown-item" href="#">Watch Dogs: Legion</a></li>
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown ">
-                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <a href="#"><i class="bi bi-box"></i> Sports <i
-                                                        class="bi bi-chevron-compact-down"></i> </a>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">NFL</a></li>
-                                                <li><a class="dropdown-item" href="#">NBA</a></li>
-                                                <li><a class="dropdown-item" href="#">Megan Anderson</a></li>
-                                                <li><a class="dropdown-item" href="#">Atlanta Hawks</a></li>
-                                                <li><a class="dropdown-item" href="#">Los Angeles Lakers</a></li>
-                                                <li><a class="dropdown-item" href="#">Boston Celtics</a></li>
-                                                <li><a class="dropdown-item" href="#">Arsenal F.C.</a></li>
-                                                <li><a class="dropdown-item" href="#">Philadelphia 76ers</a></li>
-                                                <li><a class="dropdown-item" href="#">Premier League</a></li>
-                                                <li><a class="dropdown-item" href="#">UFC</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown ">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <a href="#"><i class="bi bi-box"></i> Sports <i
+                                                    class="bi bi-chevron-compact-down"></i> </a>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">NFL</a></li>
+                                            <li><a class="dropdown-item" href="#">NBA</a></li>
+                                            <li><a class="dropdown-item" href="#">Megan Anderson</a></li>
+                                            <li><a class="dropdown-item" href="#">Atlanta Hawks</a></li>
+                                            <li><a class="dropdown-item" href="#">Los Angeles Lakers</a></li>
+                                            <li><a class="dropdown-item" href="#">Boston Celtics</a></li>
+                                            <li><a class="dropdown-item" href="#">Arsenal F.C.</a></li>
+                                            <li><a class="dropdown-item" href="#">Philadelphia 76ers</a></li>
+                                            <li><a class="dropdown-item" href="#">Premier League</a></li>
+                                            <li><a class="dropdown-item" href="#">UFC</a></li>
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <a href="#"><i class="bi bi-briefcase"></i> Business, Economics a...
-                                                    <i class="bi bi-chevron-compact-down"></i></a>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">GameStop</a></li>
-                                                <li><a class="dropdown-item" href="#">Moderna</a></li>
-                                                <li><a class="dropdown-item" href="#">Pfizer</a></li>
-                                                <li><a class="dropdown-item" href="#">Johnson & Johnson</a></li>
-                                                <li><a class="dropdown-item" href="#">AstraZeneca</a></li>
-                                                <li><a class="dropdown-item" href="#">Walgreens</a></li>
-                                                <li><a class="dropdown-item" href="#">Best Buy</a></li>
-                                                <li><a class="dropdown-item" href="#">Novavax</a></li>
-                                                <li><a class="dropdown-item" href="#">SpaceX</a></li>
-                                                <li><a class="dropdown-item" href="#">Tesla</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <a href="#"><i class="bi bi-briefcase"></i> Business, Economics a...
+                                                <i class="bi bi-chevron-compact-down"></i></a>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">GameStop</a></li>
+                                            <li><a class="dropdown-item" href="#">Moderna</a></li>
+                                            <li><a class="dropdown-item" href="#">Pfizer</a></li>
+                                            <li><a class="dropdown-item" href="#">Johnson & Johnson</a></li>
+                                            <li><a class="dropdown-item" href="#">AstraZeneca</a></li>
+                                            <li><a class="dropdown-item" href="#">Walgreens</a></li>
+                                            <li><a class="dropdown-item" href="#">Best Buy</a></li>
+                                            <li><a class="dropdown-item" href="#">Novavax</a></li>
+                                            <li><a class="dropdown-item" href="#">SpaceX</a></li>
+                                            <li><a class="dropdown-item" href="#">Tesla</a></li>
 
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <a href="#"><i class="bi bi-currency-bitcoin"></i> Crypto <i
-                                                        class="bi bi-chevron-compact-down"></i> </a>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Cardano</a></li>
-                                                <li><a class="dropdown-item" href="#">Dogecoin</a></li>
-                                                <li><a class="dropdown-item" href="#">Algorand</a></li>
-                                                <li><a class="dropdown-item" href="#">Bitcoin</a></li>
-                                                <li><a class="dropdown-item" href="#">Litecoin</a></li>
-                                                <li><a class="dropdown-item" href="#">Basic Attention Token</a></li>
-                                                <li><a class="dropdown-item" href="#">Bitcoin Cash</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <a href="#"><i class="bi bi-tv"></i> Television <i
-                                                        class="bi bi-chevron-compact-down"></i> </a>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">The Real Housewives of
-                                                        Atla...</a></li>
-                                                <li><a class="dropdown-item" href="#">The Bachelor</a></li>
-                                                <li><a class="dropdown-item" href="#">Sister Wives</a></li>
-                                                <li><a class="dropdown-item" href="#">90 Day Fiance</a></li>
-                                                <li><a class="dropdown-item" href="#">Wife Swap</a></li>
-                                                <li><a class="dropdown-item" href="#">The Amazing Race Australia</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">Married at First Sight</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">The Real Housewives of
-                                                        Dall...</a></li>
-                                                <li><a class="dropdown-item" href="#">My 600-lb Life</a></li>
-                                                <li><a class="dropdown-item" href="#">Last Week Tonight with
-                                                        John...</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <a href="#"><i class="bi bi-star"></i> Celebrity <i
-                                                        class="bi bi-chevron-compact-down"></i></a>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Kim Kardashian</a></li>
-                                                <li><a class="dropdown-item" href="#">Doja Cat</a></li>
-                                                <li><a class="dropdown-item" href="#">Iggy Azalea</a></li>
-                                                <li><a class="dropdown-item" href="#">Jamie Lee Curtis</a></li>
-                                                <li><a class="dropdown-item" href="#">Natalie Portman</a></li>
-                                                <li><a class="dropdown-item" href="#">Henry Cavill</a></li>
-                                                <li><a class="dropdown-item" href="#">Millie Bobby Brown</a></li>
-                                                <li><a class="dropdown-item" href="#">Tom Hiddleston</a></li>
-                                                <li><a class="dropdown-item" href="#">Keanu Reeves
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <a href="#"><i class="bi bi-currency-bitcoin"></i> Crypto <i
+                                                    class="bi bi-chevron-compact-down"></i> </a>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Cardano</a></li>
+                                            <li><a class="dropdown-item" href="#">Dogecoin</a></li>
+                                            <li><a class="dropdown-item" href="#">Algorand</a></li>
+                                            <li><a class="dropdown-item" href="#">Bitcoin</a></li>
+                                            <li><a class="dropdown-item" href="#">Litecoin</a></li>
+                                            <li><a class="dropdown-item" href="#">Basic Attention Token</a></li>
+                                            <li><a class="dropdown-item" href="#">Bitcoin Cash</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <a href="#"><i class="bi bi-tv"></i> Television <i
+                                                    class="bi bi-chevron-compact-down"></i> </a>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">The Real Housewives of
+                                                    Atla...</a></li>
+                                            <li><a class="dropdown-item" href="#">The Bachelor</a></li>
+                                            <li><a class="dropdown-item" href="#">Sister Wives</a></li>
+                                            <li><a class="dropdown-item" href="#">90 Day Fiance</a></li>
+                                            <li><a class="dropdown-item" href="#">Wife Swap</a></li>
+                                            <li><a class="dropdown-item" href="#">The Amazing Race Australia</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Married at First Sight</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">The Real Housewives of
+                                                    Dall...</a></li>
+                                            <li><a class="dropdown-item" href="#">My 600-lb Life</a></li>
+                                            <li><a class="dropdown-item" href="#">Last Week Tonight with
+                                                    John...</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <a href="#"><i class="bi bi-star"></i> Celebrity <i
+                                                    class="bi bi-chevron-compact-down"></i></a>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Kim Kardashian</a></li>
+                                            <li><a class="dropdown-item" href="#">Doja Cat</a></li>
+                                            <li><a class="dropdown-item" href="#">Iggy Azalea</a></li>
+                                            <li><a class="dropdown-item" href="#">Jamie Lee Curtis</a></li>
+                                            <li><a class="dropdown-item" href="#">Natalie Portman</a></li>
+                                            <li><a class="dropdown-item" href="#">Henry Cavill</a></li>
+                                            <li><a class="dropdown-item" href="#">Millie Bobby Brown</a></li>
+                                            <li><a class="dropdown-item" href="#">Tom Hiddleston</a></li>
+                                            <li><a class="dropdown-item" href="#">Keanu Reeves
 
-                                                    </a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="dropdown">
-                                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                                                aria-expanded="false">
-                                                <a href="#"><i class=" bi bi-three-dots"></i> More <i
-                                                        class="bi bi-chevron-compact-down"></i></a>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a class="dropdown-item" href="#">Animals and Pets</a></li>
-                                                <li><a class="dropdown-item" href="#">Anime</a></li>
-                                                <li><a class="dropdown-item" href="#">Art</a></li>
-                                                <li><a class="dropdown-item" href="#">Cars and Motor Vehicles</a>
-                                                </li>
-                                                <li><a class="dropdown-item" href="#">Crafts and DIY</a></li>
-                                                <li><a class="dropdown-item" href="#">Culture, Race, and
-                                                        Ethnicity</a></li>
-                                                <li><a class="dropdown-item" href="#">Ethics and Philosophy</a></li>
-                                                <li><a class="dropdown-item" href="#">Fashion</a></li>
-                                                <li><a class="dropdown-item" href="#">Food and Drink</a></li>
-                                                <li><a class="dropdown-item" href="#">History</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <hr class="navbarHr">
-                            <div class="navbar_alt mb-5">
-                                <p class="navbar_alt_p">Create an account to follow <br> your favorite communities
-                                    <br> and
-                                    start taking part in <br> conversations.
-                                </p>
-                                <div class="navbar_alt_button">
-                                    <!-- Button trigger modal -->
-                                    <button type="button" class="btn btn-kirmizi" data-bs-toggle="modal"
-                                        data-bs-target="#exampleModal">
-                                        Join Reddit
-                                    </button>
-                                </div>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown">
+                                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                            aria-expanded="false">
+                                            <a href="#"><i class=" bi bi-three-dots"></i> More <i
+                                                    class="bi bi-chevron-compact-down"></i></a>
+                                        </button>
+                                        <ul class="dropdown-menu">
+                                            <li><a class="dropdown-item" href="#">Animals and Pets</a></li>
+                                            <li><a class="dropdown-item" href="#">Anime</a></li>
+                                            <li><a class="dropdown-item" href="#">Art</a></li>
+                                            <li><a class="dropdown-item" href="#">Cars and Motor Vehicles</a>
+                                            </li>
+                                            <li><a class="dropdown-item" href="#">Crafts and DIY</a></li>
+                                            <li><a class="dropdown-item" href="#">Culture, Race, and
+                                                    Ethnicity</a></li>
+                                            <li><a class="dropdown-item" href="#">Ethics and Philosophy</a></li>
+                                            <li><a class="dropdown-item" href="#">Fashion</a></li>
+                                            <li><a class="dropdown-item" href="#">Food and Drink</a></li>
+                                            <li><a class="dropdown-item" href="#">History</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <hr class="navbarHr">
+                        <div class="navbar_alt mb-5">
+                            <p class="navbar_alt_p">Create an account to follow <br> your favorite communities
+                                <br> and
+                                start taking part in <br> conversations.
+                            </p>
+                            <div class="navbar_alt_button">
+                                <!-- Button trigger modal -->
+                                <button type="button" class="btn btn-kirmizi" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
+                                    Join Reddit
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div style="margin-top:50px ;" class="modal fade" id="exampleModal" tabindex="-1"
-                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div style="margin-top:50px ;" class="modal fade" id="exampleModal" tabindex="-1"
+            aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body ">
+                        <p class="mt-2"><b>Sign Up</b></p>
+                        <small class="mt-2">By continuing, you are setting up a Reddit account and agree to our
+                            <a href="#">User Agreement</a> and<a href="#">Privacy Policy</a>.</small>
+                        <div class="form-check mt-3 ">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label" for="flexCheckDefault">
+                                <small>I agree to get emails about cool stuff on Reddit</small>
+                            </label>
                         </div>
-                        <div class="modal-body ">
-                            <p class="mt-2"><b>Sign Up</b></p>
-                            <small class="mt-2">By continuing, you are setting up a Reddit account and agree to our
-                                <a href="#">User Agreement</a> and<a href="#">Privacy Policy</a>.</small>
-                            <div class="form-check mt-3 ">
-                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                <label class="form-check-label" for="flexCheckDefault">
-                                    <small>I agree to get emails about cool stuff on Reddit</small>
-                                </label>
-                            </div>
 
-                            <div class="navbar_alt_button_button1 mt-5">
-                                <button type="button" class="btn navbar_alt_button_button2"><i class="bi bi-google"></i>
-                                    Google ile devam edin</button>
-                            </div>
-
-                            <div class="navbar_alt_button_button1 mt-3">
-                                <button type="button " class="btn navbar_alt_button_button2"><i class="bi bi-apple"></i>
-                                    Continue with Apple</button>
-                            </div>
-                            <div class="mt-3"
-                                style="display: flex; align-items: center; width: 350px; height: 50px; text-align: center; ">
-                                <div style="flex-grow: 1; border-top: 1px solid rgb(207, 205, 205);"></div>
-                                <span style="padding: 0 10px; color: rgb(165, 164, 164);">OR</span>
-                                <div style="flex-grow: 1; border-top: 1px solid rgb(207, 205, 205);"></div>
-                            </div>
-                            <div class="col">
-                                <input type="text" class="form-control navbar_alt_formcontrol mt-3" placeholder="Email"
-                                    aria-label="">
-                            </div>
-                            <button type="button" class="btn btn-kirmizi2" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">
-                                Continue
-                            </button>
-                            <small class="mt-2">Already a redditor? <a href="#">Log In</a></small>
+                        <div class="navbar_alt_button_button1 mt-5">
+                            <button type="button" class="btn navbar_alt_button_button2"><i class="bi bi-google"></i>
+                                Google ile devam edin</button>
                         </div>
+
+                        <div class="navbar_alt_button_button1 mt-3">
+                            <button type="button " class="btn navbar_alt_button_button2"><i class="bi bi-apple"></i>
+                                Continue with Apple</button>
+                        </div>
+                        <div class="mt-3"
+                            style="display: flex; align-items: center; width: 350px; height: 50px; text-align: center; ">
+                            <div style="flex-grow: 1; border-top: 1px solid rgb(207, 205, 205);"></div>
+                            <span style="padding: 0 10px; color: rgb(165, 164, 164);">OR</span>
+                            <div style="flex-grow: 1; border-top: 1px solid rgb(207, 205, 205);"></div>
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control navbar_alt_formcontrol mt-3" placeholder="Email"
+                                aria-label="">
+                        </div>
+                        <button type="button" class="btn btn-kirmizi2" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">
+                            Continue
+                        </button>
+                        <small class="mt-2">Already a redditor? <a href="#">Log In</a></small>
                     </div>
                 </div>
             </div>
-        </nav>
+        </div>
+    </nav>
 
-        <div class="row col-12 col-md-9">
-            <div class="icerikBanner">
-                <img src="https://styles.redditmedia.com/t5_7hqomg/styles/bannerBackgroundImage_h5ywiepy6aja1.jpg?width=4000&format=pjpg&v=enabled&s=2ea9710f9f595749ce2a0924d8cf4713431495a4" alt="">
-            </div>
-            <div class="icerikProfil mb-0 w-100">
-                <ul class="text-decoration-none list-unstyled d-flex w-100 icerikProfilUl">
-                    <li class="icerikProfilİmgLi "><img class="icerikProfilİmg" src="https://styles.redditmedia.com/t5_7hqomg/styles/communityIcon_lnxlhix84tja1.png?width=256&v=enabled&s=ffec9eb8e0513d6b3a3e636856a7da8ee06d1f8e" alt="">
-                    </li>
-                    <li > <p class=" icerikProfilP"><b>ChatGPT</b></p>
-                    </li> 
-                    <li> <p class="icerikProfilP2">r/ChatGPT</p> </li>
-                    <li>
+    <div class="row col-12 col-md-9">
+        <div class="icerikBanner">
+            <img src="{{topluluk.toplulukbackgroundimg.url}}" alt="">
+        </div>
+        <div class="icerikProfil mb-0 w-100">
+            <ul class="text-decoration-none list-unstyled d-flex w-100 icerikProfilUl">
+                <li class="icerikProfilİmgLi "><img class="icerikProfilİmg" src="{{topluluk.toplulukprofileimg.url}}"
+                        alt="">
+                </li>
+                <li>
+                    <p class="icerikProfilP2 ps-3 pe-3 ">{{topluluk.toplulukadı}}</p>
+                </li>
+                <li>
                     <div class="icerikSagKisimCardButton icerikSagKisimCardButton2">
                         <div class="icerikSagKisimCardButton3 d-flex">
                             <a href="#" class="btn">ChatGPT</a>
@@ -265,605 +267,374 @@
                             <a href="#" class="btn">Information & communications technology</a>
                             <a href="#" class="btn">Technology</a>
                         </div>
-                       
-                      </div></li>
-                    
-                    <li class="icerikProfilButtonLi"><button type="button" class="btn btn-secondary icerikProfilButton ms-md-4"> <p class="icerikProfilButtonYazi">Join</p> </button>
-                    </li>
-                </ul>
-            </div>
-            <div class="icerikNav">
-                <a class="icerikNavA" href="#"><small><b>Posts</b></small></a>
-                <a href="#"><small>Discord server</small></a>
-                <a href="#"> <small>FAQ</small></a>
-            </div>
-            <section class="col-lg-7">
-                <div class="icerikIcon d-flex justify-content-between  ">
-                    <div class="icerikIconSol d-flex align-items-center">
-                        <div class="icerikIconA icerikIconA1 "><a href="#"><i class="bi bi-fire"></i>  Hot</a></div>
-                        <div class="icerikIconA"><a href="#"><i class="bi bi-rainbow"></i>  New</a></div>
-                        <div class="icerikIconA"><a href="#"><i class="bi bi-arrow-bar-up"></i>  Top</a></div>
-                        <div class="icerikIcondropdown1">
-                            <div class="dropdown">
-                        <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <i class="bi bi-three-dots"></i>
-                        </button>
-                        <ul class="dropdown-menu  ">
-                          <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i class="bi bi-graph-up-arrow"></i>Rising</a></li>
-                        </ul>
-                            </div>
+
+                    </div>
+                </li>
+                <li class="icerikProfilButtonLi">
+                    <button type="button" class="btn btn-secondary icerikProfilButton ms-md-4">
+                        <p class="icerikProfilButtonYazi">Join</p>
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <div class="icerikNav">
+            <a class="icerikNavA" href="#"><small><b>Posts</b></small></a>
+            <a href="#"><small>Discord server</small></a>
+            <a href="#"> <small>FAQ</small></a>
+        </div>
+        <section class="col-lg-7">
+            <div class="icerikIcon d-flex justify-content-between ">
+                <div class="icerikIconSol d-flex align-items-center">
+                    <div class="icerikIconA icerikIconA1 "><a href="#"><i class="bi bi-fire"></i> Hot</a></div>
+                    <div class="icerikIconA"><a href="#"><i class="bi bi-rainbow"></i> New</a></div>
+                    <div class="icerikIconA"><a href="#"><i class="bi bi-arrow-bar-up"></i> Top</a></div>
+                    <div class="icerikIcondropdown1">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <i class="bi bi-three-dots"></i>
+                            </button>
+                            <ul class="dropdown-menu  ">
+                                <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i
+                                            class="bi bi-graph-up-arrow"></i>Rising</a></li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="icerikIconSag">
-                        <div class="">
-                            <div class="dropdown">
-                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <div class="icerikIconSag">
+                    <div class="">
+                        <div class="dropdown">
+                            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
                                 <i class="bi bi-card-text"></i> <small> <i class="bi bi-chevron-down"></i></small>
                             </button>
                             <ul class="dropdown-menu  ">
-                              <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i class="bi bi-card-checklist"></i><small> Card</small> </a></li></a></li>
-                              <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i class="bi bi-list"></i> <small>Classic</small> </a></li></a></li>
-                              <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i class="bi bi-list-columns-reverse"></i> <small>Compact</small> </a></li>
+                                <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i
+                                            class="bi bi-card-checklist"></i><small> Card</small> </a></li></a></li>
+                                <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i class="bi bi-list"></i>
+                                        <small>Classic</small> </a></li></a></li>
+                                <li><a class="dropdown-item icerikIcondropdown1Menu" href="#"><i
+                                            class="bi bi-list-columns-reverse"></i> <small>Compact</small> </a></li>
                             </ul>
                         </div>
-                        </div>
                     </div>
-
                 </div>
 
-                <section class="col-lg-8 icerikpaylasim ">
-                    <div class="container">
-                        <div class="card rounded-4">
-                            <div class="card-body ">
-                                <div class="card-title d-flex">
-                                    <div class="right  d-flex ">
-    
-                                        <img src="img/smile-profil.png" width="35" alt="">
-    
-                                        <img src="smile-profil.png" width="35" alt="">
-    
-    
-                                        <div class="hesap">
-                                            <a href="" class="text-decoration-none ">
-                                                <h6>r/AskReddit</h6>
-                                            </a> <!-- POP UP !!!!!!!!!!!!! -->
-                                            <div class="pop-up" style=" width: 17rem;">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <img src="img/smile-profil.png" style="width: 50px!important; "
-                                                            alt="">
-                                                        <a href="" class="text-decoration-none w-50 p-0">
-                                                            <h6 class="">r/AskReddit</h6>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="cizgi d-flex">
-                                                            <div class="col-6">
-                                                                <h6>40.7 m </h6>
-                                                                <p>Members</p>
-                                                            </div>
-                                                            <hr class="dikcizgi">
-                                                            <div class="col-6 ms-3">
-                                                                <h6>71.4 k</h6>
-                                                                <p>Online</p>
-                                                            </div>
+            </div>
+            <section class="col-lg-8 icerikpaylasim d-flex flex-column-reverse">
+                {% for post in posts1 %}
+
+                <div class="container yonlendirme">
+                    <div class="card rounded-4">
+                        <div class="card-body ">
+                            <div class="card-title d-flex">
+                                <div class="right  ">
+
+                                    <img src="{{topluluk.toplulukprofileimg.url}}" width="35" class="me-1"
+                                        style="border-radius: 50%;" alt="">
+
+                                    <div class="hesap">
+
+                                        <a href="" class="text-decoration-none ">
+                                            <h6 class="h6">{{topluluk.toplulukadı}}</h6>
+                                        </a> <!-- POP UP !!!!!!!!!!!!! -->
+                                        <div class="pop-up">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <img src="/static/img/smile-profil.png" width="5" alt="">
+                                                    <a href="" class="text-decoration-none w-50 p-0">
+                                                        <h6 class="">{{topluluk.toplulukadı}}</h6>
+                                                    </a>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cizgi d-flex">
+                                                        <div class="col-6">
+                                                            <h6>40.7 m </h6>
+                                                            <p>Members</p>
+                                                        </div>
+                                                        <hr class="dikcizgi">
+                                                        <div class="col-6 ms-3">
+                                                            <h6>71.4 k</h6>
+                                                            <p>Online</p>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                            questions</p>
-                                                    </div>
-                                                    <button class="rounded-5 w-100">View Community</button>
                                                 </div>
+                                                <div class="row">
+                                                    <p>r/AskReddit is the place to ask and answer thought-provoking
+                                                        questions</p>
+                                                </div>
+                                                <button class="rounded-5 w-100">View Community</button>
                                             </div>
-    
                                         </div>
-    
-                                        <small>Posted by</small>
-                                        <div class="hesap">
-                                            <a href="" class="text-decoration-none ">kubra</a>
-                                            <div class="pop-up" style="height: 17rem; width: 17rem;">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <img src="smile-profil.png" style="width: 50px!important; " alt="">
-                                                        <a href="" class="text-decoration-none ">
-                                                            <h6>r/AskReddit</h6>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="cizgi d-flex">
-                                                            <div class="col-6">
-                                                                <h6>40.7 m </h6>
-                                                                <p>Members</p>
-                                                            </div>
-                                                            <hr class="dikcizgi">
-                                                            <div class="col-6 ms-3">
-                                                                <h6>71.4 k</h6>
-                                                                <p>Online</p>
-                                                            </div>
+                                    </div>
+
+                                    <small>Posted by</small>
+                                    <div class="hesap1">
+                                        <a href="{% url 'profil' post.yazar.id %}" class="text-decoration-none ">{{post.yazar}}</a>
+                                        <div class="pop-up">
+                                            <div class="container">
+                                                <div class="row">
+                                                    <img src="/static/img/smile-profil.png" width="5" alt="">
+                                                    <a href="" class="text-decoration-none w-50">
+                                                        <h6 style="color: orange;">{{post.yazar}}</h6>
+                                                    </a>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="cizgi d-flex">
+                                                        <div class="col-6">
+                                                            <h6 style="color: orange;">40.7 m </h6>
+                                                            <p>Members</p>
+                                                        </div>
+                                                        <hr class="dikcizgi">
+                                                        <div class="col-6 ms-3">
+                                                            <h6 style="color: orange;">71.4 k</h6>
+                                                            <p>Online</p>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                            questions</p>
-                                                    </div>
-                                                    <button class="rounded-5 w-100">View Community</button>
                                                 </div>
+                                                <div class="row">
+                                                    <p>r/AskReddit is the place to ask and answer thought-provoking
+                                                        questions</p>
+                                                </div>
+                                                <button class="rounded-5 w-100">View Community</button>
                                             </div>
-    
                                         </div>
-    
-    
-    
-    
-                                        
-                                        <small class="d-inline-flex time">{time}</small>
+
                                     </div>
-                                    <div class="left d-flex">
-                                        <button class="join text-black">Join</button>
-                                    </div>
+                                    <small class=" d-inline-flex time">{{ post.created_at|naturaltime }}</small>
                                 </div>
-                                <p class="card-text mt-2">Ortam nasıl olmuş ? şekil dimi</p>
-                                <img src="img/bigi.webp 09-17-57-264.webp" class="post-img" style="width: 100%!important"
-                                    alt="">
-    
-                                <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
-                                    <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
-                                        Comments</button>
-    
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="bi bi-arrow-90deg-right"> Share</i>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
-                                                        Link</i></a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
-                                                        Embed</i></a></li>
-                                        </ul>
-                                    </div>
-                                    <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
-                                            Save</i></button>
-    
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            ...
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
-                                                        Hide</i></a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
-                                                        Mute
-                                                        r/ArsivUnutmaz</i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <button type="button" class="btn" style=" border: none "> <i
+                                <div class="left d-flex">
+                                    <button class="join text-black">Join</button>
+                                </div>
+                            </div>
+                            <p class="card-text mt-2"><a href="" class="text-dark text-decoration-none">
+                                    {{post.content}}</a></p>
+                            <div class="post-img">
+                                {% if post.image %}
+                                <a href="{% url 'detail' post.id %}" class="text-dark text-decoration-none"> <img
+                                        src="{{post.image.url}}" alt=""></a>
+                                {% endif %}
+                            </div>
+
+
+                            <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
+                                <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
+                                    Comments</button>
+
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        <i class="bi bi-arrow-90deg-right"> Share</i>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
+                                                    Link</i></a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
+                                                    Embed</i></a></li>
+                                    </ul>
+                                </div>
+                                <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
+                                        Save</i></button>
+
+                                <div class="btn-group" role="group">
+                                    <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        ...
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
+                                                    Hide</i></a></li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
+                                        </li>
+                                        <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
+                                                    Mute
+                                                    r/ArsivUnutmaz</i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <form action="" method="POST" class="d-flex">
+                                    {%csrf_token%}
+                                    <input type="hidden" name="postId" value="{{post.id}}">
+                                    <button type="submit" class="btn" name="like" style=" border: none" value="Like"> <i
                                             class="fa-solid fa-heart"></i></button>
-                                    <p>1.2k</p>
-                                    <button type=" button" class="btn" style=" border: none"> <i
-                                            class="fa-solid fa-heart-crack"></i></button>
-                                </div>
+                                    <p>({{post.like.all.count}}) </p>
+                                    <button type="submit" class="btn" name="dislike" style=" border: none"
+                                        value="Dislike"> <i class="fa-solid fa-heart-crack"></i></button>
+                                </form>
+
+
                             </div>
                         </div>
                     </div>
-                    <div class="container">
-                        <div class="card rounded-4">
-                            <div class="card-body ">
-                                <div class="card-title d-flex">
-                                    <div class="right  d-flex ">
-                                        <img src="img/smile-profil.png" width="35" alt="">
-    
-                                        <div class="hesap">
-                                            <a href="" class="text-decoration-none ">
-                                                <h6>r/AskReddit</h6>
-                                            </a> <!-- POP UP !!!!!!!!!!!!! -->
-                                            <div class="pop-up" style=" width: 17rem;">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <img src="img/smile-profil.png" style="width: 50px!important; "
-                                                            alt="">
-                                                        <a href="" class="text-decoration-none w-50 p-0">
-                                                            <h6 class="">r/AskReddit</h6>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="cizgi d-flex">
-                                                            <div class="col-6">
-                                                                <h6>40.7 m </h6>
-                                                                <p>Members</p>
-                                                            </div>
-                                                            <hr class="dikcizgi">
-                                                            <div class="col-6 ms-3">
-                                                                <h6>71.4 k</h6>
-                                                                <p>Online</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                            questions</p>
-                                                    </div>
-                                                    <button class="rounded-5 w-100">View Community</button>
-                                                </div>
-                                            </div>
-    
-                                        </div>
-    
-    
-    
-    
-                                        <small>Posted by</small>
-                                        <div class="hesap">
-                                            <a href="" class="text-decoration-none ">kubra</a>
-                                            <div class="pop-up" style="height: 17rem; width: 17rem;">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <img src="smile-profil.png" style="width: 50px!important; " alt="">
-                                                        <a href="" class="text-decoration-none ">
-                                                            <h6>r/AskReddit</h6>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="cizgi d-flex">
-                                                            <div class="col-6">
-                                                                <h6>40.7 m </h6>
-                                                                <p>Members</p>
-                                                            </div>
-                                                            <hr class="dikcizgi">
-                                                            <div class="col-6 ms-3">
-                                                                <h6>71.4 k</h6>
-                                                                <p>Online</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                            questions</p>
-                                                    </div>
-                                                    <button class="rounded-5 w-100">View Community</button>
-                                                </div>
-                                            </div>
-    
-                                        </div>
-    
-    
-    
-    
-                                        
-                                        <small class="d-inline-flex time">{time}</small>
-                                    </div>
-                                    <div class="left d-flex">
-                                        <button class="join text-black">Join</button>
-                                    </div>
-                                </div>
-                                <p class="card-text mt-2">Ortam nasıl olmuş ? şekil dimi</p>
-    
-                                <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
-                                    <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
-                                        Comments</button>
-    
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="bi bi-arrow-90deg-right"> Share</i>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
-                                                        Link</i></a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
-                                                        Embed</i></a></li>
-                                        </ul>
-                                    </div>
-                                    <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
-                                            Save</i></button>
-    
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            ...
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
-                                                        Hide</i></a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
-                                                        Mute
-                                                        r/ArsivUnutmaz</i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <button type="button" class="btn" style=" border: none "> <i
-                                            class="fa-solid fa-heart"></i></button>
-                                    <p>1.2k</p>
-                                    <button type=" button" class="btn" style=" border: none"> <i
-                                            class="fa-solid fa-heart-crack"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="card rounded-4">
-                            <div class="card-body ">
-                                <div class="card-title d-flex">
-                                    <div class="right  d-flex ">
-                                        <img src="img/smile-profil.png" width="35" alt="">
-    
-                                        <div class="hesap">
-                                            <a href="" class="text-decoration-none ">
-                                                <h6>r/AskReddit</h6>
-                                            </a> <!-- POP UP !!!!!!!!!!!!! -->
-                                            <div class="pop-up" style=" width: 17rem;">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <img src="img/smile-profil.png" style="width: 50px!important; "
-                                                            alt="">
-                                                        <a href="" class="text-decoration-none w-50 p-0">
-                                                            <h6 class="">r/AskReddit</h6>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="cizgi d-flex">
-                                                            <div class="col-6">
-                                                                <h6>40.7 m </h6>
-                                                                <p>Members</p>
-                                                            </div>
-                                                            <hr class="dikcizgi">
-                                                            <div class="col-6 ms-3">
-                                                                <h6>71.4 k</h6>
-                                                                <p>Online</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                            questions</p>
-                                                    </div>
-                                                    <button class="rounded-5 w-100">View Community</button>
-                                                </div>
-                                            </div>
-    
-                                        </div>
-    
-    
-    
-    
-                                        <small>Posted by</small>
-                                        <div class="hesap">
-                                            <a href="" class="text-decoration-none ">kubra</a>
-                                            <div class="pop-up" style="height: 17rem; width: 17rem;">
-                                                <div class="container">
-                                                    <div class="row">
-                                                        <img src="smile-profil.png" style="width: 50px!important; " alt="">
-                                                        <a href="" class="text-decoration-none ">
-                                                            <h6>r/AskReddit</h6>
-                                                        </a>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="cizgi d-flex">
-                                                            <div class="col-6">
-                                                                <h6>40.7 m </h6>
-                                                                <p>Members</p>
-                                                            </div>
-                                                            <hr class="dikcizgi">
-                                                            <div class="col-6 ms-3">
-                                                                <h6>71.4 k</h6>
-                                                                <p>Online</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <p>r/AskReddit is the place to ask and answer thought-provoking
-                                                            questions</p>
-                                                    </div>
-                                                    <button class="rounded-5 w-100">View Community</button>
-                                                </div>
-                                            </div>
-    
-                                        </div>
-    
-    
-    
-    
-                                        
-                                        <small class="d-inline-flex time">{time}</small>
-                                    </div>
-                                    <div class="left d-flex">
-                                        <button class="join text-black">Join</button>
-                                    </div>
-                                </div>
-                                <p class="card-text mt-2">Paralardaki değişim hakkında</p>
-                                <img src="img/para.webp 09-17-57-275.webp" class="post-img" style="width: 100%!important"
-                                    alt="">
-                                <div class="btn-group mt-3" role="group" aria-label="Button group with nested dropdown">
-                                    <button type="button" class="btn buttons "><i class="bi bi-chat-square"></i> 2.8k
-                                        Comments</button>
-    
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            <i class="bi bi-arrow-90deg-right"> Share</i>
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-link-45deg"> Copy
-                                                        Link</i></a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-file-code-fill">
-                                                        Embed</i></a></li>
-                                        </ul>
-                                    </div>
-                                    <button type="button" class="btn border-0 buttons"><i class="bi bi-bookmark">
-                                            Save</i></button>
-    
-                                    <div class="btn-group" role="group">
-                                        <button type="button" class="btn buttons dropdown-toggle" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            ...
-                                        </button>
-                                        <ul class="dropdown-menu">
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-eye-slash">
-                                                        Hide</i></a></li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-flag"> Report</i></a>
-                                            </li>
-                                            <li><a class="dropdown-item" href="#"><i class="bi bi-volume-mute-fill">
-                                                        Mute
-                                                        r/ArsivUnutmaz</i></a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <button type="button" class="btn" style=" border: none "> <i
-                                            class="fa-solid fa-heart"></i></button>
-                                    <p>1.2k</p>
-                                    <button type=" button" class="btn" style=" border: none"> <i
-                                            class="fa-solid fa-heart-crack"></i></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+                </div>
+
+                {% endfor %}
             </section>
 
 
-            <section class="col-md-3 icerikSagKisim">
-                <div class="card">
-                    <div class="card-header icerikSagKisimCardHeader">
-                     About Community
-                    </div>
-                    <div class="card-body">
-                      <small class="card-text">Subreddit to discuss about ChatGPT. Not affiliated with OpenAI.</small>
-                      <p class="mt-3"><i class="bi bi-calendar"> <small>Time</small> </i></p>
-                      <p class="mt-3"><i class="bi bi-tag-fill"></i> <small>r/ChatGPT topics</small> </i></p>
-                      <div class="icerikSagKisimCardButton">
+        </section>
+
+
+        <section class="col-md-3 icerikSagKisim">
+            <div class="card">
+                <div class="card-header icerikSagKisimCardHeader">
+                    About Community
+                </div>
+                <div class="card-body">
+                    <small class="card-text">Subreddit to discuss about ChatGPT. Not affiliated with OpenAI.</small>
+                    <p class="mt-3"><i class="bi bi-calendar"> <small>Time</small> </i></p>
+                    <p class="mt-3"><i class="bi bi-tag-fill"></i> <small>r/ChatGPT topics</small> </i></p>
+                    <div class="icerikSagKisimCardButton">
                         <a href="#" class="btn">ChatGPT</a>
                         <a href="#" class="btn">OpenAI</a>
                         <a href="#" class="btn">Artificial Intelligence</a>
                         <a href="#" class="btn">Information & communications technology</a>
                         <a href="#" class="btn">Technology</a>
-                      </div>
-                      <hr>
-                      <div class="icerikSagKisimFooter">
+                    </div>
+                    <hr>
+                    <div class="icerikSagKisimFooter">
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item ">
-                              <div class="row">
-                                <div class="cizgi d-flex">
-                                  <div class="col-4">
-                                    <h6><small>40.7 m</small></h6>
-                                    <p>Members</p>
-                                  </div>
-                                  <div class="col-4">
-                                    <h6><small>71.4 k</small> </h6>
-                                    <p>Online</p>
-                                  </div>
-                                  <div class="col-4">
-                                    <h6> <small>Top 1%</small> </h6>
-                                    <p>Ranked by Size</p>
-                                  </div>
+                                <div class="row">
+                                    <div class="cizgi d-flex">
+                                        <div class="col-4">
+                                            <h6><small>40.7 m</small></h6>
+                                            <p>Members</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6><small>71.4 k</small> </h6>
+                                            <p>Online</p>
+                                        </div>
+                                        <div class="col-4">
+                                            <h6> <small>Top 1%</small> </h6>
+                                            <p>Ranked by Size</p>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
                             </li>
-                            
-                          </ul>
-                      </div>
-                      
+
+                        </ul>
                     </div>
+
                 </div>
-                <div class="card icerikSagKisimCard2">
-                    <div class="card-header icerikSagKisimCardHeader">
-                        Filter by flair
-                    </div>
-                    <div class="card-body">
-        
-                      <div class="icerikSagKisimCardButton">
-                        <a href="#" class="btn" style="background-color: rgb(0, 121, 211);">Educational Purpose Only </a>
+            </div>
+            <div class="card icerikSagKisimCard2">
+                <div class="card-header icerikSagKisimCardHeader">
+                    Filter by flair
+                </div>
+                <div class="card-body">
+
+                    <div class="icerikSagKisimCardButton">
+                        <a href="#" class="btn" style="background-color: rgb(0, 121, 211);">Educational Purpose Only
+                        </a>
                         <a href="#" class="btn" style="background-color: rgb(218, 218, 218);">Use cases </a>
                         <a href="#" class="btn" style="background-color: rgb(255, 176, 0);">Gone Wild </a>
                         <a href="#" class="btn" style="background-color: rgb(255, 102, 172);">Serious replies only</a>
                         <a href="#" class="btn" style="background-color: rgb(148, 224, 68);">Other </a>
-                      </div>
-                      <a href="#" class="btn"><p class="mt-3 ms-3 icerikSagKisimCardAltButton"> <small class="p-1 ">See more</small> </p> </a>
-                      
-                      
                     </div>
-                </div>
-                <div class="card icerikSagKisimCard3">
-                    <div class="card-header icerikSagKisimCardHeader">
-                        r/ChatGPT Rules
-                    </div>
-                    <div class="card-body p-0">
-                        <div class="accordion accordion-flush" id="accordionFlushExample">
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="flush-headingOne">
-                                <button class="accordion-button collapsed icerikSagKisimCardAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                                   <small>1. Malicious Communication</small> 
-                                </button>
-                              </h2>
-                              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">  Posters and commenters are expected to act in good faith. Treat other users the way you want to be treated. Avoid straw-manning and bad-faith interpretations. Avoid presenting misinformation as factual.</div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="flush-headingTwo">
-                                <button class="accordion-button collapsed icerikSagKisimCardAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                                   <small> 2. No Trashposts</small>
-                                </button>
-                              </h2>
-                              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Posts deemed to be entirely without value or effort may be removed if they have not generated interesting discussions before their discovery. Users are encouraged to report posts they feel are of significantly low effort. Specifically mentioning that “Is chat GPT down posts?” will be removed. The stickied FAQ deals with that.</div>
-                              </div>
-                            </div>
-                            <div class="accordion-item">
-                              <h2 class="accordion-header" id="flush-headingThree">
-                                <button class="accordion-button collapsed icerikSagKisimCardAccordion" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                                    <small>3.Self Advertising</small> 
-                                </button>
-                              </h2>
-                              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-                                <div class="accordion-body">Posts must be directly related to ChatGPT or the topic of LLMs. They may not be solely focused on advertising a single other LLM service. Find or establish a relative subreddit for that service.</div>
-                              </div>
-                            </div>
-                          </div>
-                     
-                      
-                    </div>
-                </div>
-                <div class="card icerikSagKisimCard4 d-flex justify-content-center">
-                    <div class="card-header icerikSagKisimCardHeader" style="background-color: #94e044;">
-                        Recommended subreddits
-                    </div>
-                    <div class="card-body" style="background-color: #0dd3bb;">
-                        <ul class="list-unstyled d-flex" >
-                            <li class="me-2"> <img class="icerikSagKisimCard4İmg" src="https://styles.redditmedia.com/t5_2qhfb/styles/communityIcon_k22m4dn16era1.png?width=256&v=enabled&s=cae0465eb7dec910e2243927c5615e9a885917a0" alt="">
-                            </li">
-                            <li class="ms-3"> <small class="icerikSagKisimCard4Yazi mb-2">r/artificial <br class="p-0"> 264,126 members</small>
-                                
-                            </li>
-                            <li class="ms-5"> <a href="#" class="btn icerikSagKisimCard4Button"><small>Join</small> </a>
-                            </li>
+                    <a href="#" class="btn">
+                        <p class="mt-3 ms-3 icerikSagKisimCardAltButton"> <small class="p-1 ">See more</small> </p>
+                    </a>
 
-                        </ul>
-                      
-                    </div>
+
                 </div>
-                <div class="card icerikSagKisimCard5 ">
-                    <a href="https://discord.com/invite/rchatgpt" ><img class="icerikSagKisimCard5İmg" src="https://styles.redditmedia.com/t5_7hqomg/styles/image_widget_lwi721uc3lva1.png" alt=""></a>
-                    
+            </div>
+            <div class="card icerikSagKisimCard3">
+                <div class="card-header icerikSagKisimCardHeader">
+                    r/ChatGPT Rules
                 </div>
-                <div class="card icerikSagKisimCard6 ">
-                    <div class="card-header icerikSagKisimCardHeader p-2">
-                        Moderators
+                <div class="card-body p-0">
+                    <div class="accordion accordion-flush" id="accordionFlushExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingOne">
+                                <button class="accordion-button collapsed icerikSagKisimCardAccordion" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                    aria-controls="flush-collapseOne">
+                                    <small>1. Malicious Communication</small>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body"> Posters and commenters are expected to act in good faith.
+                                    Treat other users the way you want to be treated. Avoid straw-manning and bad-faith
+                                    interpretations. Avoid presenting misinformation as factual.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingTwo">
+                                <button class="accordion-button collapsed icerikSagKisimCardAccordion" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                    aria-controls="flush-collapseTwo">
+                                    <small> 2. No Trashposts</small>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Posts deemed to be entirely without value or effort may be
+                                    removed if they have not generated interesting discussions before their discovery.
+                                    Users are encouraged to report posts they feel are of significantly low effort.
+                                    Specifically mentioning that “Is chat GPT down posts?” will be removed. The stickied
+                                    FAQ deals with that.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="flush-headingThree">
+                                <button class="accordion-button collapsed icerikSagKisimCardAccordion" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#flush-collapseThree"
+                                    aria-expanded="false" aria-controls="flush-collapseThree">
+                                    <small>3.Self Advertising</small>
+                                </button>
+                            </h2>
+                            <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                <div class="accordion-body">Posts must be directly related to ChatGPT or the topic of
+                                    LLMs. They may not be solely focused on advertising a single other LLM service. Find
+                                    or establish a relative subreddit for that service.</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body p-2">
-                        <small>Moderator list hidden. Learn More</small>
-                    </div>
+
+
                 </div>
-                
-            </section>
-            
-        </div>
-    </main>
-   {% endblock content %}
+            </div>
+            <div class="card icerikSagKisimCard4 d-flex justify-content-center">
+                <div class="card-header icerikSagKisimCardHeader" style="background-color: #94e044;">
+                    Recommended subreddits
+                </div>
+                <div class="card-body" style="background-color: #0dd3bb;">
+                    <ul class="list-unstyled d-flex">
+                        <li class="me-2"> <img class="icerikSagKisimCard4İmg"
+                                src="https://styles.redditmedia.com/t5_2qhfb/styles/communityIcon_k22m4dn16era1.png?width=256&v=enabled&s=cae0465eb7dec910e2243927c5615e9a885917a0"
+                                alt="">
+                            </li">
+                        <li class="ms-3"> <small class="icerikSagKisimCard4Yazi mb-2">r/artificial <br class="p-0">
+                                264,126 members</small>
+
+                        </li>
+                        <li class="ms-5"> <a href="#" class="btn icerikSagKisimCard4Button"><small>Join</small> </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="card icerikSagKisimCard5 ">
+                <a href="https://discord.com/invite/rchatgpt"><img class="icerikSagKisimCard5İmg"
+                        src="https://styles.redditmedia.com/t5_7hqomg/styles/image_widget_lwi721uc3lva1.png" alt=""></a>
+
+            </div>
+            <div class="card icerikSagKisimCard6 ">
+                <div class="card-header icerikSagKisimCardHeader p-2">
+                    Moderators
+                </div>
+                <div class="card-body p-2">
+                    <small>Moderator list hidden. Learn More</small>
+                </div>
+            </div>
+
+        </section>
+
+    </div>
+</main>
+{% endblock content %}

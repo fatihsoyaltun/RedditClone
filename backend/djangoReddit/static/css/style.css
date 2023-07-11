@@ -46,6 +46,7 @@
     background-color: #F6F7F8;
     opacity: 1;
     height: 35px;
+    width: 50%;
 }
 
 
@@ -102,7 +103,7 @@ input.search{
   color: #0dd3bb;
 }
 
-.nav-icon a , .nav-icon i{
+ .nav-icon i{
   display: inline-block;
   transition: .5s;
 }
@@ -110,6 +111,10 @@ input.search{
 .nav-icon a:hover i{
   transform:translateY(-6px) ;
 } 
+
+.kusolgi a{
+  color: black;
+}
 
 
 .sol{
@@ -334,14 +339,17 @@ right: 0;
 color: black;
 padding: 12px 16px;
 text-decoration: none;
-display: block;
+}
+
+.olartık{
+  display: none;
 }
 
 /* Change color of dropdown links on hover */
-.dropdown-content1 a:hover {background-color: #ddd;}
+
 
 /* Show the dropdown menu on hover */
-.dropdown2:hover .dropdown-content1 {display: block;}
+.dropdown2:hover .dropdown-content1 {display: flex;}
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropdown2:hover .dropbtn {cursor: pointer;}
@@ -409,6 +417,16 @@ cursor: pointer;
 
 }
 @media screen and (max-width:865px) {
+
+
+.olartık{
+  display: block;
+}
+
+.nav-icon{
+  display: none;
+}
+
 .search {
   width: 50%;
 }
@@ -1371,21 +1389,17 @@ detay sayfası
   top: -60px;
   left: 10px;
 }
-.kuhesap{
-  position: absolute;
-  bottom: -45px;
-  left: 18px;
-}
+
 .kuekleme2{
   position: absolute;
-  left: 50px;
-  bottom: 5px;
+  left: 65px;
+  bottom: -23px;
 
 }
 .kuayarlar{
   position: absolute;
-  left: 60px;
-  bottom: -45px;
+  right: 20px;
+  bottom: -65px;
 }
 
 .kudetayayon{
@@ -1461,6 +1475,7 @@ detay sayfası
 
 
 @media screen and (max-width: 950px) {
+  
   .icerikSagKisim {
     display: none;
   }
@@ -1550,7 +1565,10 @@ font-size: 8px;
  
 }
  
-
+.icerikProfilP2{
+  font-size: 2.5rem;
+  font-weight: 800;
+}
 
 
 /* İçerik Kısmı */
@@ -1620,7 +1638,7 @@ body.dark-mode .dropdown2 .dropdown-content1 a{
 body.dark-mode .navUst{
   background-color: #212122;
 }
-body.dark-mode .dropdown-content1 a:hover , body.dark-mode .icerikIcondropdown1:hover , body.dark-mode .icerikIconA:hover , body.dark-mode .icerikIconSag:hover , body.dark-mode .dropdown-menu li a:hover , body.dark-mode .icerikSagKisimCardAltButton:hover , body.dark-mode .dropdown-content1 .form-check:hover{
+body.dark-mode   body.dark-mode .icerikIcondropdown1:hover , body.dark-mode .icerikIconA:hover , body.dark-mode .icerikIconSag:hover , body.dark-mode .dropdown-menu li a:hover , body.dark-mode .icerikSagKisimCardAltButton:hover , body.dark-mode .dropdown-content1 .form-check:hover{
   background-color: #5e5873;
 }
 body.dark-mode .dropdown-menu li a i{
@@ -1651,7 +1669,7 @@ body.dark-mode .card , body.dark-mode .kubegeniyancard{
 body.dark-mode .kuproresmi button i , body.dark-mode .kucard-body button i{
   color: black;
 }
-body.dark-mode .kuayarlar a .bi-gear , body.dark-mode .girisyap, body.dark-mode form label , body.dark-mode .dropdown2 .kusolgi{
+body.dark-mode .kuayarlar a .bi-gear , body.dark-mode .girisyap, body.dark-mode form label , body.dark-mode .dropdown2 .kusolgi a{
   color: white;
 }
 body.dark-mode .preOr h1 , body.dark-mode .preOr p{
@@ -1795,9 +1813,9 @@ body.dark-mode .night {
   margin: auto;
 }
 
-.kutopsol button{
+.kutopsol a{
   margin-left: 80px;
-  padding:0 8px;
+  padding:8px 15px;
 }
 
 @media screen and (max-width: 1260px) {
@@ -1820,6 +1838,11 @@ body.dark-mode .night {
   }
 }
 @media screen and (max-width: 465px) {
+  .navUst .arama{
+    width: 20%;
+    padding-left: 0;
+    height: 25px;
+  }
   .kutular  *{
     font-size: 16px;
     }
